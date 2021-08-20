@@ -1,4 +1,5 @@
-# The SAMPL9 WP6 challenge
+#
+The SAMPL9 WP6 challenge
 
 The WP6 challenge focuses on binding of WP6 to thirteen ammonium/diammonium cationic guests. Experimental binding measurements have been collected and the Isaacs group is preparing a paper for publication. Experimental details will be provided shortly. 
 
@@ -8,7 +9,7 @@ If you want any announcement of updates/changes/fixes here, [sign up for our e-m
 
 ## A quick view of the host and guests
 
-![](images/NAMEOFIMAGEHERE)
+![](images/WP6_overview.png)
 
 Please be sure to read the Disclaimers section below to note poitns which may require particular attention
 
