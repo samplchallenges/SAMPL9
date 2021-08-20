@@ -8,6 +8,8 @@ If you want any announcement of updates/changes/fixes here, [sign up for our e-m
 
 ## A quick view of the host and guests
 
+![](images/NAMEOFIMAGEHERE)
+
 Please be sure to read the Disclaimers section below to note poitns which may require particular attention
 
 ## More on the host
