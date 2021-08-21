@@ -1,19 +1,18 @@
 # The SAMPL9 Blind Predicton Challenges for Computational Chemistry
 
+Challenge details, inputs, and results from the SAMPL9 series (phase) of challenges. Each individual SAMPL9 challenge may be broken up into multiple stages. 
 
-Challenge details, inputs, and results from the SAMPL8 series (phase) of challenges. Each individual SAMPL8 challenge may be broken up into multiple stages. 
+See the [SAMPL website](https://samplchallenges.github.io/) for information on the Statistical Assessement of the Modeling of Proteins and Ligands (SAMPL) series of challenges as a whole. This repository focuses specifically on the SAMPL9 series of challenges. Additionally, see the [SAMPL community](https://zenodo.org/communities/sampl/?page=1&size=20) on Zenodo for content related to the SAMPL series of challenges. If you wish to use Zenodo to post our presentation slides, datasets, and/or other SAMPL related material, and get a DOI for them, please upload to the community [here](https://zenodo.org/communities/sampl/?page=1&size=20) so that your content will be listed. 
 
-See the [SAMPL website](https://samplchallenges.github.io/) for information on the Statistical Assessement of the Modeling of Proteins and Ligands (SAMPL) series of challenges as a whole. This repository focuses specifically on the SAMPL9 sreies of challenges. Additionally, see the [SAMPL community](https://zenodo.org/communities/sampl/?page=1&size=20) on Zenodo for content related to the SAMPL series of challenges. If you wish to use Zenodo to post our presentaiton slides, datasets, and/or other SAMPL related material, and get a DOI for them, please upload to the community [here](https://zenodo.org/communities/sampl/?page=1&size=20) so that your content will be listed. 
-
-Because these files are available publicly, we have no record of who downloads them. Therefore, you should sign up for notifications. Specifically, if you want to receive updates if we uncover any problems, it is imperative that you either (a) [sign up for the SAMPL e-mail list](https://mailchi.mp/e36018629725/sampl9-sign-ups), or (b) sign up for notifications of changes to this GitHub repository (the Watch button, above); ideally you would do both. 
+Because these files are available publicly, we have no record of who downloads them. Therefore, you should sign up for notifications. Specifically, if you want to receive updates if we uncover any problems, it is imperative that you either (a) [sign up for the SAMPL e-mail list](https://eepurl.com/dPj11j), or (b) sign up for notifications of changes to this GitHub repository (the Watch button, above); ideally you would do both. 
 
 Please note that some aspects of the SAMPL8 series of challenges are still ongoing, but as we are launching a new host-guest challenge that marks the beginning of the SAMPL9 series of challenges, so we have opened up this repository. 
 
-## Achnowleding and citing SAMPL
+## Acknowledging and citing SAMPL
 
-If you've benefitted from our work on the SAMPL series of challenges, please be sure to acknowledge our SAMPL NIH grant in any publications/presentations. This funded host-guest experimetns, as well as our work organizing and administrating these challenges. You may acknowledge SAMPL by saying thing like, "We appreciate the National Institutes of Health for its support of the SAMPL project via R01GM124270 to David L. Mobley (UC Irvine)."
+If you've benefitted from our work on the SAMPL series of challenges, please be sure to acknowledge our SAMPL NIH grant in any publications/presentations. This funded host-guest experiments, as well as our work organizing and administrating these challenges. You may acknowledge SAMPL by saying something like, "We appreciate the National Institutes of Health for its support of the SAMPL project via R01GM124270 to David L. Mobley (UC Irvine)."
 
-We also ask you to cite the SAMPL dataset(s) you used. These are versioned on Zenodo, and the latest DOI is here: [![DOI](svg item goes here)](badge latestdoi will go here ). Click through for access to all data releases. You may cite these sets by their DOI. 
+We also ask you to cite the SAMPL dataset(s) you used. You may cite the sets by their DOI, which [will be linked here]() in a future release. 
 
 Of course, we also appreciate it if you cite any overview/experimental papers relevant to the particular SAMPL challenge you participated in. 
 
@@ -23,7 +22,8 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 
 ## What's coming
 
-Experimental results for WP6. 
+- SAMPL submission link
+- Experimental results for WP6 
 
 ## Changes and Data Set Versions
 
@@ -33,13 +33,13 @@ Experimental results for WP6.
 
 ### Changes not in a release
 
-- Add WP6 challenge details, deadline, host/guest files, submission template, and submission instructions
+- Add WP6 challenge details, deadline, host/guest files, submission template, and submission instructions (8/20/21)
 
 ## Challenge construction
 
 ### Overview
 
-The SAMPL9 phase of challenges includes a new host-guest challenge (WP6). We are currently running our physical properties challenge with GSK including pKa and logD prediction. 
+The SAMPL9 phase of challenges includes a new host-guest challenge (WP6). 
 
 
 ### The WP6 challenge
@@ -61,5 +61,5 @@ This material here is made available under a CC-BY and MIT licenses, as appropri
 - MIT for all software/code
 - CC-BY 4.0 for all other materials
 
-In other words, we are happy to have you reuse any of the materials here for any purpose as long as proper credit/citation is give.  
+In other words, we are happy to have you reuse any of the materials here for any purpose as long as proper credit/citation is given.  
 
