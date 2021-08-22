@@ -1,33 +1,32 @@
-#
-The SAMPL9 WP6 challenge
+# The SAMPL9 WP6 challenge
 
-The WP6 challenge focuses on binding of WP6 to thirteen ammonium/diammonium cationic guests. Experimental binding measurements have been collected and the Isaacs group is preparing a paper for publication. Experimental details will be provided shortly. 
+The WP6 challenge focuses on binding of WP6 to thirteen ammonium/diammonium cationic guests. Experimental binding measurements have been collected and the Isaacs group is preparing a paper for publication. 
 
 Our deadline for this challenge will be posted in the top-level [README.md](https://github.com/samplchallenges/SAMPL9/blob/master/README.MD#the-wp6-challenge)
 
-If you want any announcement of updates/changes/fixes here, [sign up for our e-mail list](INSERT NEW SIGN UP LINK HERE)
+If you want any announcement of updates/changes/fixes here, [sign up for our e-mail list](http://eepurl.com/dPj11j)
 
 ## A quick view of the host and guests
 
 ![](images/WP6_overview.png)
 
-Please be sure to read the Disclaimers section below to note poitns which may require particular attention
+Please be sure to read the Disclaimers section below to note points which may require particular attention
 
 ## More on the host
 
-This host-guest series is based on a pillar[n]arene host known as WP6, yet to be featured in a previous SAMPL challenge. WP6 similar to cucurbit[n]urils, application based. Structurally, WP6 contains CH2 linkers connecting the phenylene groups, and each phenylene group contains two anionic functional group arms. Background information on WP6 may be found in a number of publications including DOI [insert DOIs HERE]
+This host-guest series is based on a pillar[n]arene host known as WP6, yet to be featured in a previous SAMPL challenge. WP6 is similar to cucurbit[n]urils. Structurally, WP6 contains CH2 linkers connecting the phenylene groups, and each phenylene group contains two anionic functional group arms. Background information on WP6 may be found in a number of publications including DOIs: [10.1002/anie.202005902](https://onlinelibrary.wiley.com/doi/10.1002/anie.202005902), [10.1021/acs.chemrev.5b00765](https://pubs.acs.org/doi/abs/10.1021/acs.chemrev.5b00765), [10.1021/ja306399f](https://pubs.acs.org/doi/full/10.1021/ja306399f).
 
 ## Experimental conditions
 
-All ITC experiments were conducted in phosphate buffered saline (1x PBS) at pH 7.40 and at 298.15 K. [NEED TO INPUT CONCENTRATION]
+All ITC experiments were conducted in stardard phosphate buffered saline (1x PBS) at pH 7.40 and at 298.15 K. The concentration of WP6 used in the cell was between 50 uM and 1 mM, depending on the binding strength of the complex (where lower ka value would require a higher concentration of the host). 
 
 ## Disclaimers
 
-Note that we have typically selected, or attempted to select, reasonable protonation states and conformers of the hosts and guests, but these may be controversial, uncertian, or change upon binding, so participants are encouraged to exercise care in selectin gwhich states are modeled. Typically selection of protonation states, tautomers and conformers is one major place where particpant protocols differ and lead to different downstream results. 
+Note that we have typically selected, or attempted to select, reasonable protonation states and conformers of the hosts and guests, but these may be controversial, uncertain, or change upon binding, so participants are encouraged to exercise care in selecting which states are modeled. Typically selection of protonation states, tautomers and conformers is one major place where particpant protocols differ and lead to different downstream results. In addition, guests G3 and G12 were used as racemic mixture.  
 
-[IF THERE ARE ANY KNOWN PROTONATION STATES THAT MAY REQUIRE ATTENTION, INSERT A NOTE HERE]
+The WP6 host has some dynamic stereochemistry, with two potential enantiomers. WP6 has twelve carboxylate groups at the arms, and the passing of the carboxylate arms "through the annulus" gives a second enantiomer. 
 
-[INSERT A NOTE ON THE HOST (I.E. THERE HAVE BEEN FIVE OBSERVED CONFORMERS IN PREVIOUS WORK)]
+All host-guest complexes are 1:1 binders according to ITC. 
 
 ## What's here:
 - `host_files`: Files relating to the WP6 host; provides structure files for the host.
