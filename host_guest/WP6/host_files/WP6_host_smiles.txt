@@ -1,1 +1,0 @@
-[O-]C(=O)CC1=CC2=C(CC([O-])=O)C=C1CC1=CC(CC([O-])=O)=C(CC3=CC(CC([O-])=O)=C(CC4=C(CC([O-])=O)C=C(CC5=CC(CC([O-])=O)=C(CC6=C(CC([O-])=O)C=C(C2)C(CC([O-])=O)=C6)C=C5CC([O-])=O)C(CC([O-])=O)=C4)C=C3CC([O-])=O)C=C1CC([O-])=O;WP6
