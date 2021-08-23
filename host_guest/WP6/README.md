@@ -18,7 +18,7 @@ This host-guest series is based on a pillar[n]arene host known as WP6, yet to be
 
 ## Experimental conditions
 
-All ITC experiments were conducted in stardard phosphate buffered saline (1x PBS) at pH 7.40 and at 298.15 K. The concentration of WP6 used in the cell was between 50 uM and 1 mM, depending on the binding strength of the complex (where lower ka value would require a higher concentration of the host). 
+All ITC experiments were conducted in standard phosphate buffered saline (1x PBS solution containing 137 mM sodium chloride, 2.7 mM potassium chloride, and 10 mM phosphate buffer) at pH 7.40 and at 298.15 K. The concentration of WP6 used in the cell was between 50 uM and 1 mM, depending on the binding strength of the complex (where lower ka value would require a higher concentration of the host). 
 
 ## Disclaimers
 
