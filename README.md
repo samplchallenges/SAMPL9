@@ -1,4 +1,4 @@
-# The SAMPL9 Blind Predicton Challenges for Computational Chemistry
+# The SAMPL9 Blind Prediction Challenges for Computational Chemistry
 
 Challenge details, inputs, and results from the SAMPL9 series (phase) of challenges. Each individual SAMPL9 challenge may be broken up into multiple stages. 
 
