@@ -1,1 +1,65 @@
-# SAMPL9
+# The SAMPL9 Blind Predicton Challenges for Computational Chemistry
+
+Challenge details, inputs, and results from the SAMPL9 series (phase) of challenges. Each individual SAMPL9 challenge may be broken up into multiple stages. 
+
+See the [SAMPL website](https://samplchallenges.github.io/) for information on the Statistical Assessement of the Modeling of Proteins and Ligands (SAMPL) series of challenges as a whole. This repository focuses specifically on the SAMPL9 series of challenges. Additionally, see the [SAMPL community](https://zenodo.org/communities/sampl/?page=1&size=20) on Zenodo for content related to the SAMPL series of challenges. If you wish to use Zenodo to post our presentation slides, datasets, and/or other SAMPL related material, and get a DOI for them, please upload to the community [here](https://zenodo.org/communities/sampl/?page=1&size=20) so that your content will be listed. 
+
+Because these files are available publicly, we have no record of who downloads them. Therefore, you should sign up for notifications. Specifically, if you want to receive updates if we uncover any problems, it is imperative that you either (a) [sign up for the SAMPL e-mail list](https://eepurl.com/dPj11j), or (b) sign up for notifications of changes to this GitHub repository (the Watch button, above); ideally you would do both. 
+
+Please note that some aspects of the SAMPL8 series of challenges are still ongoing, but as we are launching a new host-guest challenge that marks the beginning of the SAMPL9 series of challenges, so we have opened up this repository. 
+
+## Acknowledging and citing SAMPL
+
+If you've benefitted from our work on the SAMPL series of challenges, please be sure to acknowledge our SAMPL NIH grant in any publications/presentations. This funded host-guest experiments, as well as our work organizing and administrating these challenges. You may acknowledge SAMPL by saying something like, "We appreciate the National Institutes of Health for its support of the SAMPL project via R01GM124270 to David L. Mobley (UC Irvine)."
+
+We also ask you to cite the SAMPL dataset(s) you used. You may cite the sets by their DOI, which [will be linked here]() in a future release. 
+
+Of course, we also appreciate it if you cite any overview/experimental papers relevant to the particular SAMPL challenge you participated in. 
+
+## What's here
+- Host-guest challenge files for the WP6 challenge
+- [Host-guest participation instructions](https://github.com/samplchallenges/SAMPL9/blob/master//host_guest_instructions.md) with information on the submissions format, etc. Submission templates are available in the subdirectories for individual host-guest systems. 
+
+## What's coming
+
+- SAMPL submission link
+- Experimental results for WP6 
+
+## Changes and Data Set Versions
+
+### Releases
+
+
+
+### Changes not in a release
+
+- Add WP6 challenge details, deadline, host/guest files, submission template, and submission instructions (8/20/21)
+
+## Challenge construction
+
+### Overview
+
+The SAMPL9 phase of challenges includes a new host-guest challenge (WP6). 
+
+
+### The WP6 challenge
+
+The WP6 challenge focuses on binding of WP6 to thirteen guests. Binding has been experimentally characterized, and the Isaacs group is preparing a paper for publication. Experimental results/data will be available after the challenge closes. 
+
+**Deadline**: The deadline for WP6 submissions is set for November 1, 2021. [The submission format is available here](https://github.com/samplechallenges/SAMPL9/blob/master/host_guest/WP6/WP6_submissions.txt).
+
+## MANIFEST
+- [`host_guest/`](host_guest/): Details on host-guest challenges.
+
+## SAMPL-related
+If you give a SAMPL-related talk or presentation or an analysis of its data, and are willing to share publicly, please consider posting on Zenodo and linking it to the [SAMPL Zenodo community](https://zenodo.org/communities/sampl?page=1&size=20).
+
+## LICENSE
+
+This material here is made available under a CC-BY and MIT licenses, as appropriate:
+
+- MIT for all software/code
+- CC-BY 4.0 for all other materials
+
+In other words, we are happy to have you reuse any of the materials here for any purpose as long as proper credit/citation is given.  
+
