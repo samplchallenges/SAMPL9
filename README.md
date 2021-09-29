@@ -45,7 +45,7 @@ The SAMPL9 phase of challenges includes a new host-guest challenge (WP6).
 
 The WP6 challenge focuses on binding of WP6 to thirteen guests. Binding has been experimentally characterized, and the Isaacs group is preparing a paper for publication. Experimental results/data will be available after the challenge closes.
 
-**Deadline**: The deadline for WP6 submissions is set for November 1, 2021. [The submission format is available here](https://github.com/samplechallenges/SAMPL9/blob/master/host_guest/WP6/WP6_submissions.txt).
+**Deadline**: The deadline for WP6 submissions is set for November 1, 2021. [The submission format is available here](https://github.com/samplchallenges/SAMPL9/blob/main/host_guest/WP6/WP6_submissions.txt).
 
 ## MANIFEST
 - [`host_guest/`](host_guest/): Details on host-guest challenges.
