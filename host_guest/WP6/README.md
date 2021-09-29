@@ -2,7 +2,7 @@
 
 The WP6 challenge focuses on binding of WP6 to thirteen ammonium/diammonium cationic guests. Experimental binding measurements have been collected and the Isaacs group is preparing a paper for publication.
 
-Our deadline for this challenge will be posted in the top-level [README.md](https://github.com/samplchallenges/SAMPL9/blob/master/README.MD#the-wp6-challenge)
+Our deadline for this challenge will be posted in the top-level [README.md](https://github.com/samplchallenges/SAMPL9/blob/main/README.md)
 
 If you want any announcement of updates/changes/fixes here, [sign up for our e-mail list](http://eepurl.com/dPj11j)
 
