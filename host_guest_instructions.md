@@ -2,15 +2,15 @@
 
 ## Due date
 
-Due dates vary by challenge; refer to the main [README.md](https://github.com/samplchallenges/SAMPL9/blob/master/README.md) for exact dates. 
+Due dates vary by challenge; refer to the main [README.md](https://github.com/samplchallenges/SAMPL9/blob/master/README.md) for exact dates.
 
-Your predictions must be uploaded via our [SAMPL8 submission web-server (will be available soon)]() before midnight US Pacific time on the due date. The experimental results will be available as soon as possible after SAMPL closes. Please refer to the below instructions for information on uploading.
+Your predictions must be uploaded via our [SAMPL8 submission web-server](http://sampl-submit.us-west-1.elasticbeanstalk.com/submit/SAMPL9-HG) before midnight US Pacific time on November 1. The experimental results will be available as soon as possible after SAMPL closes. Please refer to the below instructions for information on uploading.
 
 You must use the provided templates to upload your predictions:
 - [WP6_submission.txt](https://github.com/samplchallenges/SAMPL9/blob/master/host_guest/WP6/WP6_submissions.txt)
 
 File names must begin with "WP6" (as in the template files) and be followed by an underscore or dash.
-The remainder of the filename is up to you. 
+The remainder of the filename is up to you.
 
 Note that the submission server runs on AWS and has a URL involving "elasticbeanstalk.com". It is also listed as "not secure" at present, but don't be concerned about that aspect.
 
