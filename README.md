@@ -13,7 +13,7 @@ Please note that some aspects of the SAMPL8 series of challenges are still ongoi
 If you've benefitted from our work on the SAMPL series of challenges, please be sure to acknowledge our SAMPL NIH grant in any publications/presentations. This funded host-guest experiments, as well as our work organizing and administrating these challenges. You may acknowledge SAMPL by saying something like, "We appreciate the National Institutes of Health for its support of the SAMPL project via R01GM124270 to David L. Mobley (UC Irvine)."
 
 We also ask you to cite the SAMPL dataset(s) you used. You may cite the sets by their DOI, which is available here: [![DOI](https://zenodo.org/badge/397390406.svg)](https://zenodo.org/badge/latestdoi/397390406)
- 
+
 
 Of course, we also appreciate it if you cite any overview/experimental papers relevant to the particular SAMPL challenge you participated in.
 
@@ -23,7 +23,6 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 
 ## What's coming
 
-- SAMPL submission link
 - Experimental results for WP6
 
 ## Changes and Data Set Versions
@@ -33,8 +32,7 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 
 
 ### Changes not in a release
-
--  
+- 2021-09-29: Add link to [WP6 submission server](http://sampl-submit.us-west-1.elasticbeanstalk.com/submit/SAMPL9-HG)  
 
 ## Challenge construction
 
