@@ -33,6 +33,7 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 
 ### Changes not in a release
 - 2021-09-29: Add link to [WP6 submission server](http://sampl-submit.us-west-1.elasticbeanstalk.com/submit/SAMPL9-HG)  
+- 2021-10-30: Push deadline back to Nov. 15
 
 ## Challenge construction
 
@@ -45,7 +46,7 @@ The SAMPL9 phase of challenges includes a new host-guest challenge (WP6).
 
 The WP6 challenge focuses on binding of WP6 to thirteen guests. Binding has been experimentally characterized, and the Isaacs group is preparing a paper for publication. Experimental results/data will be available after the challenge closes.
 
-**Deadline**: The deadline for WP6 submissions is set for November 1, 2021. [The submission format is available here](https://github.com/samplchallenges/SAMPL9/blob/main/host_guest/WP6/WP6_submissions.txt).
+**Deadline**: The deadline for WP6 submissions is set for November 15, 2021. [The submission format is available here](https://github.com/samplchallenges/SAMPL9/blob/main/host_guest/WP6/WP6_submissions.txt).
 
 ## MANIFEST
 - [`host_guest/`](host_guest/): Details on host-guest challenges.
