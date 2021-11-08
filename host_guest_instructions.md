@@ -1,5 +1,7 @@
 # SAMPL9 Detailed Host-Guest Instructions
 
+Please note, the guest **G4 in this challenge is optional**, as it contains silicon, which can make application of some methods orders of magnitude more difficult.
+
 ## Due date
 
 Due dates vary by challenge; refer to the main [README.md](https://github.com/samplchallenges/SAMPL9/blob/master/README.md) for exact dates.

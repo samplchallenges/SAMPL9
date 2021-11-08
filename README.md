@@ -34,6 +34,7 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 ### Changes not in a release
 - 2021-09-29: Add link to [WP6 submission server](http://sampl-submit.us-west-1.elasticbeanstalk.com/submit/SAMPL9-HG)  
 - 2021-10-30: Push deadline back to Nov. 15
+- 2021-11-08: Make WP6 G4 guest optional as it contains silicon
 
 ## Challenge construction
 
