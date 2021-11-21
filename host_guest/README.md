@@ -1,5 +1,6 @@
 ## What's here
 - `WP6`: Files for the Isaacs' group WP6 challenge
+- `bCD`: Files for the Gilson group bCD challenge
 - `Scripts`: Scripts used in preparing some of the files present here and doing other processing. 
 - `Analysis`: files for analysis of the host-guest challenges. Will eventually include experimental results and analysis for host-guest systems. 
 
