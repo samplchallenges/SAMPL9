@@ -1,6 +1,6 @@
 # SAMPL9 Detailed Host-Guest Instructions
 
-Please note, the guest **G4 in this challenge is optional**, as it contains silicon, which can make application of some methods orders of magnitude more difficult.
+Please note, the guest **G4 in the WP6 challenge is optional**, as it contains silicon, which can make application of some methods orders of magnitude more difficult.
 
 ## Due date
 
@@ -11,7 +11,7 @@ Your predictions must be uploaded via our [SAMPL8 submission web-server](http://
 You must use the provided templates to upload your predictions:
 - [WP6_submission.txt](https://github.com/samplchallenges/SAMPL9/blob/master/host_guest/WP6/WP6_submissions.txt)
 
-File names must begin with "WP6" (as in the template files) and be followed by an underscore or dash.
+File names must begin with "WP6" or "bCD" (as in the template files) and be followed by an underscore or dash.
 The remainder of the filename is up to you.
 
 Note that the submission server runs on AWS and has a URL involving "elasticbeanstalk.com". It is also listed as "not secure" at present, but don't be concerned about that aspect.
@@ -28,7 +28,7 @@ Anonymous participation is not allowed.
 
 ## Molecular systems
 
-The WP6 host-guest system categories are detailed in their main README.md.  
+The WP6 and bCD host-guest system categories are detailed in their main README.md.  
 
 
 ### Optional systems:
