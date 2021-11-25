@@ -18,12 +18,14 @@ We also ask you to cite the SAMPL dataset(s) you used. You may cite the sets by 
 Of course, we also appreciate it if you cite any overview/experimental papers relevant to the particular SAMPL challenge you participated in.
 
 ## What's here
-- Host-guest challenge files for the WP6 challenge
+- Host-guest challenge files for the WP6 and bCD challenges
 - [Host-guest participation instructions](https://github.com/samplchallenges/SAMPL9/blob/master//host_guest_instructions.md) with information on the submissions format, etc. Submission templates are available in the subdirectories for individual host-guest systems.
 
 ## What's coming
 
 - Experimental results for WP6
+- Results/Analysis of the WP6 challenge
+- Submission links for the bCD challenge
 
 ## Changes and Data Set Versions
 
@@ -35,19 +37,26 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 - 2021-09-29: Add link to [WP6 submission server](http://sampl-submit.us-west-1.elasticbeanstalk.com/submit/SAMPL9-HG)  
 - 2021-10-30: Push deadline back to Nov. 15
 - 2021-11-08: Make WP6 G4 guest optional as it contains silicon
+- 2021-11-20: Add bCD challenge information, host and guest files, and submission template. Deadline Feb. 23
 
 ## Challenge construction
 
 ### Overview
 
-The SAMPL9 phase of challenges includes a new host-guest challenge (WP6).
+The SAMPL9 phase of challenges includes a new host-guest challenge (WP6) that closed November 15, 2021, and a bCD host-guest challenge..
 
 
 ### The WP6 challenge
 
 The WP6 challenge focuses on binding of WP6 to thirteen guests. Binding has been experimentally characterized, and the Isaacs group is preparing a paper for publication. Experimental results/data will be available after the challenge closes.
 
-**Deadline**: The deadline for WP6 submissions is set for November 15, 2021. [The submission format is available here](https://github.com/samplchallenges/SAMPL9/blob/main/host_guest/WP6/WP6_submissions.txt).
+**Deadline**: The deadline for WP6 submissions was November 15, 2021. [The submission format is available here](https://github.com/samplchallenges/SAMPL9/blob/main/host_guest/WP6/WP6_submissions.txt).
+
+### The bCD-Phenothiazine-based drugs challenge
+
+The bCD challenge focuses on binding of five phenothiazine antipsychotic drugs to two hosts in the cyclodextrin family. Experimental binding affinity measurements have been measured, and the Gilson group is preparing a publication for this work. Experimental results/data will be available after the challenge closes.  
+
+**Deadline**: The deadline for bCD submissions is Feb. 23, 2022. [The submission format is available here](https://github.com/samplchallenges/SAMPL9/blob/main/host_guest/bCD/bCD_submissions.txt).
 
 ## MANIFEST
 - [`host_guest/`](host_guest/): Details on host-guest challenges.
