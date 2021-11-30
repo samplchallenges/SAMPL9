@@ -20,10 +20,11 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 ## What's here
 - Host-guest challenge files for the WP6 and bCD challenges
 - [Host-guest participation instructions](https://github.com/samplchallenges/SAMPL9/blob/master//host_guest_instructions.md) with information on the submissions format, etc. Submission templates are available in the subdirectories for individual host-guest systems.
+- Experimental data for the WP6
 
 ## What's coming
 
-- Results/Analysis of the WP6 challenge
+- Analysis of the WP6 challenge
 - Submission links for the bCD challenge
 
 ## Changes and Data Set Versions
@@ -37,7 +38,7 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 - 2021-10-30: Push deadline back to Nov. 15
 - 2021-11-08: Make WP6 G4 guest optional as it contains silicon
 - 2021-11-20: Add bCD challenge information, host and guest files, and submission template. Deadline Feb. 23
-- 2021-11-30: Add experimental results for WP6
+- 2021-11-30: Add experimental data for WP6
 
 ## Challenge construction
 
