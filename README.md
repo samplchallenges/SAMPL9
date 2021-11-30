@@ -23,7 +23,6 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 
 ## What's coming
 
-- Experimental results for WP6
 - Results/Analysis of the WP6 challenge
 - Submission links for the bCD challenge
 
@@ -38,6 +37,7 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 - 2021-10-30: Push deadline back to Nov. 15
 - 2021-11-08: Make WP6 G4 guest optional as it contains silicon
 - 2021-11-20: Add bCD challenge information, host and guest files, and submission template. Deadline Feb. 23
+- 2021-11-30: Add experimental results for WP6
 
 ## Challenge construction
 
@@ -48,7 +48,7 @@ The SAMPL9 phase of challenges includes a new host-guest challenge (WP6) that cl
 
 ### The WP6 challenge
 
-The WP6 challenge focuses on binding of WP6 to thirteen guests. Binding has been experimentally characterized, and the Isaacs group is preparing a paper for publication. Experimental results/data will be available after the challenge closes.
+The WP6 challenge focuses on binding of WP6 to thirteen guests. Binding has been experimentally characterized, and the Isaacs group is preparing a paper for publication. Experimental results/data is now available as of 11/30/2021, [`here`](experimental_data/).
 
 **Deadline**: The deadline for WP6 submissions was November 15, 2021. [The submission format is available here](https://github.com/samplchallenges/SAMPL9/blob/main/host_guest/WP6/WP6_submissions.txt).
 
