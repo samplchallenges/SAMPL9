@@ -1,0 +1,385 @@
+# Results for WP6
+#
+# This file will be automatically parsed.  It must contain the following seven elements:
+# predictions, participant name, participant organization, name of method, software listing, method, method category, and ranked.
+# These elements must be provided in the order shown.
+# The file name must begin with the word "WP6" and then be followed by an underscore or dash.
+#
+# FILE FORMAT: All comment lines in this file (which begin with #) will be ignored.
+# Please use only UTF-8 characters in the non-comment fields. If your information (e.g. your name, etc.)
+# contains a non-UTF-8 character, you may note it in comments near that entry.
+#
+#
+# PREDICTIONS
+# Please explicitly describe how you handle ions and pKa effects.
+#
+# The data in each prediction line should be structured as follows, with all (up to six) numbers in kcal/mol.
+# host-guest ID (note that the host varies!), Free energy, free energy SEM, free energy model uncertainty,
+# enthalpy, enthalpy SEM, enthalpy model uncertainty
+# The free energy, free energy SEM, and free energy model uncertainty are REQUIRED.
+# The corresponding quantities for binding enthalpy are optional.
+#
+# Note that the "model uncertainty" should be your estimate of ACCURACY of this particular approach
+# for the compound considered.
+#
+#
+# The list of predictions must begin with the "Prediction:" keyword, as illustrated here.
+Predictions:
+WP6-G1, -1.63, 0.53, 0.67
+WP6-G2, -13.74, 0.21, 0.46
+WP6-G3, -8.75, 0.16, 0.44
+WP6-G4, -10.78, 1.10, 1.18
+WP6-G5, -4.00, 0.32, 0.52
+WP6-G6, -9.20, 0.61, 0.73
+WP6-G7, -9.38, 0.33, 0.52
+WP6-G8, -2.25, 0.63, 0.75
+WP6-G9, -9.14, 0.36, 0.55
+WP6-G10, -9.88, 0.29, 0.50
+WP6-G11, -8.32, 0.27, 0.49
+WP6-G12, -13.91, 0.22, 0.46
+WP6-G13, -8.68, 0.18, 0.44
+#
+#
+# Please list your name, using only UTF-8 characters as described above. The "Participant name:" entry is required.
+Participant name:
+Voelz lab
+#
+#
+# Please list your organization/affiliation, using only UTF-8 characters as described above.
+Participant organization:
+Temple University
+#
+#
+# Please provide a brief (40 character limit) informal yet informative name of the method used.
+# If using an MD-based method we suggest using the format: Method/EnergyModel/WaterModel/Sampling/[Additional-details-here] , though your name must respect the 40 character limit.
+# otherwise you may create your own following the sample text; please edit to your taste.
+# The "Name:" keyword is required, as shown here.
+# 40 character limit.
+Name:
+EE/Openff-2.0/TIP3P/MD-EE/All_data
+#
+# All major software packages used and their versions
+# Following is sample text; please edit to your taste.
+# The "Software:" keyword is required.
+Software:
+Gromacs 2020
+OpenEye's OEDocking
+openff-toolkit
+#
+# Methodology and computational details.
+# Level of detail should be at least that used in a publication.
+# Please include the values of key parameters, with units, and explain how any
+# statistical uncertainties were estimated.
+# Use as many lines of text as you need.
+# Please explicitly describe how you handle ions (e.g. counterions) and pKa effects
+# Following is sample text; please edit to your taste.
+# All text following the "Method:" keyword will be regarded as part of your free text methods description.
+Method:
+Absolute binding free energies for host-guest interactions were calculated using a double-decoupling method in which the alchemical free energies of decoupling the guest in the presence and absence of the host were computed using expanded-ensemble molecular simulations performed on the Folding@home distributed computing platform.  A  three-part workflow was implemented to (1) prepare systems, (2) perform expanded ensemble simulations on Folding@home and Temple University high-performance computing (HPC) clusters, and (3) analyze the results.
+\subsection{System preparation}
+\paragraph{Microstate enumeration}
+Curve fits of WP6 fluorescence emission spectra vs pH published in Yu et al. (Figures S16 and S17) \cite{yu2012water} suggest a pKa of 6.997 and a Hill coefficient of 3.519, for a model where approximately 4 protons cooperatively dissociate upon varying the pH from 2 to 11.  Based on this result, and the absence of other information, we assume that the most populated microstate of WP6 at pH 7.4 has a -12 net charge, and that titration to lower pH coopertatively adds 4 protons to form  a -8 net charge state.  Therefore, we considered three different protonation states of the WP6 host: -12, -10, -8 net charge, each with equal numbers of deprotonated groups above and below the pillarene ring, as the host microstates likely contributing most in the binding reaction.
+Reference ionization states for each guest molecule were determined by OpenEye's Quacpac module \cite{QUACPAC}, which selected the most energetically favorable ionization state at pH 7.4. While the reference state is likely to have the greatest population, we additionally considered a larger ensemble of enumerated microstates that may be populated near pH 7.4.  This resulted in between 1 and 4 microstates per guest molecule. We also considered each enantiomer of chiral guest molecules as separate microstates.
+\paragraph{Simulation preparation}
+System preparation was performed using our in-house \verb|simulation_prep| module.  Force field parameters for the hosts and guests used OpenFF-2.0.0. \cite{jeff_wagner_2021_5214478, lim2020benchmark} The only exception to this was for the guest G4 containing a silane group for which OpenFF parameters were unavailable.  We instead used GAFF-2.11 \cite{wang2006automatic} for G4.  Partial charges were assigned using AM1-BCC \cite{jakalian2002fast}.
+Initial poses for receptor-ligand systems were prepared by docking guests to the host via OpenEye's OEDocking\cite{OEDocking} module using the FRED score function\cite{mcgann2011fred} and saving the minimum-energy structure. Systems were solvated with TIP3P water and neutralizing counterions at 137 mM NaCl .  Ligand-only simulations used a 3.5 nm cubic box, while receptor-ligand simulations used a 4.5 nm cubic box.  Ligand-only simulations were minimized and equilibrated at 298.15 K using GPU-accelerated OpenMM version 7.5.0 \cite{eastman2017openmm}. Receptor-ligand were minimized and equilibrated at 298.15 K in Gromacs version 2020.3 \cite{abraham2015gromacs} using position restraints with a force constant of 800 kJ mol$^{-1}$ nm$^{-2}$ all heavy atoms of the host, and all atoms of the guest. Equilibration was performed in the isobaric-isothermal ensemble.
+\subsection{Expanded Ensemble simulations}
+Absolute binding free energies computed using expanded-ensemble (EE) methods have been used previously in SAMPL challenges, \cite{monroe2014converging,rizzi2020sampl6} and our methods closely follow these efforts, with some innovations inspired by recent work \cite{zhang2021expanded}.
+The free energy $\Delta G_L$ of decoupling the guest from solvent in a ligand-only (L) simulation was calculated using 101 alchemical intermediates in which Coulomb interactions are turned off, and then van der Waals (vdW) interactions. The free energy $\Delta G_{RL}$ of decoupling the guest from a receptor-ligand (RL) simulation was calculated using 101 alchemical intermediates in which a  restraint potential is turned \textit{on}, then Coulomb interactions are turned off, and then vdW interactions.  The restraint potential was a harmonic distance restraint between the center of mass of the six benzene rings of the WP6 host (6 rings $\times$ 6 carbons = 36 atoms), and all non-hydrogen guest atoms, with a force constant of 800 kJ mol$^{-1}$ nm$^{-2}$, and an equilibrium distance of 0 nm.  The absolute free energy of binding $\Delta G$ is estimated as
+\begin{equation}
+    \Delta G = \Delta G_{\text{rest}} + \Delta G_L - \Delta G_{RL},
+\end{equation}
+where $\Delta G_{\text{rest}}$ is the free energy cost of restraining the guest from standard volume to a restricted volume, determined by the force constant 800 kJ mol$^{-1}$ nm$^{-2}$, which we compute to be $\Delta G_1$ = +6.42 $RT$.  The $-\Delta G_{RL}$ term includes the free energy of removing this restaint.
+\paragraph{Optimization of alchemical intermediates}
+In order to avoid sampling bottlenecks in the EE algorithm that would impede the efficient exploration of all alchemical intermediates, we implemented a custom optimization scheme (Zhang et al., in preparation) that uses a steepest-descent algorithm to minimize the variance in the distributions $P(\Delta u_{kl})$, where $\Delta u_{kl}$ is the change in (reduced) energy in going from thermodynamic ensemble $k$ to ensemble $l$. This has the effect of maximizing the EE transition probabilities.
+Each L and RL system (using the -12 charge state of the host)  was run for 24 hours in order to sample $\Delta u_{kl}$ distributions over the course of an EE simulation, using an initial guess for the schedule of $\lambda$-values that control the alchemical transformation.  From this information, optimized $\lambda$-values were obtained and used for production-run EE simulations on the Folding@home distributed computing platform \cite{zimmerman2021sars}.
+For each set of host-guest microstate pairs, fifty parallel production-run EE simulations were performed in GROMACS 2020.3.  Simulations used a timestep of 2 fs, 0.9 nm cutoffs for long-range electrostatics, LINCS constraints on H-bonds, with frames were saved every 50 ps. The Wang-Landau method and Metropolized-Gibbs move set was used for EE simulations.  The initial Wang-Landau (WL) bias increment was set to 10 $k_BT$, and was scaled by a factor of 0.8 every time the histogram of sampled intermediates was sufficiently flat.  Settings from an \texttt{.mdp} file taken from an RL simulation are shown below:
+\footnotesize
+\begin{verbatim}
+; Free energy variables
+free-energy              = expanded
+couple-moltype           = LIG
+couple-lambda0           = vdw-q
+couple-lambda1           = none
+couple-intramol          = yes
+init-lambda              = -1
+init-lambda-state        = 0
+delta-lambda             = 0
+nstdhdl                  = 250
+fep-lambdas              = 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000
+mass-lambdas             =
+coul-lambdas             = 0.00000 0.02233 0.04466 0.06666 0.08826 0.11099 0.13509 0.15678 0.17695 0.19843 0.22175 0.24433 0.26644 0.28918 0.31202 0.33434 0.35646 0.37878 0.40178 0.42539 0.44852 0.47099 0.49389 0.51773 0.54199 0.56632 0.59104 0.61637 0.64135 0.66506 0.68806 0.71139 0.73555 0.76053 0.78600 0.81099 0.83472 0.85811 0.88277 0.90806 0.93098 0.95174 0.97376 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000
+vdw-lambdas              = 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00403 0.03659 0.06344 0.09014 0.11792 0.14512 0.17090 0.19898 0.22455 0.25000 0.27578 0.30028 0.32445 0.34787 0.37055 0.39222 0.41270 0.43215 0.45153 0.47035 0.48880 0.50810 0.52603 0.54335 0.55972 0.57542 0.59068 0.60554 0.62062 0.63415 0.64662 0.65868 0.66972 0.68090 0.69095 0.70085 0.71061 0.71970 0.72875 0.73813 0.74775 0.75740 0.76751 0.77807 0.78930 0.80114 0.81450 0.82909 0.84436 0.86133 0.87978 0.89948 0.92145 0.94457 0.96999 1.00000
+bonded-lambdas           =
+restraint-lambdas        = 0.00000 0.10000 0.20000 0.30000 0.40000 0.50000 0.60000 0.70000 0.80000 0.90000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000 1.00000
+temperature-lambdas      =
+calc-lambda-neighbors    = -1
+init-lambda-weights      = 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000
+dhdl-print-energy        = total
+sc-alpha                 = 0.5
+sc-power                 = 1
+sc-r-power               = 6
+sc-sigma                 = 0.3
+sc-coul                  = no
+separate-dhdl-file       = yes
+dhdl-derivatives         = yes
+dh_hist_size             = 0
+dh_hist_spacing          = 0.1
+; Non-equilibrium MD stuff
+acc-grps                 =
+accelerate               =
+freezegrps               =
+freezedim                =
+cos-acceleration         = 0
+deform                   =
+; simulated tempering variables
+simulated-tempering      = no
+simulated-tempering-scaling = geometric
+sim-temp-low             = 300
+sim-temp-high            = 300
+; expanded ensemble variables
+nstexpanded              = 250
+lmc-stats                = wang-landau
+lmc-move                 = metropolized-gibbs
+lmc-weights-equil        = wl-delta
+weight-equil-number-all-lambda = -1
+weight-equil-number-samples = -1
+weight-equil-number-steps = -1
+weight-equil-wl-delta    = 0.00001
+weight-equil-count-ratio = -1
+; Seed for Monte Carlo in lambda space
+lmc-seed                 = 53719
+mc-temperature           = -1
+lmc-repeats              = 1
+lmc-gibbsdelta           = -1
+lmc-forced-nstart        = 0
+symmetrized-transition-matrix = yes
+nst-transition-matrix    = 250000
+mininum-var-min          = 100
+weight-c-range           = 0
+wl-scale                 = 0.8
+wl-ratio                 = 0.7
+init-wl-delta            = 10.0
+wl-oneovert              = no
+\end{verbatim}
+\normalsize
+%%%%%
+% In *some* simulations, we observed irreversible binding of sodium cations to the interior of the host (G4/2). G8 was only prepared for the fully de-protonated receptor and ligand-only systems (\verb|RL_12/L|), as the other protonation states were problematic during setup.
+%%%%%
+\subsection{Analysis}
+The convergence of the EE predictions was monitored by the progressive decrease of the Wang-Landau (WL) increment.  We considered the EE simulations to be sufficiently converged if the WL increment went below 0.01 and 0.02 for the L and RL simulations, respectively.  Free energies  were computed as the average of all free energy estimates reported after the convergence threshold was reached, across all converged trajectories.  In the case that less than five trajectories reached convergence according to our criteria, the five (or more) trajectories with the smallest WL increments were used to compute the average free energy.
+Uncertainties in our computed binding free energies $\Delta G$ (in units of $RT$) come from the standard deviations of computed $\Delta G_L$ and $\Delta G_{RL}$ values across multiple parallel simulations.
+\subsubsection{Binding free energy predictions consider the full set of host and guest microstates.}
+Our final ranked predictions of the absolute binding free energy $\Delta G$ for each host-guest interaction (in units $RT$) are computed as
+\begin{equation}
+    \Delta G =  -\ln \frac{\sum_{i \in \text{bound}} e^{-\Delta G_i} }{\sum_{i \in \text{unbound}} e^{-\Delta G_i} },
+\end{equation}
+where each $\Delta G_i$ are bound- and unbound-microstate free energies.  Free energy differences relating bound and unbound microstates are provided by the double decoupling EE free energy simulations.  Free energy differences relating protonation states of the WP6 host were given by our model of cooperative titration of 4 protons at pH 6.997.  At pH 7.4, this model rewards the removal of two protons by -1.856 $RT$.  Free energy differences between the protonation microstates of the guests are provided by microstate pKa estimates  obtained using the \texttt{luoszgroup} $pK_a$ predictor from Qi Yang et al. \cite{yang2020holistic}.
+We also submitted two additional unranked submissions.  One included all samples of the free energy estimates throughout the simulations, regardless of the WL convergence.  The other used only the -8 net charge microstate of the host.
+Model uncertainties $\sigma_{\text{model}}$ were calculated as
+\begin{equation}
+    \sigma_{\text{model}} = \left( \sigma_{\Delta G}^2 +  \sigma_{\text{sys}}^2  \right)^{1/2}
+\end{equation}
+where $\sigma_{\text{sys}} = 0.6857 RT$ is assumed to be independent systematic error arising from the reported 1.7 kJ mol$^{-1}$  accuracy of OpenFF 2.0.0 \cite{jeff_wagner_2021_5214478}.
+An interactive webpage of all EE simulations (WL increment over time and estimated free energy over time, for all alchemical transformations) and our computed binding free estimates is available at \url{https://vvoelz.github.io/sampl9-voelzlab/}.
+@article{yang2020holistic,
+  title={Holistic Prediction of the pKa in Diverse Solvents Based on a Machine-Learning Approach},
+  author={Yang, Qi and Li, Yao and Yang, Jin-Dong and Liu, Yidi and Zhang, Long and Luo, Sanzhong and Cheng, Jin-Pei},
+  journal={Angewandte Chemie},
+  volume={132},
+  number={43},
+  pages={19444--19453},
+  year={2020},
+  publisher={Wiley Online Library}
+}
+@article{yu2012water,
+  title={A water-soluble pillar [6] arene: synthesis, host--guest chemistry, and its application in dispersion of multiwalled carbon nanotubes in water},
+  author={Yu, Guocan and Xue, Min and Zhang, Zibin and Li, Jinying and Han, Chengyou and Huang, Feihe},
+  journal={Journal of the American Chemical Society},
+  volume={134},
+  number={32},
+  pages={13248--13251},
+  year={2012},
+  publisher={ACS Publications}
+}
+@software{jeff_wagner_2021_5214478,
+  author       = {Jeff Wagner and
+                  Matt Thompson and
+                  David Dotson and
+                  hyejang and
+                  SimonBoothroyd and
+                  Jaime Rodríguez-Guerra},
+  title        = {{openforcefield/openff-forcefields: Version 2.0.0
+                   "Sage"}},
+  month        = aug,
+  year         = 2021,
+  publisher    = {Zenodo},
+  version      = {2.0.0},
+  doi          = {10.5281/zenodo.5214478},
+  url          = {https://doi.org/10.5281/zenodo.5214478}
+}
+@article{wang2006automatic,
+  title={Automatic atom type and bond type perception in molecular mechanical calculations},
+  author={Wang, Junmei and Wang, Wei and Kollman, Peter A and Case, David A},
+  journal={Journal of molecular graphics and modelling},
+  volume={25},
+  number={2},
+  pages={247--260},
+  year={2006},
+  publisher={Elsevier}
+}
+@article{lim2020benchmark,
+  title={Benchmark assessment of molecular geometries and energies from small molecule force fields},
+  author={Lim, Victoria T and Hahn, David F and Tresadern, Gary and Bayly, Christopher I and Mobley, David L},
+  journal={F1000Research},
+  volume={9},
+  year={2020},
+  publisher={Faculty of 1000 Ltd}
+}
+@article{eastman2017openmm,
+  title={OpenMM 7: Rapid development of high performance algorithms for molecular dynamics},
+  author={Eastman, Peter and Swails, Jason and Chodera, John D and McGibbon, Robert T and Zhao, Yutong and Beauchamp, Kyle A and Wang, Lee-Ping and Simmonett, Andrew C and Harrigan, Matthew P and Stern, Chaya D and others},
+  journal={PLoS computational biology},
+  volume={13},
+  number={7},
+  pages={e1005659},
+  year={2017},
+  publisher={Public Library of Science San Francisco, CA USA}
+}
+@article{abraham2015gromacs,
+  title={GROMACS: High performance molecular simulations through multi-level parallelism from laptops to supercomputers},
+  author={Abraham, Mark James and Murtola, Teemu and Schulz, Roland and P{\'a}ll, Szil{\'a}rd and Smith, Jeremy C and Hess, Berk and Lindahl, Erik},
+  journal={SoftwareX},
+  volume={1},
+  pages={19--25},
+  year={2015},
+  publisher={Elsevier}
+}
+@article{mcgann2011fred,
+  title={FRED pose prediction and virtual screening accuracy},
+  author={McGann, Mark},
+  journal={Journal of chemical information and modeling},
+  volume={51},
+  number={3},
+  pages={578--596},
+  year={2011},
+  publisher={ACS Publications}
+}
+@software{OEDocking,
+  author = {{OpenEye Scientific Software Inc.}},
+  title = {OEDOCKING },
+  url = {http://www.eyesopen.com},
+  version = {4.1.0.1},
+  date = {2021-07-19},
+}
+@software{QUACPAC,
+  author = {{OpenEye Scientific Software Inc.}},
+  title = {QUACPAC},
+  url = {http://www.eyesopen.com},
+  version = {2.1.2.1},
+  date = {2021-07-19},
+}
+@article{amezcua2020sampl7,
+  title={SAMPL7 challenge overview: assessing the reliability of polarizable and non-polarizable methods for host-guest binding free energy calculations},
+  author={Amezcua, Martin and Mobley, David},
+  year={2020}
+}
+@article{ponder2010current,
+  title={Current status of the AMOEBA polarizable force field},
+  author={Ponder, Jay W and Wu, Chuanjie and Ren, Pengyu and Pande, Vijay S and Chodera, John D and Schnieders, Michael J and Haque, Imran and Mobley, David L and Lambrecht, Daniel S and DiStasio Jr, Robert A and others},
+  journal={The journal of physical chemistry B},
+  volume={114},
+  number={8},
+  pages={2549--2564},
+  year={2010},
+  publisher={ACS Publications}
+}
+@article{ghorbani2021replica,
+  title={A replica exchange umbrella sampling (REUS) approach to predict host--guest binding free energies in SAMPL8 challenge},
+  author={Ghorbani, Mahdi and Hudson, Phillip S and Jones, Michael R and Aviat, F{\'e}lix and Meana-Pa{\~n}eda, Rub{\'e}n and Klauda, Jeffery B and Brooks, Bernard R},
+  journal={Journal of computer-aided molecular design},
+  volume={35},
+  number={5},
+  pages={667--677},
+  year={2021},
+  publisher={Springer}
+}
+@article{azimi2021application,
+  title={Application of the Alchemical Transfer and Potential of Mean Force Methods to the SAMPL8 Host-Guest Blinded Challenge},
+  author={Azimi, Solmaz and Wu, Joe Z and Khuttan, Sheenam and Kurtzman, Tom and Deng, Nanjie and Gallicchio, Emilio},
+  journal={arXiv preprint arXiv:2107.05155},
+  year={2021}
+}
+@article{chen2021pillararenes,
+  title={Pillararenes: fascinating planar chiral macrocyclic arenes},
+  author={Chen, Jin-Fa and Ding, Jindong and Wei, Tai-Bao},
+  journal={Chemical Communications},
+  year={2021},
+  publisher={Royal Society of Chemistry}
+}
+@article{jakalian2002fast,
+  title={Fast, efficient generation of high-quality atomic charges. AM1-BCC model: II. Parameterization and validation},
+  author={Jakalian, Araz and Jack, David B and Bayly, Christopher I},
+  journal={Journal of computational chemistry},
+  volume={23},
+  number={16},
+  pages={1623--1641},
+  year={2002},
+  publisher={Wiley Online Library}
+}
+@article{monroe2014converging,
+  title={Converging free energies of binding in cucurbit [7] uril and octa-acid host--guest systems from SAMPL4 using expanded ensemble simulations},
+  author={Monroe, Jacob I and Shirts, Michael R},
+  journal={Journal of computer-aided molecular design},
+  volume={28},
+  number={4},
+  pages={401--415},
+  year={2014},
+  publisher={Springer}
+}
+@article{rizzi2020sampl6,
+  title={The SAMPL6 SAMPLing challenge: assessing the reliability and efficiency of binding free energy calculations},
+  author={Rizzi, Andrea and Jensen, Travis and Slochower, David R and Aldeghi, Matteo and Gapsys, Vytautas and Ntekoumes, Dimitris and Bosisio, Stefano and Papadourakis, Michail and Henriksen, Niel M and De Groot, Bert L and others},
+  journal={Journal of computer-aided molecular design},
+  volume={34},
+  number={5},
+  pages={601--633},
+  year={2020},
+  publisher={Springer}
+}
+@article{zhang2021expanded,
+  title={Expanded Ensemble Methods Can be Used to Accurately Predict Protein-Ligand Relative Binding Free Energies},
+  author={Zhang, Si and Hahn, David F. and Shirts, Michael R. and Voelz, Vincent A.},
+  journal={Journal of Chemical Theory and Computation},
+  volume={17},
+  number={10},
+  pages={6536--6547},
+  year={2021},
+  publisher={Americal Chemical Society}
+}
+@article{zimmerman2021sars,
+  title={SARS-CoV-2 simulations go exascale to predict dramatic spike opening and cryptic pockets across the proteome},
+  author={Zimmerman, Maxwell I and Porter, Justin R and Ward, Michael D and Singh, Sukrit and Vithani, Neha and Meller, Artur and Mallimadugula, Upasana L and Kuhn, Catherine E and Borowsky, Jonathan H and Wiewiora, Rafal P and others},
+  journal={Nature Chemistry},
+  pages={1--9},
+  year={2021},
+  publisher={Nature Publishing Group}
+}
+#
+#
+# METHOD CATEGORY SECTION
+#
+# State which method category your prediction method is better described as:
+# `Alchemical`, `Quantum`, `Other Physical` `Empirical`, `Mixed`, or `Other`.
+# Pick only one category label.
+# The `Category:` keyword is required.
+Category:
+Alchemical
+#
+# All submissions must either be ranked or non-ranked.
+# Only one ranked submission per participant is allowed.
+# Multiple ranked submissions from the same participant will not be judged.
+# Non-ranked submissions are accepted so we can verify that they were made before the deadline.
+# The "Ranked:" keyword is required, and expects a Boolean value (True/False)
+Ranked:
+False
