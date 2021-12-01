@@ -1,0 +1,137 @@
+# Results for WP6
+#
+# This file will be automatically parsed.  It must contain the following seven elements:
+# predictions, participant name, participant organization, name of method, software listing, method, method category, and ranked.
+# These elements must be provided in the order shown.
+# The file name must begin with the word "WP6" and then be followed by an underscore or dash.
+#
+# FILE FORMAT: All comment lines in this file (which begin with #) will be ignored.
+# Please use only UTF-8 characters in the non-comment fields. If your information (e.g. your name, etc.)
+# contains a non-UTF-8 character, you may note it in comments near that entry.
+#
+#
+# PREDICTIONS
+# Please explicitly describe how you handle ions and pKa effects.
+#
+# The data in each prediction line should be structured as follows, with all (up to six) numbers in kcal/mol.
+# host-guest ID (note that the host varies!), Free energy, free energy SEM, free energy model uncertainty,
+# enthalpy, enthalpy SEM, enthalpy model uncertainty
+# The free energy, free energy SEM, and free energy model uncertainty are REQUIRED.
+# The corresponding quantities for binding enthalpy are optional.
+#
+# Note that the "model uncertainty" should be your estimate of ACCURACY of this particular approach
+# for the compound considered.
+#
+#
+# The list of predictions must begin with the "Prediction:" keyword, as illustrated here.
+Predictions:
+#                                         
+WP6-G1,  -7.71, 0.1, 3.0,,,   
+WP6-G2,  -7.34, 0.1, 3.0,,,  
+WP6-G3,  -7.09, 0.1, 3.0,,,	  
+WP6-G4,  -5.11, 0.1, 3.0,,,	  
+WP6-G5,  -6.41, 0.1, 3.0,,,	  
+WP6-G6,  -7.90, 0.1, 3.0,,,	  
+WP6-G7,  -6.80, 0.1, 3.0,,,	  
+WP6-G8,  -7.21, 0.1, 3.0,,,	  
+WP6-G9,  -8.50, 0.1, 3.0,,,	  
+WP6-G10, -7.00, 0.1, 3.0,,,	  
+WP6-G11, -5.31, 0.1, 3.0,,,	  
+WP6-G12, -8.33, 0.1, 3.0,,,	  
+WP6-G13, -8.31, 0.1, 3.0,,, 
+
+#
+#
+# Please list your name, using only UTF-8 characters as described above. The "Participant name:" entry is required.
+Participant name:
+Piero Procacci
+#
+#
+# Please list your organization/affiliation, using only UTF-8 characters as described above.
+Participant organization:
+University of Florence,  Italy 
+#
+#
+# Please provide a brief (40 character limit) informal yet informative name of the method used.
+# If using an MD-based method we suggest using the format: Method/EnergyModel/WaterModel/Sampling/[Additional-details-here] , though your name must respect the 40 character limit.
+# otherwise you may create your own following the sample text; please edit to your taste.
+# The "Name:" keyword is required, as shown here.
+# 40 character limit.
+Name:
+DOCKING/SMINA/VINARDO  
+#
+# All major software packages used and their versions
+# Following is sample text; please edit to your taste.
+# The "Software:" keyword is required.
+Software:
+Smina Oct 15 2019.  Based on AutoDock Vina 1.1.2.
+#
+# Methodology and computational details.
+# Level of detail should be at least that used in a publication.
+# Please include the values of key parameters, with units, and explain how any
+# statistical uncertainties were estimated.
+# Use as many lines of text as you need.
+# Please explicitly describe how you handle ions (e.g. counterions) and pKa effects
+# Following is sample text; please edit to your taste.
+# All text following the "Method:" keyword will be regarded as part of your free text methods description.
+
+Method:
+
+All calculation were performed with the smina code (dowloaded as a static executable from
+https://sourceforge.net/projects/smina/). The host and guest PDB structures were taken from the
+github site with no change of the protonation state. For the WP6, the pKa of WP6 are estimated from
+the statistical factor formula [D. D. Perrin, Boyd Dempsey and E. P. Serjeant. (1981). Molecular
+Factors that Modify pKa Values. In pKa Prediction for Organic Acids and Bases
+(16–17). Netherlands:Springer ]:
+
+pka(n) = pka(1) - log((n)/(13-n))
+
+Where pka(1) is the pka of the template monobasic acid 2-(2,5-dimethylphenoxy) acetic acid with
+canonical SMILES: CC1=CC(=C(C=C1)C)OCC(=O)O. Assuming that pKa(1)=3.23 (Scifinder, predicted value),
+we obtain that, at pH=7.4, the prevalent species is the 12- anion with all deprotonated group (
+97\%).  We converted the host and guest PDB structures to PDBQT format using the MGLTOOLS python
+utilities ( http://mgltools.scripps.edu/ ) prepare_ligand4.py and prepare_receptor4.py
+
+Smina Free energies were computed using the bash commands:
+
+for i in G* ; do\
+    smina -r WP6.pdbqt -l $i.pdbqt --center_x 0.0 --center_y 0.0 --center_z 0.0 --size_x 12.0 --size_y 12.0 --size_z 12.0 --scoring vinardo -o $i.out\
+done
+
+Blind predictions were computed using  the best smina docking scores in the G??.out files -in all cases consisting in no less than 8 nearly degenerate DGk  - assuming that DG = -RT log(sum_k e^-{\beta DG_i/RT}). To this end,  we used the bash commmand:
+
+for i in G*.out ; do printf $i " "; awk '{if(NF==4 && $2 ~ "[0-9]*.[0-9]" ) print}' $i | awk '{sume+=exp(-$2/0.596)}END{printf "%8.2f\n",  -0.596*log(sume)}' ; done  > vinardo_prediction
+
+
+Nota Bene: the smina/vinardo was tested on the following complexes with known association constant:
+
+WP6- G13            DG=-8.48    https://doi.org/10.3390/polym9120719
+WP6-Methylene-Blue  DG= -9.68   https://pubs.rsc.org/en/content/articlelanding/2018/cc/c8cc02739k
+WP6-M1              DG= -8.37   https://www.sciencedirect.com/science/article/pii/S1386142521000317
+WP6-M2              DG= -10.59   https://www.sciencedirect.com/science/article/pii/S1386142521000317
+WP6-choline         DG= -6.48    https://www.sciencedirect.com/science/article/pii/S0925400517315708
+WP6-Betaine          no binding  https://www.sciencedirect.com/science/article/pii/S0925400517315708
+
+yielding
+Pearson=0.88; a= 0.71; b= 2.18; MUE=0.87; tau=0.86; MSE=-0.07
+
+The whole calculation was completed in few seconds on a Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz with no GPU.
+Pretty frustrating,  indeed. 
+#
+#
+# METHOD CATEGORY SECTION
+#
+# State which method category your prediction method is better described as:
+# `Alchemical`, `Quantum`, `Other Physical` `Empirical`, `Mixed`, or `Other`.
+# Pick only one category label.
+# The `Category:` keyword is required.
+Category:
+Empirical
+#
+# All submissions must either be ranked or non-ranked.
+# Only one ranked submission per participant is allowed.
+# Multiple ranked submissions from the same participant will not be judged.
+# Non-ranked submissions are accepted so we can verify that they were made before the deadline.
+# The "Ranked:" keyword is required, and expects a Boolean value (True/False)
+Ranked:
+False
