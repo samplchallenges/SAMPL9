@@ -20,11 +20,11 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 ## What's here
 - Host-guest challenge files for the WP6 and bCD challenges
 - [Host-guest participation instructions](https://github.com/samplchallenges/SAMPL9/blob/master//host_guest_instructions.md) with information on the submissions format, etc. Submission templates are available in the subdirectories for individual host-guest systems.
+- Experimental data for the WP6
 
 ## What's coming
 
-- Experimental results for WP6
-- Results/Analysis of the WP6 challenge
+- Analysis of the WP6 challenge
 - Submission links for the bCD challenge
 
 ## Changes and Data Set Versions
@@ -38,6 +38,7 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 - 2021-10-30: Push deadline back to Nov. 15
 - 2021-11-08: Make WP6 G4 guest optional as it contains silicon
 - 2021-11-20: Add bCD challenge information, host and guest files, and submission template. Deadline Feb. 23
+- 2021-11-30: Add experimental data for WP6
 
 ## Challenge construction
 
@@ -48,7 +49,7 @@ The SAMPL9 phase of challenges includes a new host-guest challenge (WP6) that cl
 
 ### The WP6 challenge
 
-The WP6 challenge focuses on binding of WP6 to thirteen guests. Binding has been experimentally characterized, and the Isaacs group is preparing a paper for publication. Experimental results/data will be available after the challenge closes.
+The WP6 challenge focuses on binding of WP6 to thirteen guests. Binding has been experimentally characterized, and the Isaacs group is preparing a paper for publication. Experimental results/data is now available as of 11/30/2021, [`here`](experimental_data/).
 
 **Deadline**: The deadline for WP6 submissions was November 15, 2021. [The submission format is available here](https://github.com/samplchallenges/SAMPL9/blob/main/host_guest/WP6/WP6_submissions.txt).
 
@@ -60,6 +61,7 @@ The bCD challenge focuses on binding of five phenothiazine antipsychotic drugs t
 
 ## MANIFEST
 - [`host_guest/`](host_guest/): Details on host-guest challenges.
+- [`experimental_data/WP6/`](experimental_data/WP6/): Experimental data for WP6 challenge provided by Isaacs on 11/30/2021. Contains: [`SAMPL9_Datasheet_20210727.cdx`](experimental_data/WP6/SAMPL9_Datasheet_20210727.cdx) - a ChemDraw file that contains smiles strings and a view of the host and guest molecules, [`host_and_guest_smiles.csv`](experimental_data/WP6/host_and_guest_smiles.csv) - a `.csv.` containing the host and guest smile strings (taken from [`SAMPL9_Datasheet_20210727.cdx`](experimental_data/WP6/SAMPL9_Datasheet_20210727.cdx)),[`SAMPL9_answersheet.docx`](experimental_data/WP6/SAMPL9_answersheet.cdx)- a MS Word document that contains the measured thermodynamic data, and [`SAMPL9_answersheet.csv`](experimental_data/WP6/SAMPL9_answersheet.csv)- a machine-readable format version of [`SAMPL9_answersheet.docx`](Sexperimental_data/WP6/SAMPL9_answersheet.cdx).
 
 ## SAMPL-related
 If you give a SAMPL-related talk or presentation or an analysis of its data, and are willing to share publicly, please consider posting on Zenodo and linking it to the [SAMPL Zenodo community](https://zenodo.org/communities/sampl?page=1&size=20).
