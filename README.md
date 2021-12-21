@@ -41,6 +41,7 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 - 2021-11-30: Add experimental data for WP6
 - 2021-12-07: Add pKa values for WP6 host in `experimental_data/WP6`
 - 2021-12-08: Correct TFP `.mol2` , `.sdf`, and `.pdb` structure files in `host_guest/bCD/guest_files` directory
+- 2021-12-21: Add SAMPL WP6 experimental reference at https://doi.org/10.1039/D1NJ05209H
 
 ## Challenge construction
 
@@ -54,6 +55,8 @@ The SAMPL9 phase of challenges includes a new host-guest challenge (WP6) that cl
 The WP6 challenge focuses on binding of WP6 to thirteen guests. Binding has been experimentally characterized, and the Isaacs group is preparing a paper for publication. Experimental results/data is now available as of 11/30/2021, [`here`](experimental_data/).
 
 **Deadline**: The deadline for WP6 submissions was November 15, 2021. [The submission format is available here](https://github.com/samplchallenges/SAMPL9/blob/main/host_guest/WP6/WP6_submissions.txt).
+
+**Experimental work** on [the WP6 challenge data has now been published](https://doi.org/10.1039/D1NJ05209H) in the *New Journal of Chemistry*.
 
 ### The bCD-Phenothiazine-based drugs challenge
 
