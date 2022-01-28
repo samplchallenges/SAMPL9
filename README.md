@@ -42,6 +42,7 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 - 2021-12-07: Add pKa values for WP6 host in `experimental_data/WP6`
 - 2021-12-08: Correct TFP `.mol2` , `.sdf`, and `.pdb` structure files in `host_guest/bCD/guest_files` directory
 - 2021-12-21: Add SAMPL WP6 experimental reference at https://doi.org/10.1039/D1NJ05209H
+- 2022-01-27: Add submission instructions for CD challenge
 
 ## Challenge construction
 
