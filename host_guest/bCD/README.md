@@ -8,7 +8,7 @@ If you want any announcement of updates/changes/fixes here, [sign up for our e-m
 
 ## A quick view of the host and guests
 
-The two hosts molecules are beta-cyclodextrin (bCD) and Hexakis-2,6-dimethyl-beta-cyclodextrin (H26DM-bCD). 
+The two hosts molecules are beta-cyclodextrin (bCD) and Hexakis-2,6-dimethyl-beta-cyclodextrin (H26DM-bCD).
 
 ![](images/hosts.png)
 
@@ -24,7 +24,7 @@ Background information on bCD and guests may be found in a number of publication
 
 ## Experimental conditions
 
-All ITC results have been collected in triplicate on an ITC200 in phosphate buffer (sodium counterion, no potassium), pH 7.4, 25mM at 25 C with a 20-point binding isotherm (1-1.5 uL injections). Enthalpograms will be provided for each complex. In each case the guest was in the cell and the host in the syringe. Concentration of solutions varied for each complex depdning on binding affinity. 
+All ITC results have been collected in triplicate on an ITC200 in phosphate buffer (sodium counterion, no potassium), pH 7.4, 25mM at 25 C with a 20-point binding isotherm (1-1.5 uL injections). Enthalpograms will be provided for each complex. In each case the guest was in the cell and the host in the syringe. Concentration of solutions varied for each complex depdning on binding affinity.
 
 ## Disclaimers
 
@@ -35,4 +35,4 @@ Note that we have typically selected, or attempted to select, reasonable protona
 - `guest_files`: Files relating to the bCD guests; provides structure files for the guests.
 - `images`: Images used in this repo
 - `source_files`: Raw source files as provided by the Gilson group
-- `bCD_submission.txt`: An example submission file for submitting to our system (please replace text and values with your own!). Filenames must begin with "bCD". See [host_guest_instructions.md](https://github.com/samplchallenges/SAMPL9/blob/master//host_guest_instructions.md) for submission instructions.  
+- `CD_submission.txt`: An example submission file for submitting to our system (please replace text and values with your own!). Filenames must begin with "CD". See [host_guest_instructions.md](https://github.com/samplchallenges/SAMPL9/blob/master//host_guest_instructions.md) for submission instructions.  
