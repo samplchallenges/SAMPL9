@@ -1,0 +1,13 @@
+cyclododecylammonium;G1
+4-(1,1-dimethylpiperidin-1-ium-4-yl)-1,1-dimethyl-piperidin-1-ium;G2
+norbornan-2-ylammonium;G3
+trimethylsilylmethylammonium;G4
+[3,5-dimethyl-7-(trimethylammonio)-1-adamantyl]-trimethyl-ammonium;G5
+cyclooctylammonium;G6
+cyclohexylammonium;G7
+3-[benzyl(dimethyl)ammonio]propane-1-sulfonate;G8
+(3-hydroxy-1-adamantyl)ammonium;G9
+trimethyl-[[4-[(trimethylammonio)methyl]phenyl]methyl]ammonium;G10
+2,2-dimethylpropylammonium;G11
+trimethyl-[6-(trimethylammonio)-2-adamantyl]ammonium;G12
+1-methyl-4-(1-methylpyridin-1-ium-4-yl)pyridin-1-ium;G13
