@@ -1,0 +1,78 @@
+# Results for CB8
+#
+# Host-guest,  free-energy [kcal/mol],  free-energy SEM [kcal/mol],  free energy model uncertainty [kcal/mol]
+Predictions:
+bCD-TDZ,  -1.7,  1.0,  1.0, , ,
+bCD-TFP,   0.0,  1.0,  1.0, , ,
+bCD-PMZ,   0.0,  1.0,  1.0, , ,  
+bCD-PMT,  -4.9,  1.0,  1.0, , , 
+bCD-CPZ,  -0.7,  1.0,  1.0, , ,
+HbCD-TDZ, -2.9,  1.0,  1.0, , ,  
+HbCD-TFP,  0.0,  1.0,  1.0, , , 
+HbCD-PMZ,  0.0,  1.0,  1.0, , , 
+HbCD-PMT, -5.0,  1.0,  1.0, , ,
+HbCD-CPZ, -1.9,  1.0,  1.0, , ,
+
+#
+#
+#
+Participant name: 
+Niels Hansen
+#
+#
+Participant organization:
+University of Stuttgart, Stuttgart, Germany
+#
+#
+Name:
+DD/GROMOS-53A6_glyc/SPC/MD
+#
+#
+Software:
+GROMACS 2016.4
+PLUMED 2.4.2
+#
+#
+Method:
+All simulations were conducted with the GROMACS 2016.4 program patched to the
+free-energy library PLUMED 2.4.2 for restraints definition. 
+The binding free energies were obtained by decoupling the cyclodextrin 
+host from its environment both in the complexed state and free in 
+solution using 28 or 24 intermediate lambda states with sampling 
+times of 20 ns per intermediate state. During decoupling 
+in the complexed state a set of 6 restraints was activated 
+to keep the complex together. The free-energy contribution 
+from these restraints was calculated analytically. 
+
+Production simulations were run in the NPT ensemble, with temperature control
+using a Nose-Hoover thermostat with relaxation time of 1.0 ps^-1
+and Parrinello-Rahman barostat with coupling constant tau_p = 2.0 ps. 
+A Verlet-buffered neighbor list which was updated every 10 steps, was applied
+for the treatment of short-range electrostatic and van der
+Waals interactions with potentials shifted to zero at 1.4 nm.
+The latter were modeled by the Lennard-Jones potential. Analytic
+dispersion corrections were applied for energy and
+pressure calculation. Long-range electrostatic interactions
+were treated with the smooth particle-mesh Ewald (PME)
+method using a real-space cut-off of 1.4 nm with
+a cubic splines interpolation scheme and a grid spacing of
+0.12 nm. The center of mass translation of the computational box was removed
+every 100 steps. All bond lengths were constrained using
+the LINCS algorithm.
+
+The free energy change from the alchemical perturbation
+was calculated using the MBAR method. Non-binding guest
+molecules were indicated with a binding free energy of 0.0 kcal/mol.
+
+A sound error estimate for the predicted free energies was 
+not conducted, as only one binding pose per complex was investigated.
+As a result, the estimated binding free energies may change substantially 
+if the system is reconsidered in future work. 
+#
+#
+Category:
+Alchemical
+#
+#
+Ranked:
+True
