@@ -27,63 +27,75 @@ R = u.MOLAR_GAS_CONSTANT_R
 RELATIVE_TITRANT_CONC_ERROR = 0.03
 
 WP6_GUESTS_SMILES_PATH = '/home/amezcum1/SAMPL9/host_guest/WP6/guest_files/WP6_guest_smiles.txt'
-WP6_GUESTS_NAMES_PATH = '/home/amezcum1/SAMPL9/host_guest/WP6/guest_files/WP6_guest_names.txt'
+#WP6_GUESTS_NAMES_PATH = '/home/amezcum1/SAMPL9/host_guest/WP6/guest_files/WP6_guest_names.txt'
 #CD_GUESTS_NAMES_PATH = '/home/amezcum1/SAMPL9/host_guest/bCD/guest_files/bCD_guest_names.txt'
-#CD_GUESTS_SMILES_PATH = '/home/amezcum1/SAMPL9/host_guest/bCD/guest_files/bCD_guest_smiles.txt'
-#CD_HOST_NAMES = ['bCD', 'HbCD']
+CD_GUESTS_SMILES_PATH = '/home/amezcum1/SAMPL9/host_guest/bCD/guest_files/guest_smiles.txt'
+CD_HOST_NAMES = ['bCD', 'HbCD']
 
-# Experimental results as provided by the Gibb, Isaacs and Gilson groups.
+# Experimental results as provided by the Isaacs and Gilson groups.
 # The error is relative. None means that the error is <1%.
 EXPERIMENTAL_DATA = OrderedDict([
 
-    #('OA-g1', OrderedDict([
-    #    ('DG', -20.8 * u.kilojoules_per_mole), ('dDG', 0.1 * u.kilojoules_per_mole),
-    #    ('DH', -23.2 * u.kilojoules_per_mole), ('dDH', 0.4 * u.kilojoules_per_mole),
-    #    ('TDS', -2.4 * u.kilojoules_per_mole), ('dTDS', 0.3 * u.kilojoule_per_mole),
-    #    ('n', 1)
-    #])),
-    #('OA-g2', OrderedDict([
-    #    ('DG', -28.9 * u.kilojoules_per_mole), ('dDG', 0.1 * u.kilojoules_per_mole),
-    #    ('DH', -40.2 * u.kilojoules_per_mole), ('dDH', 1.1 * u.kilojoules_per_mole),
-    #    ('TDS', -11.0 * u.kilojoules_per_mole), ('dTDS', 1.0 * u.kilojoule_per_mole),
-    #    ('n', 1)
-    #])),
-    #('OA-g3', OrderedDict([
-    #    ('DG', -33.9 * u.kilojoules_per_mole), ('dDG', 0.1 * u.kilojoules_per_mole),
-    #    ('DH', -50.2 * u.kilojoules_per_mole), ('dDH', 0.1 * u.kilojoules_per_mole),
-    #    ('TDS', -16.3 * u.kilojoules_per_mole), ('dTDS', 0.1 * u.kilojoule_per_mole),
-    #    ('n', 1)
-    #])),
-    #('OA-g4', OrderedDict([
-    #    ('DG', -28.3 * u.kilojoules_per_mole), ('dDG', 0.2 * u.kilojoules_per_mole),
-    #    ('DH', -28.0 * u.kilojoules_per_mole), ('dDH', 0.7 * u.kilojoules_per_mole),
-    #    ('TDS', 0.3 * u.kilojoules_per_mole), ('dTDS', 0.5 * u.kilojoule_per_mole),
-    #    ('n', 1)
-    #])),
-    #('OA-g5', OrderedDict([
-    #    ('DG', -19.8 * u.kilojoules_per_mole), ('dDG', 0.1 * u.kilojoules_per_mole),
-    #    ('DH', -31.3 * u.kilojoules_per_mole), ('dDH', 0.2 * u.kilojoules_per_mole),
-    #    ('TDS', -11.5 * u.kilojoules_per_mole), ('dTDS', 0.2 * u.kilojoule_per_mole),
-    #    ('n', 1)
-    #])),
-    #('OA-g6', OrderedDict([
-    #    ('DG', -20.8 * u.kilojoules_per_mole), ('dDG', 0.1 * u.kilojoules_per_mole),
-    #    ('DH', -30.5 * u.kilojoules_per_mole), ('dDH', 1.4 * u.kilojoules_per_mole),
-    #    ('TDS', -9.6 * u.kilojoules_per_mole), ('dTDS', 1.4 * u.kilojoule_per_mole),
-    #    ('n', 1)
-    #])),
-    #('OA-g7', OrderedDict([
-    #    ('DG', -25.4 * u.kilojoules_per_mole), ('dDG', 0.2 * u.kilojoules_per_mole),
-    #    ('DH', -24.0 * u.kilojoules_per_mole), ('dDH', 0.7 * u.kilojoules_per_mole),
-    #    ('TDS', 1.4 * u.kilojoules_per_mole), ('dTDS', 0.5 * u.kilojoule_per_mole),
-    #    ('n', 1)
-    #])),
-    #('OA-g8', OrderedDict([
-    #    ('DG', -34.5 * u.kilojoules_per_mole), ('dDG', 0.1 * u.kilojoules_per_mole),
-    #    ('DH', -32.7 * u.kilojoules_per_mole), ('dDH', 0.8 * u.kilojoules_per_mole),
-    #    ('TDS', 1.7 * u.kilojoules_per_mole), ('dTDS', 0.6 * u.kilojoule_per_mole),
-    #    ('n', 1)
-    #])),
+    ('bCD-PMZ', OrderedDict([
+        ('DG', -20.81 * u.kilojoules_per_mole), ('dDG', None * u.kilojoules_per_mole),
+        ('DH', -24.76 * u.kilojoules_per_mole), ('dDH', None * u.kilojoules_per_mole),
+        ('TDS', 3.95 * u.kilojoules_per_mole), ('dTDS', None * u.kilojoule_per_mole),
+        ('n', 1.09)
+    ])),
+    ('bCD-PMT', OrderedDict([
+        ('DG', -18.73 * u.kilojoules_per_mole), ('dDG', None * u.kilojoules_per_mole),
+        ('DH', -16.45 * u.kilojoules_per_mole), ('dDH', None * u.kilojoules_per_mole),
+        ('TDS', -2.28 * u.kilojoules_per_mole), ('dTDS', None * u.kilojoule_per_mole),
+        ('n', 0.94)
+    ])),
+    ('bCD-CPZ', OrderedDict([
+        ('DG', -22.66 * u.kilojoules_per_mole), ('dDG', None * u.kilojoules_per_mole),
+        ('DH', -26.62 * u.kilojoules_per_mole), ('dDH', None * u.kilojoules_per_mole),
+        ('TDS', 3.96 * u.kilojoules_per_mole), ('dTDS', None * u.kilojoule_per_mole),
+        ('n', 0.77)
+    ])),
+    ('bCD-TDZ', OrderedDict([
+        ('DG', -23.86 * u.kilojoules_per_mole), ('dDG', None * u.kilojoules_per_mole),
+        ('DH', -20.62 * u.kilojoules_per_mole), ('dDH', None * u.kilojoules_per_mole),
+        ('TDS', -3.24 * u.kilojoules_per_mole), ('dTDS', None * u.kilojoule_per_mole),
+        ('n', 1.14)
+    ])),
+    ('bCD-TFP', OrderedDict([
+        ('DG', -21.18 * u.kilojoules_per_mole), ('dDG', None * u.kilojoules_per_mole),
+        ('DH', -16.31 * u.kilojoules_per_mole), ('dDH', None * u.kilojoules_per_mole),
+        ('TDS', -4.87 * u.kilojoules_per_mole), ('dTDS', None * u.kilojoule_per_mole),
+        ('n', 1.18)
+    ])),
+    ('HbCD-PMZ', OrderedDict([
+        ('DG', -21.15 * u.kilojoules_per_mole), ('dDG', None * u.kilojoules_per_mole),
+        ('DH', -21.41 * u.kilojoules_per_mole), ('dDH', None * u.kilojoules_per_mole),
+        ('TDS', 0.26 * u.kilojoules_per_mole), ('dTDS', None * u.kilojoule_per_mole),
+        ('n', 0.99)
+    ])),
+    ('HbCD-PMT', OrderedDict([
+        ('DG', -22.42 * u.kilojoules_per_mole), ('dDG', None * u.kilojoules_per_mole),
+        ('DH', -16.96 * u.kilojoules_per_mole), ('dDH', None * u.kilojoules_per_mole),
+        ('TDS', -5.46 * u.kilojoules_per_mole), ('dTDS', None * u.kilojoule_per_mole),
+        ('n', 1.06)
+    ])),
+    ('HbCD-CPZ', OrderedDict([
+        ('DG', -22.60 * u.kilojoules_per_mole), ('dDG', None * u.kilojoules_per_mole),
+        ('DH', -24.95 * u.kilojoules_per_mole), ('dDH', None * u.kilojoules_per_mole),
+        ('TDS', 2.35 * u.kilojoules_per_mole), ('dTDS', None * u.kilojoule_per_mole),
+        ('n', 0.77)
+    ])),
+    ('HbCD-TDZ', OrderedDict([
+        ('DG', -27.03 * u.kilojoules_per_mole), ('dDG', None * u.kilojoules_per_mole),
+        ('DH', -38.34 * u.kilojoules_per_mole), ('dDH', None * u.kilojoules_per_mole),
+        ('TDS', 11.31 * u.kilojoules_per_mole), ('dTDS', None * u.kilojoule_per_mole),
+        ('n', 0.87)
+    ])),
+    ('HbCD-TFP', OrderedDict([
+        ('DG', -23.17 * u.kilojoules_per_mole), ('dDG', None * u.kilojoules_per_mole),
+        ('DH', -31.05 * u.kilojoules_per_mole), ('dDH', None * u.kilojoules_per_mole),
+        ('TDS', 7.88 * u.kilojoules_per_mole), ('dTDS', None * u.kilojoule_per_mole),
+        ('n', 0.56)
+    ])),
     ('WP6-G1', OrderedDict([
         ('Ka_1', 52900 / u.molar), ('dKa_1', 700 / u.molar),
         ('Ka_2', 51500 / u.molar), ('dKa_2', 1600 / u.molar),
@@ -359,32 +371,32 @@ if __name__ == '__main__':
     # Load names and SMILES of guests.
     molecule_names = {}
 
-    #smiles_by_host = {
-    #    'WP6': load_smiles(WP6_GUESTS_SMILES_PATH),
-    #    'bCD' : load_smiles(CD_GUESTS_SMILES_PATH),
-    #    'HbCD' : load_smiles(CD_GUESTS_SMILES_PATH),
-    #}
-
     smiles_by_host = {
-            'WP6': load_smiles(WP6_GUESTS_SMILES_PATH)
-                }
+        'WP6': load_smiles(WP6_GUESTS_SMILES_PATH),
+        'bCD' : load_smiles(CD_GUESTS_SMILES_PATH),
+        'HbCD' : load_smiles(CD_GUESTS_SMILES_PATH),
+    }
 
-    #names_by_host = {
-    #    'WP6': load_names(WP6_GUESTS_NAMES_PATH),
-    #    'bCD' : load_names(CD_GUESTS_NAMES_PATH),
-    #    'HbCD' : load_names(CD_GUESTS_NAMES_PATH),
-    #}
+    #smiles_by_host = {
+    #        'WP6': load_smiles(WP6_GUESTS_SMILES_PATH)
+    #            }
 
     names_by_host = {
-        'WP6': load_names(WP6_GUESTS_NAMES_PATH)
-        }
+        'WP6': load_names(WP6_GUESTS_NAMES_PATH),
+        'bCD' : load_names(CD_GUESTS_NAMES_PATH),
+        'HbCD' : load_names(CD_GUESTS_NAMES_PATH),
+    }
 
-    #for host in CD_HOST_NAMES:
-    #    smiles_by_host[host] = load_smiles(CD_GUESTS_SMILES_PATH)
-    #    names_by_host[host] = load_names(CD_GUESTS_NAMES_PATH)
+    #names_by_host = {
+    #    'WP6': load_names(WP6_GUESTS_NAMES_PATH)
+    #    }
 
-    #for host in ['WP6']+CD_HOST_NAMES:
-    for host in ['WP6']:
+    for host in CD_HOST_NAMES:
+        smiles_by_host[host] = load_smiles(CD_GUESTS_SMILES_PATH)
+        names_by_host[host] = load_names(CD_GUESTS_NAMES_PATH)
+
+    #for host in ['WP6']:
+    for host in ['WP6']+CD_HOST_NAMES:
         molecule_names[host] = {}
         for smi, gid in smiles_by_host[host]:
             for name, gid2 in names_by_host[host]:
