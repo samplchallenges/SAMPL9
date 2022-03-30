@@ -2,4 +2,4 @@ Thioridazine;TDZ
 Trifluoroperazine;TFP
 Promazine;PMZ
 Promethazine;PMT
-Chloropromazine;PMZ
+Chloropromazine;CPZ
