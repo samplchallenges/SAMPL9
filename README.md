@@ -20,12 +20,11 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 ## What's here
 - Host-guest challenge files for the WP6 and bCD challenges
 - [Host-guest participation instructions](https://github.com/samplchallenges/SAMPL9/blob/master//host_guest_instructions.md) with information on the submissions format, etc. Submission templates are available in the subdirectories for individual host-guest systems.
-- Experimental data for the WP6
+- Experimental data for the WP6 and bCD challenges is available [here](https://github.com/samplchallenges/SAMPL9/blob/main/experimental_data/experimental_measurements.csv)
 
 ## What's coming
 
-- Analysis of the WP6 challenge
-- Submission links for the bCD challenge
+- Analysis of the WP6/bCD challenge
 
 ## Changes and Data Set Versions
 
@@ -43,6 +42,10 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 - 2021-12-08: Correct TFP `.mol2` , `.sdf`, and `.pdb` structure files in `host_guest/bCD/guest_files` directory
 - 2021-12-21: Add SAMPL WP6 experimental reference at https://doi.org/10.1039/D1NJ05209H
 - 2022-01-27: Add submission instructions for CD challenge
+- 2022-04-06: Add CD submissions, updated usermap, and reference calculations
+- 2022-04-06: Add CD raw experimental measurements provided by Gilson group
+- 2022-04-06: Add generated machine readable experimental measurements for WP6 and CD
+ 
 
 ## Challenge construction
 
@@ -63,11 +66,13 @@ The WP6 challenge focuses on binding of WP6 to thirteen guests. Binding has been
 
 The bCD challenge focuses on binding of five phenothiazine antipsychotic drugs to two hosts in the cyclodextrin family. Experimental binding affinity measurements have been measured, and the Gilson group is preparing a publication for this work. Experimental results/data will be available after the challenge closes.  
 
-**Deadline**: The deadline for bCD submissions is Feb. 23, 2022. [The submission format is available here](https://github.com/samplchallenges/SAMPL9/blob/main/host_guest/bCD/bCD_submissions.txt).
+**Deadline**: The deadline for bCD submissions was Feb. 23, 2022. The experimental data is available here [bCD experimental data](https://github.com/samplchallenges/SAMPL9/blob/main/experimental_data/CD).
 
 ## MANIFEST
 - [`host_guest/`](host_guest/): Details on host-guest challenges.
 - [`experimental_data/WP6/`](experimental_data/WP6/): Experimental data for WP6 challenge provided by Isaacs on 11/30/2021. Contains: [`SAMPL9_Datasheet_20210727.cdx`](experimental_data/WP6/SAMPL9_Datasheet_20210727.cdx) - a ChemDraw file that contains smiles strings and a view of the host and guest molecules, [`host_and_guest_smiles.csv`](experimental_data/WP6/host_and_guest_smiles.csv) - a `.csv.` containing the host and guest smile strings (taken from [`SAMPL9_Datasheet_20210727.cdx`](experimental_data/WP6/SAMPL9_Datasheet_20210727.cdx)),[`SAMPL9_answersheet.docx`](experimental_data/WP6/SAMPL9_answersheet.cdx)- a MS Word document that contains the measured thermodynamic data, and [`SAMPL9_answersheet.csv`](experimental_data/WP6/SAMPL9_answersheet.csv)- a machine-readable format version of [`SAMPL9_answersheet.docx`](Sexperimental_data/WP6/SAMPL9_answersheet.cdx).
+- [`experimental_measureents.X`]: Summary table of experimental data in `.csv` and `.json` formats. Includes WP6 and bCD.
+- [`experimental_data/CD/`](experimental_data/CD/PhenothiazineCD-Binding-Summary-3-31-2022_BAedit.docx): Data provided by the Gilson group in `.docx` format. This document was updated/corrected on 3/31/2022 from earlier values. 
 
 ## SAMPL-related
 If you give a SAMPL-related talk or presentation or an analysis of its data, and are willing to share publicly, please consider posting on Zenodo and linking it to the [SAMPL Zenodo community](https://zenodo.org/communities/sampl?page=1&size=20).
