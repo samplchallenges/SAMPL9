@@ -54,7 +54,7 @@ Michigan State University, East Lansing, Michigan
 # The "Name:" keyword is required, as shown here.
 # 40 character limit.
 Name:
-MD/GAFF-RESP/TIP4PEW/MM-GBSA
+MD/GAFF-RESP/TIP4PEW/MM-GBSA_2
 #
 # All major software packages used and their versions
 # Following is sample text; please edit to your taste.
