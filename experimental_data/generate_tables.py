@@ -27,202 +27,224 @@ R = u.MOLAR_GAS_CONSTANT_R
 RELATIVE_TITRANT_CONC_ERROR = 0.03
 
 WP6_GUESTS_SMILES_PATH = '/home/amezcum1/SAMPL9/host_guest/WP6/guest_files/WP6_guest_smiles.txt'
-#WP6_GUESTS_NAMES_PATH = '/home/amezcum1/SAMPL9/host_guest/WP6/guest_files/WP6_guest_names.txt'
-#CD_GUESTS_NAMES_PATH = '/home/amezcum1/SAMPL9/host_guest/bCD/guest_files/bCD_guest_names.txt'
+WP6_GUESTS_NAMES_PATH = '/home/amezcum1/SAMPL9/host_guest/WP6/guest_files/WP6_guest_names.txt'
+CD_GUESTS_NAMES_PATH = '/home/amezcum1/SAMPL9/host_guest/bCD/guest_files/bCD_guest_names.txt'
 CD_GUESTS_SMILES_PATH = '/home/amezcum1/SAMPL9/host_guest/bCD/guest_files/guest_smiles.txt'
 CD_HOST_NAMES = ['bCD', 'HbCD']
 
 # Experimental results as provided by the Isaacs and Gilson groups.
 # The error is relative. None means that the error is <1%.
+
+# NOTE: CURRENTLY bCD HAS PLACE HOLDER UNCERTAINTY VALUES MEANWHILE WE RECEIVE VALUES.
 EXPERIMENTAL_DATA = OrderedDict([
 
     ('bCD-PMZ', OrderedDict([
-        ('DG', -20.81 * u.kilojoules_per_mole), ('dDG', None * u.kilojoules_per_mole),
-        ('DH', -24.76 * u.kilojoules_per_mole), ('dDH', None * u.kilojoules_per_mole),
-        ('TDS', 3.95 * u.kilojoules_per_mole), ('dTDS', None * u.kilojoule_per_mole),
+        #('Ka', 4440 / u.molar), ('dKa', 156 / u.molar),
+        #('Kd', 0.000225 * u.molar), ('dKd', 0.008 * u.molar),
+        ('DG', -4.97 * u.kilocalories_per_mole), ('dDG', 0.02 * u.kilocalories_per_mole),
+        ('DH', -5.91 * u.kilocalories_per_mole), ('dDH', 0.13 * u.kilocalories_per_mole),
+        ('TDS', None), ('dTDS', None),
         ('n', 1.09)
     ])),
     ('bCD-PMT', OrderedDict([
-        ('DG', -18.73 * u.kilojoules_per_mole), ('dDG', None * u.kilojoules_per_mole),
-        ('DH', -16.45 * u.kilojoules_per_mole), ('dDH', None * u.kilojoules_per_mole),
-        ('TDS', -2.28 * u.kilojoules_per_mole), ('dTDS', None * u.kilojoule_per_mole),
+        #('Ka', 1903 / u.molar), ('dKa', 156 / u.molar),
+        #('Kd', 0.000525 * u.molar), ('dKd', 0.043 * u.molar),
+        ('DG', -4.47 * u.kilocalories_per_mole), ('dDG', 0.05 * u.kilocalories_per_mole),
+        ('DH', -3.93 * u.kilocalories_per_mole), ('dDH', 0.33 * u.kilocalories_per_mole),
+        ('TDS', None), ('dTDS', None),
         ('n', 0.94)
     ])),
     ('bCD-CPZ', OrderedDict([
-        ('DG', -22.66 * u.kilojoules_per_mole), ('dDG', None * u.kilojoules_per_mole),
-        ('DH', -26.62 * u.kilojoules_per_mole), ('dDH', None * u.kilojoules_per_mole),
-        ('TDS', 3.96 * u.kilojoules_per_mole), ('dTDS', None * u.kilojoule_per_mole),
+        #('Ka', 9387 / u.molar), ('dKa', 330 / u.molar),
+        #('Kd', 0.000107 * u.molar), ('dKd', 0.004 * u.molar),
+        ('DG', -5.41 * u.kilocalories_per_mole), ('dDG', 0.02 * u.kilocalories_per_mole),
+        ('DH', -6.36 * u.kilocalories_per_mole), ('dDH', 0.20 * u.kilocalories_per_mole),
+        ('TDS', None ), ('dTDS', None),
         ('n', 0.77)
     ])),
     ('bCD-TDZ', OrderedDict([
-        ('DG', -23.86 * u.kilojoules_per_mole), ('dDG', None * u.kilojoules_per_mole),
-        ('DH', -20.62 * u.kilojoules_per_mole), ('dDH', None * u.kilojoules_per_mole),
-        ('TDS', -3.24 * u.kilojoules_per_mole), ('dTDS', None * u.kilojoule_per_mole),
+        #('Ka', 15066 / u.molar), ('dKa', 723 / u.molar),
+        #('Kd', 0.000066 * u.molar), ('dKd', 0.003 * u.molar), 
+        ('DG', -5.70 * u.kilocalories_per_mole), ('dDG', 0.03 * u.kilocalories_per_mole),
+        ('DH', -4.93 * u.kilocalories_per_mole), ('dDH', 0.19 * u.kilocalories_per_mole),
+        ('TDS', None), ('dTDS', None),
         ('n', 1.14)
     ])),
     ('bCD-TFP', OrderedDict([
-        ('DG', -21.18 * u.kilojoules_per_mole), ('dDG', None * u.kilojoules_per_mole),
-        ('DH', -16.31 * u.kilojoules_per_mole), ('dDH', None * u.kilojoules_per_mole),
-        ('TDS', -4.87 * u.kilojoules_per_mole), ('dTDS', None * u.kilojoule_per_mole),
+        #('Ka', 5103 / u.molar), ('dKa', 497 / u.molar),
+        #('Kd', 0.000196 * u.molar), ('dKd', 0.019 * u.molar),
+        ('DG', -5.06 * u.kilocalories_per_mole), ('dDG', 0.06 * u.kilocalories_per_mole),
+        ('DH', -3.90 * u.kilocalories_per_mole), ('dDH', 0.40 * u.kilocalories_per_mole),
+        ('TDS', None), ('dTDS', None),
         ('n', 1.18)
     ])),
     ('HbCD-PMZ', OrderedDict([
-        ('DG', -21.15 * u.kilojoules_per_mole), ('dDG', None * u.kilojoules_per_mole),
-        ('DH', -21.41 * u.kilojoules_per_mole), ('dDH', None * u.kilojoules_per_mole),
-        ('TDS', 0.26 * u.kilojoules_per_mole), ('dTDS', None * u.kilojoule_per_mole),
+        #('Ka', 5083 / u.molar), ('dKa', 159 / u.molar),
+        #('Kd', 0.000197 * u.molar), ('dKd', 0.006 * u.molar), 
+        ('DG', -5.05 * u.kilocalories_per_mole), ('dDG', 0.02 * u.kilocalories_per_mole),
+        ('DH', -5.11 * u.kilocalories_per_mole), ('dDH', 0.05 * u.kilocalories_per_mole),
+        ('TDS', None), ('dTDS', None),
         ('n', 0.99)
     ])),
     ('HbCD-PMT', OrderedDict([
-        ('DG', -22.42 * u.kilojoules_per_mole), ('dDG', None * u.kilojoules_per_mole),
-        ('DH', -16.96 * u.kilojoules_per_mole), ('dDH', None * u.kilojoules_per_mole),
-        ('TDS', -5.46 * u.kilojoules_per_mole), ('dTDS', None * u.kilojoule_per_mole),
+        #('Ka', 8416 / u.molar), ('dKa', 150 / u.molar),
+        #('Kd', 0.000119 * u.molar), ('dKd', 0.002 * u.molar),
+        ('DG', -5.35 * u.kilocalories_per_mole), ('dDG', 0.01 * u.kilocalories_per_mole),
+        ('DH', -4.05 * u.kilocalories_per_mole), ('dDH', 0.06 * u.kilocalories_per_mole),
+        ('TDS', None), ('dTDS', None),
         ('n', 1.06)
     ])),
     ('HbCD-CPZ', OrderedDict([
-        ('DG', -22.60 * u.kilojoules_per_mole), ('dDG', None * u.kilojoules_per_mole),
-        ('DH', -24.95 * u.kilojoules_per_mole), ('dDH', None * u.kilojoules_per_mole),
-        ('TDS', 2.35 * u.kilojoules_per_mole), ('dTDS', None * u.kilojoule_per_mole),
+        #('Ka', 9113 / u.molar), ('dKa', 471 / u.molar),
+        #('Kd', 0.000110 * u.molar), ('dKd', 0.006 * u.molar),
+        ('DG', -5.40 * u.kilocalories_per_mole), ('dDG', 0.03 * u.kilocalories_per_mole),
+        ('DH', -5.96 * u.kilocalories_per_mole), ('dDH', 0.16 * u.kilocalories_per_mole),
+        ('TDS', None), ('dTDS', None),
         ('n', 0.77)
     ])),
     ('HbCD-TDZ', OrderedDict([
-        ('DG', -27.03 * u.kilojoules_per_mole), ('dDG', None * u.kilojoules_per_mole),
-        ('DH', -38.34 * u.kilojoules_per_mole), ('dDH', None * u.kilojoules_per_mole),
-        ('TDS', 11.31 * u.kilojoules_per_mole), ('dTDS', None * u.kilojoule_per_mole),
+        #('Ka', 54866 / u.molar), ('dKa', 2871 / u.molar),
+        #('Kd', 0.000018 * u.molar), ('dKd', 0.001 * u.molar),
+        ('DG', -6.46 * u.kilocalories_per_mole), ('dDG', 0.03 * u.kilocalories_per_mole),
+        ('DH', -9.28 * u.kilocalories_per_mole), ('dDH', 0.07 * u.kilocalories_per_mole),
+        ('TDS', None), ('dTDS', None),
         ('n', 0.87)
     ])),
     ('HbCD-TFP', OrderedDict([
-        ('DG', -23.17 * u.kilojoules_per_mole), ('dDG', None * u.kilojoules_per_mole),
-        ('DH', -31.05 * u.kilojoules_per_mole), ('dDH', None * u.kilojoules_per_mole),
-        ('TDS', 7.88 * u.kilojoules_per_mole), ('dTDS', None * u.kilojoule_per_mole),
+        #('Ka', 11500 / u.molar), ('dKa', 707 / u.molar),
+        #('Kd', 0.000087 * u.molar), ('dKd', 0.005 * u.molar),
+        ('DG', -5.53 * u.kilocalories_per_mole), ('dDG', 0.03 * u.kilocalories_per_mole),
+        ('DH', -7.42 * u.kilocalories_per_mole), ('dDH', 0.87 * u.kilocalories_per_mole),
+        ('TDS', None), ('dTDS', None),
         ('n', 0.56)
     ])),
     ('WP6-G1', OrderedDict([
-        ('Ka_1', 52900 / u.molar), ('dKa_1', 700 / u.molar),
-        ('Ka_2', 51500 / u.molar), ('dKa_2', 1600 / u.molar),
-        ('DH_1', -8.08 * u.kilocalories_per_mole), ('dDH_1', 0.02 * u.kilocalories_per_mole),
-        ('DH_2', -7.87 * u.kilocalories_per_mole), ('dDH_2', 0.03 * u.kilocalories_per_mole),
-        #('TDS_1', 8.09 * u.kilojoules_per_mole), ('dTDS_1', 0.45 * u.kilojoules_per_mole),
-        #('TDS_2', 8.56 * u.kilojoules_per_mole), ('dTDS_2', 0.47 * u.kilojoules_per_mole),
+        #('Ka_1', 5.29*(10**4) / u.molar), ('dKa_1', 0.07*(10**4) / u.molar),
+        #('Ka_2', 5.15*(10**4) / u.molar), ('dKa_2', 0.16*(10**4) / u.molar),
+        ('Ka', 5.22*(10**4) / u.molar), ('dKa', 0.12*(10**4) / u.molar),
+        ('DH', -7.98 * u.kilocalories_per_mole), ('dDH', 0.03 * u.kilocalories_per_mole),
+        #('DH_1', -8.08 * u.kilocalories_per_mole), ('dDH_1', 0.02 * u.kilocalories_per_mole),
+        #('DH_2', -7.87 * u.kilocalories_per_mole), ('dDH_2', 0.03 * u.kilocalories_per_mole),
         ('TDS', None), ('dTDS', None),
         ('n', 1.00)
     ])),
     ('WP6-G2', OrderedDict([
-        ('Ka_1', 45900000 / u.molar), ('dKa_1', 3500000 / u.molar),
-        ('Ka_2', 44800000 / u.molar), ('dKa_2', 2100000 / u.molar),
-        ('DH_1', -6.10 * u.kilocalories_per_mole), ('dDH_1', 0.02 * u.kilocalories_per_mole),
-        ('DH_2', -6.15 * u.kilocalories_per_mole), ('dDH_2', 0.02 * u.kilocalories_per_mole),
-        #('TDS_1', -17.04 * u.kilojoules_per_mole), ('dTDS_1', 1.75 * u.kilojoules_per_mole),
-        #('TDS_2', -17.84 * u.kilojoules_per_mole), ('dTDS_2', 1.76 * u.kilojoules_per_mole),
+        #('Ka_1', 4.59*(10**7) / u.molar), ('dKa_1', 0.35*(10**7) / u.molar),
+        #('Ka_2', 4.48*(10**7) / u.molar), ('dKa_2', 0.21*(10**7) / u.molar),
+        ('Ka', 4.54*(10**7) / u.molar), ('dKa', 0.28*(10**7) / u.molar),
+        ('DH', -6.13 * u.kilocalories_per_mole), ('dDH', 0.02 * u.kilocalories_per_mole),
+        #('DH_1', -6.10 * u.kilocalories_per_mole), ('dDH_1', 0.02 * u.kilocalories_per_mole),
+        #('DH_2', -6.15 * u.kilocalories_per_mole), ('dDH_2', 0.02 * u.kilocalories_per_mole),
         ('TDS', None), ('dTDS', None),
         ('n', 1.00)
     ])),
     ('WP6-G3', OrderedDict([
-        ('Ka_1', 645000 / u.molar), ('dKa_1', 18000 / u.molar),
-        ('Ka_2', 625000 / u.molar), ('dKa_2', 30000 / u.molar),
-        ('DH_1', -4.75 * u.kilocalories_per_mole), ('dDH_1', 0.02 * u.kilocalories_per_mole),
-        ('DH_2', -4.68 * u.kilocalories_per_mole), ('dDH_2', 0.02 * u.kilocalories_per_mole),
-        #('TDS_1', 4.54 * u.kilojoules_per_mole), ('dTDS_1', 1.40 * u.kilojoules_per_mole),
-        #('TDS_2', 8.23 * u.kilojoules_per_mole), ('dTDS_2', 0.53 * u.kilojoules_per_mole),
+        #('Ka_1', 6.45*(10**5) / u.molar), ('dKa_1', 0.18*(10**5) / u.molar),
+        #('Ka_2', 6.25*(10**5) / u.molar), ('dKa_2', 0.30*(10**5) / u.molar),
+        ('Ka', 6.35*(10**5) / u.molar), ('dKa', 0.24*(10**5) / u.molar),
+        ('DH', -4.72 * u.kilocalories_per_mole), ('dDH', 0.02 * u.kilocalories_per_mole),
+        #('DH_1', -4.75 * u.kilocalories_per_mole), ('dDH_1', 0.02 * u.kilocalories_per_mole),
+        #('DH_2', -4.68 * u.kilocalories_per_mole), ('dDH_2', 0.02 * u.kilocalories_per_mole),
         ('TDS', None), ('dTDS', None),
         ('n', 1.00)
     ])),
     ('WP6-G4', OrderedDict([
-        ('Ka_1', 50800 / u.molar), ('dKa_1', 1100 / u.molar),
-        ('Ka_2', 49700 / u.molar), ('dKa_2', 1600 / u.molar),
-        ('DH_1', -4.15 * u.kilocalories_per_mole), ('dDH_1', 0.02 * u.kilocalories_per_mole),
-        ('DH_2', -3.98 * u.kilocalories_per_mole), ('dDH_2', 0.02 * u.kilocalories_per_mole),
-        #('TDS_1', -10.78 * u.kilojoules_per_mole), ('dTDS_1', 1.19 * u.kilojoules_per_mole),
-        #('TDS_2', -13.56 * u.kilojoules_per_mole), ('dTDS_2', 1.47 * u.kilojoules_per_mole),
+        #('Ka_1', 5.08*(10**5) / u.molar), ('dKa_1', 0.011*(10**5) / u.molar),
+        #('Ka_2', 4.97*(10**5) / u.molar), ('dKa_2', 0.016*(10**5) / u.molar),
+        ('Ka', 5.03*(10**5) / u.molar), ('dKa', 0.014*(10**5) / u.molar),
+        ('DH', -4.07 * u.kilocalories_per_mole), ('dDH', 0.02 * u.kilocalories_per_mole),
+        #('DH_1', -4.15 * u.kilocalories_per_mole), ('dDH_1', 0.02 * u.kilocalories_per_mole),
+        #('DH_2', -3.98 * u.kilocalories_per_mole), ('dDH_2', 0.02 * u.kilocalories_per_mole),
         ('TDS', None), ('dTDS', None),
         ('n', 1.00)
     ])),
     ('WP6-G5', OrderedDict([
-        ('Ka_1', 9010 / u.molar), ('dKa_1', 230 / u.molar),
-        ('Ka_2', 9310 / u.molar), ('dKa_2', 220 / u.molar),
-        ('DH_1', -3.95 * u.kilocalories_per_mole), ('dDH_1', 0.03 * u.kilocalories_per_mole),
-        ('DH_2', -4.15 * u.kilocalories_per_mole), ('dDH_2', 0.03 * u.kilocalories_per_mole),
-        #('TDS_1', 2.98 * u.kilojoules_per_mole), ('dTDS_1', 1.80 * u.kilojoules_per_mole),
-        #('TDS_2', 0.81 * u.kilojoules_per_mole), ('dTDS_2', 2.66 * u.kilojoules_per_mole),
+        #('Ka_1', 9.01*(10**3) / u.molar), ('dKa_1', 0.23*(10**3) / u.molar),
+        #('Ka_2', 9.31*(10**3) / u.molar), ('dKa_2', 0.22*(10**3) / u.molar),
+        ('Ka', 9.16*(10**3) / u.molar), ('dKa', 0.23*(10**3) / u.molar),
+        ('DH', -4.05 * u.kilocalories_per_mole), ('dDH', 0.03 * u.kilocalories_per_mole),
+        #('DH_1', -3.95 * u.kilocalories_per_mole), ('dDH_1', 0.03 * u.kilocalories_per_mole),
+        #('DH_2', -4.15 * u.kilocalories_per_mole), ('dDH_2', 0.03 * u.kilocalories_per_mole),
         ('TDS', None), ('dTDS', None),
         ('n', 1.00)
     ])),
     ('WP6-G6', OrderedDict([
-        ('Ka_1', 709000 / u.molar), ('dKa_1', 44000 / u.molar),
-        ('Ka_2', 726000 / u.molar), ('dKa_2', 44000 / u.molar),
-        ('DH_1', -6.90 * u.kilocalories_per_mole), ('dDH_1', 0.07 * u.kilocalories_per_mole),
-        ('DH_2', -7.10 * u.kilocalories_per_mole), ('dDH_2', 0.04 * u.kilocalories_per_mole),
-        #('TDS_1', -21.82 * u.kilojoules_per_mole), ('dTDS_1', 1.73 * u.kilojoules_per_mole),
-        #('TDS_2', -21.21 * u.kilojoules_per_mole), ('dTDS_2', 5.73 * u.kilojoules_per_mole),
+        #('Ka_1', 7.09*(10**5) / u.molar), ('dKa_1', 0.44*(10**5) / u.molar),
+        #('Ka_2', 7.26*(10**5) / u.molar), ('dKa_2', 0.44*(10**5) / u.molar),
+        ('Ka', 7.18*(10**5) / u.molar), ('dKa', 0.44*(10**5) / u.molar), 
+        ('DH', -7.00 * u.kilocalories_per_mole), ('dDH', 0.06 * u.kilocalories_per_mole),
+        #('DH_1', -6.90 * u.kilocalories_per_mole), ('dDH_1', 0.07 * u.kilocalories_per_mole),
+        #('DH_2', -7.10 * u.kilocalories_per_mole), ('dDH_2', 0.04 * u.kilocalories_per_mole),
         ('TDS', None), ('dTDS', None),
         ('n', 1.00)
     ])),
     ('WP6-G7', OrderedDict([
-        ('Ka_1', 131000 / u.molar), ('dKa_1', 5000 / u.molar),
-        ('Ka_2', 129000 / u.molar), ('dKa_2', 5000 / u.molar),
-        ('DH_1', -3.18 * u.kilocalories_per_mole), ('dDH_1', 0.02 * u.kilocalories_per_mole),
-        ('DH_2', -3.17 * u.kilocalories_per_mole), ('dDH_2', 0.02 * u.kilocalories_per_mole),
-        #('TDS_1', 4.05 * u.kilojoules_per_mole), ('dTDS_1', 0.73 * u.kilojoules_per_mole),
-        #('TDS_2', 5.51 * u.kilojoules_per_mole), ('dTDS_2', 0.53 * u.kilojoules_per_mole),
+        #('Ka_1', 1.31*(10**5) / u.molar), ('dKa_1', 0.05*(10**5) / u.molar),
+        #('Ka_2', 1.29*(10**5) / u.molar), ('dKa_2', 0.05*(10**5) / u.molar),
+        ('Ka', 1.30*(10**5) / u.molar), ('dKa', 0.05*(10**5) / u.molar), 
+        ('DH', -3.18 * u.kilocalories_per_mole), ('dDH', 0.02 * u.kilocalories_per_mole), 
+        #('DH_1', -3.18 * u.kilocalories_per_mole), ('dDH_1', 0.02 * u.kilocalories_per_mole),
+        #('DH_2', -3.17 * u.kilocalories_per_mole), ('dDH_2', 0.02 * u.kilocalories_per_mole),
         ('TDS', None), ('dTDS', None),
         ('n', 1.00)
     ])),
     ('WP6-G8', OrderedDict([
-        ('Ka_1', 23500 / u.molar), ('dKa_1', 400 / u.molar),
-        ('Ka_2', 23000 / u.molar), ('dKa_2', 600 / u.molar),
-        ('DH_1', -9.55 * u.kilocalories_per_mole), ('dDH_1', 0.05 * u.kilocalories_per_mole),
-        ('DH_2', -9.51 * u.kilocalories_per_mole), ('dDH_2', 0.05 * u.kilocalories_per_mole),
-        #('TDS_1', -33.19 * u.kilojoules_per_mole), ('dTDS_1', 3.40 * u.kilojoules_per_mole),
-        #('TDS_2', -34.21 * u.kilojoules_per_mole), ('dTDS_2', 2.75 * u.kilojoules_per_mole),
+        #('Ka_1', 2.35*(10**4) / u.molar), ('dKa_1', 0.04*(10**4) / u.molar),
+        #('Ka_2', 2.30*(10**4) / u.molar), ('dKa_2', 0.06*(10**4) / u.molar),
+        ('Ka', 2.33*(10**4) / u.molar), ('dKa', 0.05*(10**4) / u.molar),
+        ('DH', -9.53 * u.kilocalories_per_mole), ('dDH', 0.05 * u.kilocalories_per_mole),
+        #('DH_1', -9.55 * u.kilocalories_per_mole), ('dDH_1', 0.05 * u.kilocalories_per_mole),
+        #('DH_2', -9.51 * u.kilocalories_per_mole), ('dDH_2', 0.05 * u.kilocalories_per_mole),
         ('TDS', None), ('dTDS', None),
         ('n', 1.00)
     ])),
     ('WP6-G9', OrderedDict([
-            ('Ka_1', 37500 / u.molar), ('dKa_1', 3100 / u.molar),
-            ('Ka_2', 36800 / u.molar), ('dKa_2', 3700 / u.molar),
-            ('DH_1', -5.31 * u.kilocalories_per_mole), ('dDH_1', 0.08 * u.kilocalories_per_mole),
-            ('DH_2', -5.21 * u.kilocalories_per_mole), ('dDH_2', 0.08 * u.kilocalories_per_mole),
-            #('TDS_1', 3.76 * u.kilojoules_per_mole), ('dTDS_1', 1.68 * u.kilojoules_per_mole),
-            #('TDS_2', 0.33 * u.kilojoules_per_mole), ('dTDS_2', 4.18 * u.kilojoules_per_mole),
-            ('TDS', None), ('dTDS', None),
-            ('n', 1.00)
+        #('Ka_1', 3.75*(10**4) / u.molar), ('dKa_1', 0.31*(10**4) / u.molar),
+        #('Ka_2', 3.68*(10**4) / u.molar), ('dKa_2', 0.37*(10**4) / u.molar),
+        ('Ka', 3.72*(10**4) / u.molar), ('dKa', 0.34*(10**4) / u.molar), 
+        ('DH', -5.26 * u.kilocalories_per_mole), ('dDH', 0.08 * u.kilocalories_per_mole),
+        #('DH_1', -5.31 * u.kilocalories_per_mole), ('dDH_1', 0.08 * u.kilocalories_per_mole),
+        #('DH_2', -5.21 * u.kilocalories_per_mole), ('dDH_2', 0.08 * u.kilocalories_per_mole),
+        ('TDS', None), ('dTDS', None),
+        ('n', 1.00)
         ])),
     ('WP6-G10', OrderedDict([
-        ('Ka_1', 16100000 / u.molar), ('dKa_1', 800000 / u.molar),
-        ('Ka_2', 16000000 / u.molar), ('dKa_2', 1200000 / u.molar),
-        ('DH_1', -6.23 * u.kilocalories_per_mole), ('dDH_1', 0.02 * u.kilocalories_per_mole),
-        ('DH_2', -6.11 * u.kilocalories_per_mole), ('dDH_2', 0.02 * u.kilocalories_per_mole),
-        #('TDS_1', -13.96 * u.kilojoules_per_mole), ('dTDS_1', 0.48 * u.kilojoules_per_mole),
-        #('TDS_2', -13.14 * u.kilojoules_per_mole), ('dTDS_2', 1.33 * u.kilojoules_per_mole),
+        #('Ka_1', 1.61*(10**7) / u.molar), ('dKa_1', 0.08*(10**7) / u.molar),
+        #('Ka_2', 1.60*(10**7) / u.molar), ('dKa_2', 0.12*(10**7) / u.molar),
+        ('Ka', 1.61*(10**7) / u.molar), ('dKa', 0.10*(10**7) / u.molar),
+        ('DH', -6.17 * u.kilocalories_per_mole), ('dDH', 0.02 * u.kilocalories_per_mole),
+        #('DH_1', -6.23 * u.kilocalories_per_mole), ('dDH_1', 0.02 * u.kilocalories_per_mole),
+        #('DH_2', -6.11 * u.kilocalories_per_mole), ('dDH_2', 0.02 * u.kilocalories_per_mole),
         ('TDS', None), ('dTDS', None),
         ('n', 1.00)
     ])),
     ('WP6-G11', OrderedDict([
-        ('Ka_1', 33700 / u.molar), ('dKa_1', 500 / u.molar),
-        ('Ka_2', 33100 / u.molar), ('dKa_2', 500 / u.molar),
-        ('DH_1', -5.61 * u.kilocalories_per_mole), ('dDH_1', 0.02 * u.kilocalories_per_mole),
-        ('DH_2', -5.45 * u.kilocalories_per_mole), ('dDH_2', 0.03 * u.kilocalories_per_mole),
-        #('TDS_1', 6.28 * u.kilojoules_per_mole), ('dTDS_1', 0.84 * u.kilojoules_per_mole),
-        #('TDS_2', 8.23 * u.kilojoules_per_mole), ('dTDS_2', 0.54 * u.kilojoules_per_mole),
+        #('Ka_1', 3.37*(10**4) / u.molar), ('dKa_1', 0.05*(10**4) / u.molar),
+        #('Ka_2', 3.31*(10**4) / u.molar), ('dKa_2', 0.05*(10**4) / u.molar),
+        ('Ka', 3.34*(10**4) / u.molar), ('dKa', 0.05*(10**4) / u.molar), 
+        ('DH', -5.53 * u.kilocalories_per_mole), ('dDH', 0.03 * u.kilocalories_per_mole),
+        #('DH_1', -5.61 * u.kilocalories_per_mole), ('dDH_1', 0.02 * u.kilocalories_per_mole),
+        #('DH_2', -5.45 * u.kilocalories_per_mole), ('dDH_2', 0.03 * u.kilocalories_per_mole),
         ('TDS', None), ('dTDS', None),
         ('n', 1.00)
     ])),
     ('WP6-G12', OrderedDict([
-        ('Ka_1', 94300000 / u.molar), ('dKa_1', 3100000 / u.molar),
-        ('Ka_2', 84000000 / u.molar), ('dKa_2', 5100000 / u.molar),
-        ('DH_1', -7.45 * u.kilocalories_per_mole), ('dDH_1', 0.02 * u.kilocalories_per_mole),
-        ('DH_2', -7.41 * u.kilocalories_per_mole), ('dDH_2', 0.02 * u.kilocalories_per_mole),
-        #('TDS_1', -17.85 * u.kilojoules_per_mole), ('dTDS_1', 1.53 * u.kilojoules_per_mole),
-        #('TDS_2', -19.59 * u.kilojoules_per_mole), ('dTDS_2', 1.56 * u.kilojoules_per_mole),
+        #('Ka_1', 9.43*(10**7) / u.molar), ('dKa_1', 0.31*(10**7) / u.molar),
+        #('Ka_2', 8.40*(10**7) / u.molar), ('dKa_2', 0.51*(10**7) / u.molar),
+        ('Ka', 8.92*(10**7) / u.molar), ('dKa', 0.41*(10**7) / u.molar),
+        ('DH', -7.43 * u.kilocalories_per_mole), ('dDH', 0.02 * u.kilocalories_per_mole),
+        #('DH_1', -7.45 * u.kilocalories_per_mole), ('dDH_1', 0.02 * u.kilocalories_per_mole),
+        #('DH_2', -7.41 * u.kilocalories_per_mole), ('dDH_2', 0.02 * u.kilocalories_per_mole),
         ('TDS', None), ('dTDS', None),
         ('n', 1.00)
     ])),
     ('WP6-G13', OrderedDict([
-        ('Ka_1', 1630000 / u.molar), ('dKa_1', 110000 / u.molar),
-        ('Ka_2', 1610000 / u.molar), ('dKa_2', 110000 / u.molar),
-        ('DH_1', -4.98 * u.kilocalories_per_mole), ('dDH_1', 0.04 * u.kilocalories_per_mole),
-        ('DH_2', -4.96 * u.kilocalories_per_mole), ('dDH_2', 0.03 * u.kilocalories_per_mole),
-        #('TDS_1', 0.70 * u.kilojoules_per_mole), ('dTDS_1', 0.74 * u.kilojoules_per_mole),
-        #('TDS_2', 0.63 * u.kilojoules_per_mole), ('dTDS_2', 0.72 * u.kilojoules_per_mole),
+        #('Ka_1', 1.63*(10**6) / u.molar), ('dKa_1', 0.11*(10**6) / u.molar),
+        #('Ka_2', 1.61*(10**6) / u.molar), ('dKa_2', 0.11*(10**6) / u.molar),
+        ('Ka', 1.62*(10**6) / u.molar), ('dKa', 0.11*(10**6) / u.molar),
+        ('DH', -4.97 * u.kilocalories_per_mole), ('dDH', 0.04 * u.kilocalories_per_mole),
+        #('DH_1', -4.98 * u.kilocalories_per_mole), ('dDH_1', 0.04 * u.kilocalories_per_mole),
+        #('DH_2', -4.96 * u.kilocalories_per_mole), ('dDH_2', 0.03 * u.kilocalories_per_mole),
         ('TDS', None), ('dTDS', None),
         ('n', 1.00)
     ])),
@@ -373,8 +395,8 @@ if __name__ == '__main__':
 
     smiles_by_host = {
         'WP6': load_smiles(WP6_GUESTS_SMILES_PATH),
-        'bCD' : load_smiles(CD_GUESTS_SMILES_PATH),
-        'HbCD' : load_smiles(CD_GUESTS_SMILES_PATH),
+        'bCD': load_smiles(CD_GUESTS_SMILES_PATH),
+        'HbCD': load_smiles(CD_GUESTS_SMILES_PATH),
     }
 
     #smiles_by_host = {
@@ -383,20 +405,19 @@ if __name__ == '__main__':
 
     names_by_host = {
         'WP6': load_names(WP6_GUESTS_NAMES_PATH),
-        'bCD' : load_names(CD_GUESTS_NAMES_PATH),
-        'HbCD' : load_names(CD_GUESTS_NAMES_PATH),
+        'bCD': load_names(CD_GUESTS_NAMES_PATH),
+        'HbCD': load_names(CD_GUESTS_NAMES_PATH),
     }
 
     #names_by_host = {
     #    'WP6': load_names(WP6_GUESTS_NAMES_PATH)
     #    }
 
-    for host in CD_HOST_NAMES:
-        smiles_by_host[host] = load_smiles(CD_GUESTS_SMILES_PATH)
-        names_by_host[host] = load_names(CD_GUESTS_NAMES_PATH)
+    #for host in CD_HOST_NAMES:
+    #    smiles_by_host[host] = load_smiles(CD_GUESTS_SMILES_PATH)
+    #    names_by_host[host] = load_names(CD_GUESTS_NAMES_PATH)
 
-    #for host in ['WP6']:
-    for host in ['WP6']+CD_HOST_NAMES:
+    for host in ['WP6', 'bCD', 'HbCD']:
         molecule_names[host] = {}
         for smi, gid in smiles_by_host[host]:
             for name, gid2 in names_by_host[host]:
@@ -468,7 +489,7 @@ if __name__ == '__main__':
         dTDS = None
         DG = None
         dDG = None
-        if not 'OA' in system_name:
+        if not 'CD' in system_name:
             for k in ['Ka', 'DH']:
                 quantity = system_data[k]
                 # Compute relative uncertainty
@@ -504,15 +525,15 @@ if __name__ == '__main__':
         strip_units(system_data)
 
         # Consistency checks.
-        if system_data['TDS']!='NaN' and system_data['DG']!='NaN' and system_data['DH']!='NaN':
-            assert np.isclose(system_data['DG'], system_data['DH'] - system_data['TDS'], atol=0.10000000000001, rtol=0.0)
+        #if system_data['TDS']!='NaN' and system_data['DG']!='NaN' and system_data['DH']!='NaN':
+        #    assert np.isclose(system_data['DG'], system_data['DH'] - system_data['TDS'], atol=0.10000000000001, rtol=0.0)
 
-            if DG is not None:
-                computed_DG = DG.value_in_unit(u.kilocalories_per_mole)
-                assert np.isclose(np.around(computed_DG, decimals=2), system_data['DG'], atol=0.0200000000000001, rtol=0.0)
-            if TDS is not None:
-                computed_TDS = TDS.value_in_unit(u.kilocalories_per_mole)
-                assert np.isclose(np.around(computed_TDS, decimals=2), system_data['TDS'], atol=0.0200000000000001, rtol=0.0)
+        #    if DG is not None:
+        #        computed_DG = DG.value_in_unit(u.kilocalories_per_mole)
+        #        assert np.isclose(np.around(computed_DG, decimals=2), system_data['DG'], atol=0.0200000000000001, rtol=0.0)
+        #    if TDS is not None:
+        #        computed_TDS = TDS.value_in_unit(u.kilocalories_per_mole)
+        #        assert np.isclose(np.around(computed_TDS, decimals=2), system_data['TDS'], atol=0.0200000000000001, rtol=0.0)
 
 
         # Report only error most significant digit.
