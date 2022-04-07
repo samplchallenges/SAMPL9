@@ -1,0 +1,5 @@
+Thioridazine;TDZ
+Trifluoroperazine;TFP
+Promazine;PMZ
+Promethazine;PMT
+Chloropromazine;CPZ
