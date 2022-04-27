@@ -52,8 +52,8 @@ from pkganalysis.stats import (compute_bootstrap_statistics, rmse, mae,
 # =============================================================================
 
 # Paths to input data.
-HOST_GUEST_WP6_SUBMISSIONS_DIR_PATH = '/home/amezcum1/SAMPL9/host_guest/Analysis/Submissions/'
-HOST_GUEST_CD_SUBMISSIONS_DIR_PATH = '/home/amezcum1/SAMPL9/host_guest/Analysis/Submissions/'
+HOST_GUEST_WP6_SUBMISSIONS_DIR_PATH = '/home/amezcum1/SAMPL9/host_guest/Analysis/Submissions/WP6/'
+HOST_GUEST_CD_SUBMISSIONS_DIR_PATH = '/home/amezcum1/SAMPL9/host_guest/Analysis/Submissions/CD/'
 EXPERIMENTAL_DATA_FILE_PATH = '/home/amezcum1/SAMPL9/experimental_data/experimental_measurements.csv'
 
 # Host color scheme.
@@ -160,8 +160,7 @@ class HostGuestSubmission(SamplSubmission):
         CD_guests = ['TDZ','TFP', 'PMZ', 'PMT', 'CPZ']
 
         self.REQUIRED_SYSTEM_IDs = {'WP6':[f'WP6-{guest}' for guest in WP6_guests], 
-                                    'CD':['bCD-TDZ', 'bCD-TFP', 'bCD-PMZ', 'bCD-PMT', 'b-CD-CPZ'] + ['HbCD-TDZ', 'HbCD-TFP','HbCD-PMZ', 
-                                        'HbCD-PMT', 'HbCD-CPZ']}
+                                    'CD':['bCD-TDZ', 'bCD-TFP', 'bCD-PMZ', 'bCD-PMT', 'b-CD-CPZ'] + ['HbCD-TDZ', 'HbCD-TFP','HbCD-PMZ', 'HbCD-PMT', 'HbCD-CPZ']}
         #self.REQUIRED_SYSTEM_IDs = {'WP6':[f'WP6-{guest}' for guest in WP6_guests]}
 
         # Check if this is a test submission.
@@ -797,7 +796,7 @@ class HostGuestSubmissionCollection:
 
             # Compute bootstrap statistics.
             data = data[['$\Delta$G (expt) [kcal/mol]', '$\Delta$G (calc) [kcal/mol]']]
-            new_bootstrap_statistics = compute_bootstrap_statistics(data.as_matrix(), group_stats_funcs, sems=sems,
+            new_bootstrap_statistics = compute_bootstrap_statistics(data.to_numpy(), group_stats_funcs, sems=sems,
                                                                     n_bootstrap_samples=10000)
 
             # Update the returned value with the statistics just computed.
@@ -1107,8 +1106,8 @@ if __name__ == '__main__':
         submissions_hbcd.append(b)
 
     # Make a set of all the submissions
-    #submissions_all = submissions_wp6 + submissions_bcd + submissions_hbcd
-    submissions_all = submissions_bcd + submissions_hbcd
+    submissions_all = submissions_wp6 + submissions_bcd + submissions_hbcd
+    #submissions_all = submissions_bcd + submissions_hbcd
 
     # Make directories for output
     if not os.path.isdir('../Ranked_Accuracy'): os.mkdir('../Ranked_Accuracy')
@@ -1120,14 +1119,14 @@ if __name__ == '__main__':
     if not os.path.isdir('../All_Accuracy/PaperImages'): os.mkdir('../All_Accuracy/PaperImages')
 
     # Create submission collections
-    #print("Creating submission collection for WP6")
-    #collection_wp6 = HostGuestSubmissionCollection(submissions_wp6, experimental_data,
-    #                                              output_directory_path='../Ranked_Accuracy/WP6')
+    print("Creating submission collection for WP6")
+    collection_wp6 = HostGuestSubmissionCollection(submissions_wp6, experimental_data,
+                                                  output_directory_path='../Ranked_Accuracy/WP6')
 
-    #print("Creating submission collection for all WP6, including non-ranked")
-    #collection_wp6_nonranked = HostGuestSubmissionCollection(submissions_wp6, experimental_data,
-    #        output_directory_path='../All_Accuracy/WP6', 
-    #        ignore_refcalcs = False, ranked_only = False)
+    print("Creating submission collection for all WP6, including non-ranked")
+    collection_wp6_nonranked = HostGuestSubmissionCollection(submissions_wp6, experimental_data,
+            output_directory_path='../All_Accuracy/WP6', 
+            ignore_refcalcs = False, ranked_only = False)
 
     print("Creating submission collection for CD collectively")
     collection_cd = HostGuestSubmissionCollection(submissions_cd, experimental_data,
@@ -1168,26 +1167,26 @@ if __name__ == '__main__':
             allow_multiple = True, ignore_refcalcs = False, ranked_only = False)
 
     # Systems to be excluded (optionals and systems not detected).Currently only WP6-G4.
-    #def remove_optional(submission_collection_data):
-    #    return submission_collection_data[(submission_collection_data.system_id != 'WP6-G4')]
+    def remove_optional(submission_collection_data):
+        return submission_collection_data[(submission_collection_data.system_id != 'WP6-G4')]
 
     #make new collections and remove optionals. Currently only applies to WP6-G4.
-    #print("Making new collection set (ranked only) & removing optional host-guest systems from WP6 collection")
-    #collection_wp6_no_optional = HostGuestSubmissionCollection(submissions_wp6, experimental_data,
-    #                                                                output_directory_path='../Ranked_Accuracy/WP6_no_optional')
-    #collection_wp6_no_optional.data = remove_optional(collection_wp6_no_optional.data)
+    print("Making new collection set (ranked only) & removing optional host-guest systems from WP6 collection")
+    collection_wp6_no_optional = HostGuestSubmissionCollection(submissions_wp6, experimental_data,
+                                                                    output_directory_path='../Ranked_Accuracy/WP6_no_optional')
+    collection_wp6_no_optional.data = remove_optional(collection_wp6_no_optional.data)
 
-    #print("Making new collection set (including nonranked) & removing optional host-guest systems from WP6 collection")
-    #collection_wp6_nonranked_no_optional = HostGuestSubmissionCollection(submissions_wp6, experimental_data, 
-    #        output_directory_path='../All_Accuracy/WP6_no_optional', 
-    #        ignore_refcalcs = False, ranked_only = False)
-    #collection_wp6_nonranked_no_optional.data = remove_optional(collection_wp6_nonranked_no_optional.data)
+    print("Making new collection set (including nonranked) & removing optional host-guest systems from WP6 collection")
+    collection_wp6_nonranked_no_optional = HostGuestSubmissionCollection(submissions_wp6, experimental_data, 
+            output_directory_path='../All_Accuracy/WP6_no_optional', 
+            ignore_refcalcs = False, ranked_only = False)
+    collection_wp6_nonranked_no_optional.data = remove_optional(collection_wp6_nonranked_no_optional.data)
 
-    #print("Removing optional host-guest systems from entire ranked collection")
-    #collection_all.data = remove_optional(collection_all.data)
+    print("Removing optional host-guest systems from entire ranked collection")
+    collection_all.data = remove_optional(collection_all.data)
 
-    #print("Removing optional host-guest systems from entire ranked+nonranked collection")
-    #collection_all_nonranked.data = remove_optional(collection_all_nonranked.data)
+    print("Removing optional host-guest systems from entire ranked+nonranked collection")
+    collection_all_nonranked.data = remove_optional(collection_all_nonranked.data)
 
 
     # =============================================================================
@@ -1198,7 +1197,7 @@ if __name__ == '__main__':
 
     # NOTE: Do not include collection_all or collection_all_nonranked here. 
     # Generate correlation plots and statistics
-    for collection in [collection_cd, collection_cd_nonranked, collection_bcd, collection_bcd_nonranked, collection_hbcd, collection_hbcd_nonranked]:
+    for collection in [collection_cd, collection_cd_nonranked, collection_bcd, collection_bcd_nonranked, collection_hbcd, collection_hbcd_nonranked, collection_wp6_no_optional, collection_wp6_nonranked_no_optional, collection_wp6, collection_wp6_nonranked]:
         sns.set_context('notebook')
         collection.generate_correlation_plots()
 
