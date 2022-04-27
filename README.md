@@ -45,6 +45,10 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 - 2022-04-06: Add CD submissions, updated usermap, and reference calculations
 - 2022-04-06: Add CD raw experimental measurements provided by Gilson group
 - 2022-04-06: Add generated machine readable experimental measurements for WP6 and CD
+- 2022-04-25: Update analyze_hostguest.py to include CD dataset submissions. 
+- 2022-04-25: Edit analyze_hostguest.py updating deprecated .as_matrix() function to .to_numpy(). 
+- 2022-04-25: Edit and update submissions.py removing stats_funcs=None parameter from plotting functions
+- 2022-04-25: Add preliminary analysis of ranked methods and all methods separately for SAMPL9 WP6 and CD datasets.  
  
 
 ## Challenge construction
@@ -71,7 +75,7 @@ The bCD challenge focuses on binding of five phenothiazine antipsychotic drugs t
 ## MANIFEST
 - [`host_guest/`](host_guest/): Details on host-guest challenges.
 - [`experimental_data/WP6/`](experimental_data/WP6/): Experimental data for WP6 challenge provided by Isaacs on 11/30/2021. Contains: [`SAMPL9_Datasheet_20210727.cdx`](experimental_data/WP6/SAMPL9_Datasheet_20210727.cdx) - a ChemDraw file that contains smiles strings and a view of the host and guest molecules, [`host_and_guest_smiles.csv`](experimental_data/WP6/host_and_guest_smiles.csv) - a `.csv.` containing the host and guest smile strings (taken from [`SAMPL9_Datasheet_20210727.cdx`](experimental_data/WP6/SAMPL9_Datasheet_20210727.cdx)),[`SAMPL9_answersheet.docx`](experimental_data/WP6/SAMPL9_answersheet.cdx)- a MS Word document that contains the measured thermodynamic data, and [`SAMPL9_answersheet.csv`](experimental_data/WP6/SAMPL9_answersheet.csv)- a machine-readable format version of [`SAMPL9_answersheet.docx`](Sexperimental_data/WP6/SAMPL9_answersheet.cdx).
-- [`experimental_measureents.X`]: Summary table of experimental data in `.csv` and `.json` formats. Includes WP6 and bCD.
+- [`experimental_measurements.X`]: Summary table of experimental data in `.csv` and `.json` formats. Includes WP6 and bCD.
 - [`experimental_data/CD/`](experimental_data/CD/PhenothiazineCD-Binding-Summary-3-31-2022_BAedit.docx): Data provided by the Gilson group in `.docx` format. This document was updated/corrected on 3/31/2022 from earlier values. 
 
 ## SAMPL-related
