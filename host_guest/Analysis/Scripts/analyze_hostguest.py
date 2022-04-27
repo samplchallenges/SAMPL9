@@ -38,12 +38,13 @@ from pkganalysis.stats import (compute_bootstrap_statistics, rmse, mae,
 #      - Particularly for participants who included multiple submissions. 
 # - (DONE) Update/exclude compounds with previously published values. (WP6 --> WP6-G4 was optional. )
 # - (DONE) Update to have "ranked only" and "all" (ranked and non-ranked) analysis output separate
-# - Include bCD dataset for analysis, re-run analysis.
+# - (DONE) Include bCD dataset for analysis, re-run analysis.
+# - (DONE) Update deprecated ".as_matrix()" function, to ".to_numpy()" 
 
 
 # TO DO / WIP
 # - Update script to generate single plot of correlations of ranked methods for each dataset
-#      - Almost complete, need to fix titles (or change method name), change number of plots, etc. 
+#      - fix titles (or change method name), change number of plots, etc. 
 # - Update script after figure5 to generate plots of methods that correctly predict strongest/weakest binders. 
 # - Update script to commpare similar methods, typically by name (i.e. force field, sampling, charging scheme, water, etc)
 
