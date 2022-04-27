@@ -52,7 +52,7 @@ def plot_correlation(x, y, data, title=None, color=None, shaded_area_color=None,
 
     if hue is None:
         grid = sns.jointplot(x=x, y=y, data=data,
-                             kind='reg', joint_kws={'ci': None}, stat_func=None,
+                             kind='reg', joint_kws={'ci': None},
                              xlim=axes_limits, ylim=axes_limits, color=color)
         ax = grid.ax_joint
         grid.fig.subplots_adjust(top=0.95)
