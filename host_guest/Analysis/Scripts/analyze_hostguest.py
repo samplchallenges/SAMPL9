@@ -40,6 +40,8 @@ from pkganalysis.stats import (compute_bootstrap_statistics, rmse, mae,
 # - (DONE) Update to have "ranked only" and "all" (ranked and non-ranked) analysis output separate
 # - (DONE) Include bCD dataset for analysis, re-run analysis.
 # - (DONE) Update deprecated ".as_matrix()" function, to ".to_numpy()" 
+# - (DONE) Update sids 
+# - (DONE) Update stat limits to fit ranked method in plots. 
 
 
 # TO DO / WIP
@@ -1074,9 +1076,9 @@ if __name__ == '__main__':
         'kendall_tau': '$\\tau$',
     }
     stats_limits = {
-        'RMSE': (0, 15.0),
-        'MAE': (0, 15),
-        'ME': (-10, 15),
+        'RMSE': (0, 25.0),
+        'MAE': (0, 25),
+        'ME': (-20, 20),
         'R2': (0, 1),
         'm': (-5, 5),
         'kendall_tau': (-1, 1),
