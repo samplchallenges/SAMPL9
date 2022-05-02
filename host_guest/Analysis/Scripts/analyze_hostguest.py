@@ -101,7 +101,7 @@ class HostGuestSubmission(SamplSubmission):
 
     TEST_SUBMISSION_SIDS = {}
     # The IDs of submissions for reference calculations. Should be strings of submission IDs
-    REF_SUBMISSION_SIDS = ['18', '19', '20']  
+    REF_SUBMISSION_SIDS = ['18', '19', '20', '21', '22', '23']  
 
     # Section of the submission file.
     SECTIONS = {'Predictions', 'Participant name', 'Participant organization', 'Name', 'Software', 'Method', 'Category', 'Ranked'}
