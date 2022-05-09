@@ -16,5 +16,8 @@ sid,file_name
 16,CD_lobos.txt
 17,WP6-voelz-lab_EE_corrections.txt
 18,WP6_REF_GAFF2.txt
-19,WP6_REF_OFF1.2.0.txt
-20,WP6_REF_OFF2.0.0.txt
+19,WP6_REF_OFF1_2_0.txt
+20,WP6_REF_OFF2_0_0.txt
+21,CD_REF_GAFF2.txt
+22,CD_REF_OFF1_2_0.txt
+23,CD_REF_OFF2_0_0.txt

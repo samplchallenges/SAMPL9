@@ -1,0 +1,34 @@
+\documentclass[8pt]{article}
+\usepackage[a4paper,margin=0.2in,tmargin=0.5in,bmargin=0.5in,landscape]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\pagenumbering{gobble}
+\begin{document}
+\begin{center}
+\begin{footnotesize}
+\begin{longtable}{|cccccccc|}
+\toprule
+                         ID & sid &      RMSE [kcal/mol] &       MAE [kcal/mol] &        ME [kcal/mol] &             R$^2$ &                     m &              $\tau$ \\
+\midrule
+\endfirsthead
+
+\toprule
+                         ID & sid &      RMSE [kcal/mol] &       MAE [kcal/mol] &        ME [kcal/mol] &             R$^2$ &                     m &              $\tau$ \\
+\midrule
+\endhead
+\midrule
+\multicolumn{8}{r}{{Continued on next page}} \\
+\midrule
+\endfoot
+
+\bottomrule
+\endlastfoot
+    ATM/FFENGINE/TIP3P/HREM &  14 &    1.86 [1.26, 4.20] &    1.60 [1.01, 3.66] &  -0.94 [-2.92, 1.09] & 0.14 [0.00, 0.75] &    1.29 [-3.13, 6.55] &  0.29 [-0.45, 0.83] \\
+     DDM/FEP/MBAR/ParamChem &  16 &    3.20 [2.66, 3.66] &    3.07 [2.49, 3.60] &  -0.41 [-2.39, 1.55] & 0.13 [0.00, 0.50] &   -2.16 [-6.89, 1.27] & -0.11 [-0.60, 0.42] \\
+DD/GROMOS-53A6\_glyc/SPC/MD &  11 &    4.12 [3.05, 5.30] &    3.72 [2.50, 5.05] & -3.63 [-5.00, -2.06] & 0.00 [0.00, 0.75] &   -0.08 [-4.02, 4.18] &  0.12 [-0.60, 0.71] \\
+  PMF/GAFF-RESP/TIP4PEW/SMD &  10 & 27.26 [22.68, 31.33] & 26.38 [22.08, 30.75] & 26.38 [22.08, 30.75] & 0.00 [0.00, 0.54] & -0.78 [-11.75, 12.88] &  0.02 [-0.53, 0.56] \\
+\end{longtable}
+\end{footnotesize}
+\end{center}
+
+\end{document}

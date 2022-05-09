@@ -1,0 +1,109 @@
+# Results for bCD
+#
+# The list of predictions must begin with the "Prediction:" keyword, as illustrated here.
+Predictions:
+bCD-TDZ, -4.21, 0.17, 1.0,,,
+bCD-TFP, -2.44, 0.17, 1.0,,,
+bCD-PMZ, -3.50, 0.17, 1.0,,,
+bCD-PMT, -3.46, 0.17, 1.0,,,
+bCD-CPZ, -4.10, 0.17, 1.0,,,
+HbCD-TDZ, -0.71, 0.17, 1.0,,,
+HbCD-TFP, 2.54, 0.17, 1.0,,,
+HbCD-PMZ, -0.42, 0.17, 1.0,,,
+HbCD-PMT, 0.57, 0.17, 1.0,,,
+HbCD-CPZ, -0.30, 0.17, 1.0,,,
+
+#
+#
+# Please list your name, using only UTF-8 characters as described above. The "Participant name:" entry is required.
+Participant name:
+Martin Amezcua
+#
+#
+# Please list your organization/affiliation, using only UTF-8 characters as described above.
+Participant organization:
+University of California, Irvine
+#
+# 40 character limit.
+Name:
+APR/OFF1.2.0/TIP3P/MD-US/MBAR
+#
+# All major software packages used and their versions
+# Following is sample text; please edit to your taste.
+# The "Software:" keyword is required.
+Software:
+pAPRika 1.0.4
+OpenMM 7.4.2
+openff-toolkit 10.2
+pyMBAR 3.0.5
+Ambertools 20.7
+openeye-toolkits 2019.10.2
+
+#
+# All text following the "Method:" keyword will be regarded as part of your free text methods description.
+Method:
+
+All simulations were performed using the attach-pull-release method (10.1002/jcc.23398, 10.1021/acs.jctc.5b00405) 
+with pAPRika 1.0.4, and OpenMM 7.4.2 as the simulation engine. Fifteen windows were used for the attach phase, 
+and the 46 umbrella sampling windows during the pull phase were spaced at 0.4 Angstrom intervals, starting at 6 Angstroms 
+from the noninteracting anchor particles and extended to a maximum distance of 24 Angstroms. Fifteen windows were used 
+for the release phase. Each window included up to 30 ns simulation time. 
+
+The starting structures were obtained by docking using oedock from OpenEye Toolkits 2019.10.2. Each host guest system were solvated
+with 2500 TIP3P water molecules in a rectangular box whose dimensions were approximately 40 x 40 x 63 cubic Angstroms, sodium
+or chloride counterions (with parameters from Joung and Cheatham (10.1021/jp8001614)) were added as needed to neutralize each
+host-guest system, and additional NaCl ions were added to obtain experimental conditions of the same ionic strength. AM1BCC
+partial atomic charges were generated with oequacpac as implemented with OpenEye Toolkits. The bonded and Lennard-Jones
+parameters were assigned based on OpenFF v1.2.0 using the openff-toolkit 10.2. 
+
+The attach-pull-release windows were prepared using pAPRika 1.0.4, which consists of: adding non-interacting anchor particles, 
+Boresch-style restraint setup, the addition of solvent and ions, and preparation of OpenMM XML files. 
+As described elsewhere (10.1021/acs.jctc.5b00405), six restraints (one distance restraint, two angle restraints, and three torsional
+restraints) were used to position the host relative to the anchor particles throughout the entire APR process to impose a lab frame 
+of reference. Moreover, three restraints were applied to the guest molecule; two for the translation (r and theta) and one for the
+orientation (beta). The guest molecule is pulled from host along the reaction coordinate r.
+The force constant values used for the host static restraints and the guest orientational restraints were:
+
+distance restraints = 10.0 kcal/mol/A^2
+angle and torsional restraints = 100 kcal/mol/rad^2  
+
+Eight "wall" restraints were used to help define the bound state and prevent guest molecules from leaving the host during the 
+attach phase. Restraints were set on the guest relative to the host at every first carbon of each carboxylate arm.
+The force constant values used for the wall restraints were:
+
+distance restraints = 50 kcal/mol/A^2
+angle restraints = 14 kcal/mol/rad^2 
+
+Equilibration was done at a constant temperature of 298.15 K using a Langevin thermostat with collision frequency 1.0 ps^-1 
+and pressure control provided by the Monte Carlo barostat (1 atm). All systems were minimized up to a maximum of 5000 
+and equilibrated for 1ns.  
+
+Production simulations were run up to 30 ns per window at 298.15 K with temperature control using a Langevin thermostat 
+with collision frequency 1.0 ps-1 and pressure control provided by the Monte Carlo barostat (at 1 atm). 
+Nonbonded interactions were truncated with a 9.0 Angstrom cutoff. At the same time, long-range electrostatics were 
+handled with the PME method and an isotropic dispersion correction is used for the long-range Lennard-Jones. The simulation 
+time step was set to 4 fs with Hydrogen Mass Repartitioning (HMR). 
+
+All simulations were analyzed with thermodynamic integration (TI) and/or multibennet acceptance ratio (MBAR) estimator approaches.
+The SEMs were obtained using block analysis (described in 10.1021/acs.jctc.5b00405).
+
+We considered protonated (charged) and non-protonated (neutral) variants of the guests for binding free energy predictions. 
+For this submission, we report the predictions using the fully protonated (charged) variant of all guests of primary orientations.
+#
+#
+# METHOD CATEGORY SECTION
+#
+# State which method category your prediction method is better described as:
+# `Alchemical`, `Quantum`, `Other Physical` `Empirical`, `Mixed`, or `Other`.
+# Pick only one category label.
+# The `Category:` keyword is required.
+Category:
+Other Physical
+#
+# All submissions must either be ranked or non-ranked.
+# Only one ranked submission per participant is allowed.
+# Multiple ranked submissions from the same participant will not be judged.
+# Non-ranked submissions are accepted so we can verify that they were made before the deadline.
+# The "Ranked:" keyword is required, and expects a Boolean value (True/False)
+Ranked:
+False

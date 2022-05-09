@@ -1,0 +1,35 @@
+\documentclass[8pt]{article}
+\usepackage[a4paper,margin=0.2in,tmargin=0.5in,bmargin=0.5in,landscape]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\pagenumbering{gobble}
+\begin{document}
+\begin{center}
+\begin{footnotesize}
+\begin{longtable}{|cccccccc|}
+\toprule
+                                       ID & sid &   RMSE [kcal/mol] &    MAE [kcal/mol] &       ME [kcal/mol] &             R$^2$ &                  m &             $\tau$ \\
+\midrule
+\endfirsthead
+
+\toprule
+                                       ID & sid &   RMSE [kcal/mol] &    MAE [kcal/mol] &       ME [kcal/mol] &             R$^2$ &                  m &             $\tau$ \\
+\midrule
+\endhead
+\midrule
+\multicolumn{8}{r}{{Continued on next page}} \\
+\midrule
+\endfoot
+
+\bottomrule
+\endlastfoot
+ MACHINE-LEARNING/NNET/DRAGON-descriptors &   3 & 1.97 [1.13, 2.94] & 1.50 [0.85, 2.41] &  0.61 [-0.56, 1.66] & 0.15 [0.00, 0.78] & 0.38 [-0.38, 1.12] & 0.18 [-0.41, 0.77] \\
+         ELIE/GAFF2-ABCG2/TIP3P/MD/MMPBSA &   8 & 2.49 [1.36, 3.97] & 1.93 [1.08, 3.26] &   1.93 [0.77, 3.18] & 0.40 [0.00, 0.88] & 0.66 [-0.08, 1.38] & 0.50 [-0.17, 0.87] \\
+EE/Openff-2.0/TIP3P/MD-EE/WL\_RL.02\_L.01 &   4 & 2.68 [1.81, 3.67] & 2.23 [1.43, 3.19] &  0.68 [-0.86, 2.07] & 0.61 [0.25, 0.86] &  1.69 [0.91, 2.42] &  0.56 [0.15, 0.88] \\
+                           DDM/AMOEBA/BAR &   7 & 2.77 [1.75, 5.14] & 2.04 [1.37, 4.24] & -0.79 [-2.82, 1.38] & 0.55 [0.09, 0.86] &  1.60 [0.56, 2.91] &  0.54 [0.03, 0.86] \\
+                    vDSSB/GAFF2/OPC3/HREM &   2 & 3.63 [2.50, 5.74] & 3.25 [1.98, 5.07] &   2.77 [0.76, 4.73] & 0.36 [0.00, 0.78] & 1.02 [-0.51, 2.11] & 0.37 [-0.25, 0.78] \\
+\end{longtable}
+\end{footnotesize}
+\end{center}
+
+\end{document}

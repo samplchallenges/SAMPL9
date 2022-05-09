@@ -1,0 +1,40 @@
+\documentclass[8pt]{article}
+\usepackage[a4paper,margin=0.2in,tmargin=0.5in,bmargin=0.5in,landscape]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\pagenumbering{gobble}
+\begin{document}
+\begin{center}
+\begin{footnotesize}
+\begin{longtable}{|cccccccc|}
+\toprule
+                             ID & sid &      RMSE [kcal/mol] &       MAE [kcal/mol] &        ME [kcal/mol] &             R$^2$ &                     m &              $\tau$ \\
+\midrule
+\endfirsthead
+
+\toprule
+                             ID & sid &      RMSE [kcal/mol] &       MAE [kcal/mol] &        ME [kcal/mol] &             R$^2$ &                     m &              $\tau$ \\
+\midrule
+\endhead
+\midrule
+\multicolumn{8}{r}{{Continued on next page}} \\
+\midrule
+\endfoot
+
+\bottomrule
+\endlastfoot
+        ATM/FFENGINE/TIP3P/HREM &  14 &    1.86 [1.29, 4.29] &    1.60 [0.99, 3.69] &  -0.94 [-2.93, 1.06] & 0.14 [0.00, 0.74] &    1.29 [-2.96, 6.10] &  0.29 [-0.43, 0.80] \\
+         DDM/FEP/MBAR/ParamChem &  16 &    3.20 [2.65, 3.65] &    3.07 [2.48, 3.59] &  -0.41 [-2.32, 1.57] & 0.13 [0.00, 0.50] &   -2.16 [-6.87, 1.17] & -0.11 [-0.60, 0.41] \\
+    DD/GROMOS-53A6\_glyc/SPC/MD &  11 &    4.12 [3.06, 5.35] &    3.72 [2.50, 5.10] & -3.63 [-5.07, -2.08] & 0.00 [0.00, 0.76] &   -0.08 [-4.08, 4.24] &  0.12 [-0.61, 0.70] \\
+     APR/GAFF2/TIP3P/MD-US/MBAR &  21 &    4.17 [2.90, 5.61] &    3.83 [2.53, 5.22] & -3.83 [-5.22, -2.52] & 0.22 [0.00, 0.80] &   -1.25 [-3.61, 2.26] & -0.20 [-0.79, 0.51] \\
+  APR/OFF2.0.0/TIP3P/MD-US/MBAR &  23 &    4.32 [2.59, 6.06] &    3.43 [1.83, 5.33] & -3.43 [-5.28, -1.59] & 0.12 [0.00, 0.65] &   -1.66 [-6.96, 1.85] & -0.16 [-0.76, 0.41] \\
+  APR/OFF1.2.0/TIP3P/MD-US/MBAR &  22 &    4.41 [2.82, 6.08] &    3.74 [2.18, 5.44] & -3.74 [-5.43, -2.08] & 0.08 [0.00, 0.64] &   -1.20 [-5.99, 2.37] & -0.07 [-0.75, 0.45] \\
+   MD/GAFF-RESP/TIP4PEW/MM-PBSA &  13 & 15.33 [13.94, 16.75] & 15.23 [13.81, 16.63] & 15.23 [13.81, 16.63] & 0.78 [0.08, 0.96] &     3.88 [1.15, 6.40] &  0.45 [-0.15, 0.95] \\
+   MD/GAFF-RESP/TIP4PEW/MM-GBSA &  12 & 18.47 [17.17, 19.78] & 18.40 [17.06, 19.71] & 18.40 [17.06, 19.71] & 0.65 [0.06, 0.92] &     3.25 [0.80, 7.10] &  0.64 [-0.05, 1.00] \\
+MD/GAFF-RESP/TIP4PEW/MM-GBSA\_2 &  15 & 18.47 [17.15, 19.75] & 18.40 [17.03, 19.69] & 18.40 [17.03, 19.69] & 0.65 [0.05, 0.92] &     3.25 [0.74, 7.17] &  0.64 [-0.05, 1.00] \\
+      PMF/GAFF-RESP/TIP4PEW/SMD &  10 & 27.26 [22.73, 31.33] & 26.38 [22.10, 30.74] & 26.38 [22.10, 30.74] & 0.00 [0.00, 0.54] & -0.78 [-11.99, 13.21] &  0.02 [-0.55, 0.56] \\
+\end{longtable}
+\end{footnotesize}
+\end{center}
+
+\end{document}
