@@ -18,15 +18,19 @@ We also ask you to cite the SAMPL dataset(s) you used. You may cite the sets by 
 Of course, we also appreciate it if you cite any overview/experimental papers relevant to the particular SAMPL challenge you participated in.
 
 ## What's here
-- Host-guest challenge files for the WP6 and bCD challenges
+- Host-guest challenge files for the WP6 and bCD host-guest challenges
 - [Host-guest participation instructions](https://github.com/samplchallenges/SAMPL9/blob/master//host_guest_instructions.md) with information on the submissions format, etc. Submission templates are available in the subdirectories for individual host-guest systems.
 - Experimental data for the WP6 and bCD challenges is available [here](https://github.com/samplchallenges/SAMPL9/blob/main/experimental_data/experimental_measurements.csv)
+- Information on participation in the nanoluciferase (nanoluc) protein-ligand binding challenge for SAMPL9 and SAMPL10, in [protein_ligand/README.md](protein_ligand/README.md)
 
 ## What's coming
 
 - Analysis of the WP6/bCD challenge
+- Additional inputs for NanoLuc challenge
+- Submission details and formats for NanoLuc challenge
+- Info on submission of containerized methods for NanoLuc challenge
 
-## Changes and Data Set Versions
+## Changes and Data Set Versions/Changelog
 
 ### Releases
 - **Release 0.1** (Sept. 7, 2021, DOI [10.5281/zenodo.5485849](https://dx.doi.org/10.5281/zenodo.5485849)): WP6 challenge details, deadline, host/guest files, submission template, and submission instructions, initially added Aug. 20
@@ -48,15 +52,19 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 - 2022-04-25: Update analyze_hostguest.py to include CD dataset submissions. 
 - 2022-04-25: Edit analyze_hostguest.py updating deprecated .as_matrix() function to .to_numpy(). 
 - 2022-04-25: Edit and update submissions.py removing stats_funcs=None parameter from plotting functions
-- 2022-04-25: Add preliminary analysis of ranked methods and all methods separately for SAMPL9 WP6 and CD datasets.  
+- 2022-04-25: Add preliminary analysis of ranked methods and all methods separately for SAMPL9 WP6 and CD datasets. 
+- 2022-05-10: Add additional info on nanoluciferase (NanoLuc) binding prediction challenge 
  
 
 ## Challenge construction
 
 ### Overview
 
-The SAMPL9 phase of challenges includes a new host-guest challenge (WP6) that closed November 15, 2021, and a bCD host-guest challenge..
+The SAMPL9 phase of challenges includes two host-guest challenges (already closed) and a protein-ligand challenge on nanoluciferase.
 
+### The NanoLuc challenge
+
+The SAMPL9 (and SAMPL10) protein-ligand challenges focus on binding to nanoluciferase (nanoluc) and include both a virtual screening and potency prediction component, as [further detailed here](protein_ligand/README.md). Submission deadlines and instructions are forthcoming, but compound identities are available.
 
 ### The WP6 challenge
 
@@ -77,9 +85,12 @@ The bCD challenge focuses on binding of five phenothiazine antipsychotic drugs t
 - [`experimental_data/WP6/`](experimental_data/WP6/): Experimental data for WP6 challenge provided by Isaacs on 11/30/2021. Contains: [`SAMPL9_Datasheet_20210727.cdx`](experimental_data/WP6/SAMPL9_Datasheet_20210727.cdx) - a ChemDraw file that contains smiles strings and a view of the host and guest molecules, [`host_and_guest_smiles.csv`](experimental_data/WP6/host_and_guest_smiles.csv) - a `.csv.` containing the host and guest smile strings (taken from [`SAMPL9_Datasheet_20210727.cdx`](experimental_data/WP6/SAMPL9_Datasheet_20210727.cdx)),[`SAMPL9_answersheet.docx`](experimental_data/WP6/SAMPL9_answersheet.cdx)- a MS Word document that contains the measured thermodynamic data, and [`SAMPL9_answersheet.csv`](experimental_data/WP6/SAMPL9_answersheet.csv)- a machine-readable format version of [`SAMPL9_answersheet.docx`](Sexperimental_data/WP6/SAMPL9_answersheet.cdx).
 - [`experimental_measurements.X`]: Summary table of experimental data in `.csv` and `.json` formats. Includes WP6 and bCD.
 - [`experimental_data/CD/`](experimental_data/CD/PhenothiazineCD-Binding-Summary-3-31-2022_BAedit.docx): Data provided by the Gilson group in `.docx` format. This document was updated/corrected on 3/31/2022 from earlier values. 
+- ['protein_ligand`](protein_ligand): Information on the protein-ligand challenge on nanoluciferase (nanoluc) binding, which includes library screening and prediction of potency (IC50).
 
 ## SAMPL-related
 If you give a SAMPL-related talk or presentation or an analysis of its data, and are willing to share publicly, please consider posting on Zenodo and linking it to the [SAMPL Zenodo community](https://zenodo.org/communities/sampl?page=1&size=20).
+
+Please also be sure to let David Mobley know of any SAMPL-related publications so he can include these in the [master list of all SAMPL publications](https://www.samplchallenges.org/history/allreferences/) on the [SAMPL website](samplchallenges.org)
 
 ## LICENSE
 

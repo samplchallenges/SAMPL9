@@ -55,3 +55,5 @@ Secreted Nano Luciferase was collected after 24 hours from confluent S16 PMP22 s
 
 The dose-response data for each sample was plotted and modeled by a four-parameter logistic fit yielding IC50 and efficacy (maximal response) values using NCATS in-house informatics software. In cases where compounds were inactive, no IC50 value is listed/determined. For those with dose response curves, provided data include qHTS curve classifications, curve descriptions, IC50 values, maximal response. 
 
+## Manifest
+- `NCATS_experimental_data`: Directory containing source/challenge data from NCATS. See additional [README.md](NCATS_experimental_data/README.md) for contents.
