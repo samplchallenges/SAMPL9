@@ -55,7 +55,7 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 - 2022-04-25: Add preliminary analysis of ranked methods and all methods separately for SAMPL9 WP6 and CD datasets.
 - 2022-05-10: Add additional info on nanoluciferase (NanoLuc) binding prediction challenge
 - 2022-06-29: Add (optional) conformers for NanoLuc challenge, as well as info on which compounds were tested as a racemic mix
-
+- 2022-07-01: Add submission templates for NanoLuc challenge, challenge deadlines.
 
 ## Challenge construction
 
@@ -65,7 +65,7 @@ The SAMPL9 phase of challenges includes two host-guest challenges (already close
 
 ### The NanoLuc challenge
 
-The SAMPL9 (and SAMPL10) protein-ligand challenges focus on binding to nanoluciferase (nanoluc) and include both a virtual screening and potency prediction component, as [further detailed here](protein_ligand/README.md). Submission deadlines and instructions are forthcoming, but compound identities are available.
+The SAMPL9 (and SAMPL10) protein-ligand challenges focus on binding to nanoluciferase (nanoluc) and include both a virtual screening and potency prediction component, as [further detailed here](protein_ligand/README.md). Compound identities and submission deadlines [are available](protein_ligand/README.md)], and submission links are forthcoming before the challenge deadline.
 
 ### The WP6 challenge
 

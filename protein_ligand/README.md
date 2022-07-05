@@ -31,18 +31,26 @@ If you are interested in participating, please sign up for our [SAMPL9 e-mail li
 
 ## Challenge staging
 
-- Step 1: Predict which compounds from the overall library inhibit the nanoLuc luminescence signal  and which do not inhibit (with a detection threshold of roughly 200 micromolar); at this stage we will release only compound IDs and SMILES/structures and predictions must provide predicted inhibitor/non-inhibitor status for all compound IDs.
+- Step 1: Predict which compounds from the overall library inhibit the nanoLuc luminescence signal and which do not inhibit (with a detection threshold of roughly 200 micromolar); at this stage we will release only compound IDs and SMILES/structures and predictions must provide predicted inhibitor/non-inhibitor status for all compound IDs.
 - Step 2: For those which bind, predict IC50 values. At this stage we will release results of Stage 1 and participants must predict IC50 values for all binders. This will be broken into two sub-categories: Ranking and affinity prediction.
 
 These two stages will apply for SAMPL9 and for SAMPL10. The corresponding compound tranches are now available in this repository.
 
 ### Timing
 
-Stage 1 challenge inputs are now available as SMILES, as of 2022-05-10. Stage 1 is expected to run until roughly September, with Stage 2 until perhaps December (exact details forthcoming). Input welcome.
+Stage 1 challenge inputs are now available as SMILES, as of 2022-05-10. Conformers are available as of June 30.
+
+- Stage 1 predictions are due Friday, September 23, 2022, at midnight UTC.
+- Stage 2 inputs will be released on or about Sept. 26, 2022.
+- Stage 2 predictions are due Friday, Dec. 9, 2022, at midnight UTC.
 
 ### Prediction formats
 
-Prediction formats are forthcoming.
+The Stage 1 (virtual screening) submission format requires submission of a prediction for whether each compound in tranche1 does/does not inhibit the nanoLuc luminescence signal (with a detection threshold of roughly 200 micromolar). Submissions must follow this format and be uploaded to the required submission server (link to be provided when available). Predictions are required for every compound. If your method is not able to make a prediction for a given compound, you must fill in a default value of your choice. (Given the hit rate in the library it is probably preferable to fill in `false`). This format is available as `stage1_submission_template.txt`. Any example values provided in this template are given purely for illustration purposes.
+
+The Stage 2 (IC50 prediction) portion of the challenge requires predicting an IC50 value (with uncertainty) for all of the compounds in the set for which IC50s were measured. This list will be made available once Stage 1 closes. The submission format is available as `stage2_submission_template.txt` and any example values provided in this template are given purely for illustration purposes. Predicted values and their uncertainties (both in micromolar) must be provided for all Stage 2 compounds.
+
+
 
 ### Submission instructions
 
@@ -59,3 +67,5 @@ The dose-response data for each sample was plotted and modeled by a four-paramet
 
 ## Manifest
 - `NCATS_experimental_data`: Directory containing source/challenge data from NCATS. See additional [README.md](NCATS_experimental_data/README.md) for contents.
+- `stage1_submission_template.txt`: Submission template for stage 1, virtual screening
+- `stage2_submission_template.txt`: Submission template for stage 2, IC50 prediction.
