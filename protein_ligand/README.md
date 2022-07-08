@@ -46,9 +46,9 @@ Stage 1 challenge inputs are now available as SMILES, as of 2022-05-10. Conforme
 
 ### Prediction formats
 
-The Stage 1 (virtual screening) submission format requires submission of a prediction for whether each compound in tranche1 does/does not inhibit the nanoLuc luminescence signal (with a detection threshold of roughly 200 micromolar). Submissions must follow this format and be uploaded to the required submission server (link to be provided when available). Predictions are required for every compound. If your method is not able to make a prediction for a given compound, you must fill in a default value of your choice. (Given the hit rate in the library it is probably preferable to fill in `false`). This format is available as `stage1_submission_template.txt`. Any example values provided in this template are given purely for illustration purposes.
+The Stage 1 (virtual screening) submission format requires submission of a prediction for whether each compound in tranche1 does/does not inhibit the nanoLuc luminescence signal (with a detection threshold of roughly 200 micromolar). Submissions must follow this format and be uploaded to the required submission server (link to be provided when available). Predictions are required for every compound. If your method is not able to make a prediction for a given compound, you must fill in a default value of your choice. (Given the hit rate in the library it is probably preferable to fill in `false`). This format is available as `NANOLUC_stage1_submission_template.txt`. Any example values provided in this template are given purely for illustration purposes.
 
-The Stage 2 (IC50 prediction) portion of the challenge requires predicting an IC50 value (with uncertainty) for all of the compounds in the set for which IC50s were measured. This list will be made available once Stage 1 closes. The submission format is available as `stage2_submission_template.txt` and any example values provided in this template are given purely for illustration purposes. Predicted values and their uncertainties (both in micromolar) must be provided for all Stage 2 compounds.
+The Stage 2 (IC50 prediction) portion of the challenge requires predicting an IC50 value (with uncertainty) for all of the compounds in the set for which IC50s were measured. This list will be made available once Stage 1 closes. The submission format is available as `NANOLUC_stage2_submission_template.txt` and any example values provided in this template are given purely for illustration purposes. Predicted values and their uncertainties (both in micromolar) must be provided for all Stage 2 compounds.
 
 
 
@@ -67,5 +67,5 @@ The dose-response data for each sample was plotted and modeled by a four-paramet
 
 ## Manifest
 - `NCATS_experimental_data`: Directory containing source/challenge data from NCATS. See additional [README.md](NCATS_experimental_data/README.md) for contents.
-- `stage1_submission_template.txt`: Submission template for stage 1, virtual screening
-- `stage2_submission_template.txt`: Submission template for stage 2, IC50 prediction.
+- `NANOLUC_stage1_submission_template.txt`: Submission template for stage 1, virtual screening
+- `NANOLUC_stage2_submission_template.txt`: Submission template for stage 2, IC50 prediction.
