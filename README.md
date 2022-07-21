@@ -56,6 +56,7 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 - 2022-05-10: Add additional info on nanoluciferase (NanoLuc) binding prediction challenge
 - 2022-06-29: Add (optional) conformers for NanoLuc challenge, as well as info on which compounds were tested as a racemic mix
 - 2022-07-01: Add submission templates for NanoLuc challenge, challenge deadlines.
+- 2022-07-21: Add submission link for NanoLuc Stage 1
 
 ## Challenge construction
 
