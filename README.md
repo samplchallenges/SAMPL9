@@ -57,6 +57,7 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 - 2022-06-29: Add (optional) conformers for NanoLuc challenge, as well as info on which compounds were tested as a racemic mix
 - 2022-07-01: Add submission templates for NanoLuc challenge, challenge deadlines.
 - 2022-07-21: Add submission link for NanoLuc Stage 1
+- 2022-08-01: Correct list of compounds for which conformer generation failed, for NanoLuc Stage 1 (`tranche1_failures.txt1`)
 
 ## Challenge construction
 
