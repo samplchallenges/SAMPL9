@@ -58,6 +58,7 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 - 2022-07-01: Add submission templates for NanoLuc challenge, challenge deadlines.
 - 2022-07-21: Add submission link for NanoLuc Stage 1
 - 2022-08-01: Correct list of compounds for which conformer generation failed, for NanoLuc Stage 1 (`tranche1_failures.txt1`)
+- 2022-08-01: Add (optional) correct SMILES strings for molecules for which conformer generation had failed from both tranches. Participants may either skip these molecules or provide predictions for them.
 
 ## Challenge construction
 
