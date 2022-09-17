@@ -6,6 +6,8 @@ Tranche 1 of the compounds will form the basis of Phase 1 of the SAMPL9 NanoLuc 
 
 Some SMILES strings provided by NCATS were apparently incorrect and could not be parsed; compounds with these SMILES strings are reflected in `trancheN_failures.txt`. Later (May 2022), NCATS provided sdf files containing conformers for these molecules, and then we generated updated SMILES strings. Because of the lateness of this data, we have not updated the `nanoluc_compounds_trancheN.csv` files with these SMILES strings, but instead provided them in `nanoluc_compounds_trancheN_failure_updates.csv`. Participants can choose to include these compounds or skip them.
 
+For Stage 2, the `nanoluc_binders_tranche1.csv` file contains compound IDs for binders, as well as original NCATS-provided SMILES strings for these. SDFs and updated/corrected SMILES strings for failures may be obtained from other files in this repository.
+
 ## Manifest
 - `nanoluc_compounds_tranche1.csv`: Tranche 1 of compounds for which to predict NanoLuc binding. Contains compound IDs and isomeric SMILES. Predictions should be of whether compounds do or do not bind with detection thresholds as specified in the challenge description.
 - `nanoluc_compounds_tranche2.csv`: Tranche 2 of compounds for which to predict NanoLuc binding. Contains compound IDs and isomeric SMILES. Predictions should be of whether compounds do or do not bind with detection thresholds as specified in the challenge description.
@@ -15,7 +17,8 @@ Some SMILES strings provided by NCATS were apparently incorrect and could not be
 - `tranche2_unspecified_stereochem.txt`: Compounds with unspecified stereochemistry in tranche 2 (for which conformer generation initially failed); these were tested as a racemic mixture, per NCATS
 - `tranche1_failures.txt`: Molecules in tranche1 for which we failed to generate conformers; this likely means the SMILES strings are invalid or cannot be correctly parsed. Corrected 2022-08-01. Alternate input for these failures provided in a separate file.
 - `tranche2_failures.txt`: Molecules in tranche2 for which we failed to generate conformers; this likely means the SMILES strings are invalid or cannot be correctly parsed. Alternate input for these failures provided in a separate file.
-- `nanoluc_compounds_tranche1_failure_updates.csv` and `nanoluc_compounds_tranche2_failure_updates.csv`: Updated (corrected) SMILES strings for molecules for which conformer generation failed 
+- `nanoluc_compounds_tranche1_failure_updates.csv` and `nanoluc_compounds_tranche2_failure_updates.csv`: Updated (corrected) SMILES strings for molecules for which conformer generation failed
+- `nanoluc_binders_tranche1.csv`: NanoLuc binders from tranche1 (compound ID and SMILES); provides answers for Stage 1, and inputs for Stage 2. SMILES strings are original NCATS SMILES strings, and corrected SMILES from the above files can be used if failures are encountered. 
 
 ## Additional information forthcoming
 - Experimental results will be released after phases close
