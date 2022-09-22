@@ -40,8 +40,8 @@ These two stages will apply for SAMPL9 and for SAMPL10. The corresponding compou
 
 Stage 1 challenge inputs are now available as SMILES, as of 2022-05-10. Conformers are available as of June 30.
 
-- Stage 1 predictions are due Friday, September 23, 2022, at midnight UTC.
-- Stage 2 inputs will be released on or about Sept. 26, 2022.
+- Stage 1 predictions are due Friday, Oct. 7, 2022, at midnight UTC.
+- Stage 2 inputs will be released on or about Oct. 10, 2022.
 - Stage 2 predictions are due Friday, Dec. 9, 2022, at midnight UTC.
 
 ### Prediction formats
