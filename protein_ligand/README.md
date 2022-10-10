@@ -40,8 +40,8 @@ These two stages will apply for SAMPL9 and for SAMPL10. The corresponding compou
 
 Stage 1 challenge inputs are now available as SMILES, as of 2022-05-10. Conformers are available as of June 30.
 
-- Stage 1 predictions are due Friday, September 23, 2022, at midnight UTC.
-- Stage 2 inputs will be released on or about Sept. 26, 2022.
+- Stage 1 predictions are due Friday, September 23, 2022, at midnight UTC. (Update: Delayed to Oct. 7, 2022, midnight UTC.)
+- Stage 2 inputs were released October 10, 2022.
 - Stage 2 predictions are due Friday, Dec. 9, 2022, at midnight UTC.
 
 ### Prediction formats
@@ -56,8 +56,15 @@ The Stage 2 (IC50 prediction) portion of the challenge requires predicting an IC
 
 To submit, upload your completed submission file to the appropriate SAMPL9 submission server (below) by the requisite deadline. You MUST follow the required submission format for your challenge stage, and your file name must begin with "NANOLUC". Additional details are available as comments within the template file itself.
 - Submit [SAMPL9 virtual screening submissions here](https://submit.samplchallenges.org/submit/SAMPL9-VS)
+- Submit [SAMPL9 IC50 predictions here](https://submit.samplchallenges.org/submit/SAMPL9-affinity)
 
-Please note that the server will do some basic error checking, such as checking that it can read at least SOME data from your predictions section, checking that the requisite fields are completed, etc. However, it will NOT check whether you have submitted predictions for all compounds; it will simply check that it can process predictions for at least some compounds.
+Please note that the server will do some basic error checking, such as checking that it can read at least SOME data from your predictions section, checking that the requisite fields are completed, etc. However, it will NOT check whether you have submitted predictions for all of the compounds by name. The virtual screening server will simply check that it can process predictions for at least some compounds. The IC50 server will check whether you have submitted predictions for the correct number of compounds, but you need to ensure they have the correct names.
+
+For the IC50 case, several other complexities are worth noting. Your predictions:
+- Must contain the correct number of compounds
+- All compounds must have a nonzero IC50 and uncertainty
+- should contain a placeholder value for any compounds for which you have no predictions (the average of your predictions? the max or min? Something else?) and note this in your methods; the server will not accept predictions unless the correct number of compounds are present
+- must have correct compound names (but the server isn't checking this)
 
 ## Containerized challenges
 
