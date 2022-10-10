@@ -61,6 +61,7 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 - 2022-08-01: Add (optional) correct SMILES strings for molecules for which conformer generation had failed from both tranches. Participants may either skip these molecules or provide predictions for them.
 - 2022-09-22: Extend NanoLuc Stage 1 deadline to Oct. 7
 - 2022-10-10: Add tranche1 NanoLuc binders (answers to Stage 1/inputs for Stage 2)
+- 2022-10-10: Add NanoLuc Stage 1 submissions
 
 ## Challenge construction
 

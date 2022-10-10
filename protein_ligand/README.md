@@ -81,3 +81,4 @@ The dose-response data for each sample was plotted and modeled by a four-paramet
 - `NCATS_experimental_data`: Directory containing source/challenge data from NCATS. See additional [README.md](NCATS_experimental_data/README.md) for contents.
 - `NANOLUC_stage1_submission_template.txt`: Submission template for stage 1, virtual screening
 - `NANOLUC_stage2_submission_template.txt`: Submission template for stage 2, IC50 prediction.
+- `Analysis`: Directory for analysis of submission results.
