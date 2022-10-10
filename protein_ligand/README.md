@@ -48,7 +48,7 @@ Stage 1 challenge inputs are now available as SMILES, as of 2022-05-10. Conforme
 
 The Stage 1 (virtual screening) submission format requires submission of a prediction for whether each compound in tranche1 does/does not inhibit the nanoLuc luminescence signal (with a detection threshold of roughly 200 micromolar). Submissions must follow this format and be uploaded to the required submission server (link to be provided when available). Predictions are required for every compound; any missing compounds will be assumed to be predicted to be `false` (but you should submit for every compound). If your method is not able to make a prediction for a given compound, you must fill in a default value of your choice. (Given the hit rate in the library it is probably preferable to fill in `false`). This format is available as `NANOLUC_stage1_submission_template.txt`. Any example values provided in this template are given purely for illustration purposes.
 
-The Stage 2 (IC50 prediction) portion of the challenge requires predicting an IC50 value (with uncertainty) for all of the compounds in the set for which IC50s were measured. This list will be made available once Stage 1 closes. The submission format is available as `NANOLUC_stage2_submission_template.txt` and any example values provided in this template are given purely for illustration purposes. Predicted values and their uncertainties (both in micromolar) must be provided for all Stage 2 compounds.
+The Stage 2 (IC50 prediction) portion of the challenge requires predicting an IC50 value (with uncertainty) for all of the compounds in the set for which IC50s were measured (`NCATS_experimental_data/nanoluc_binders_tranche1.csv`). The submission format is available as `NANOLUC_stage2_submission_template.txt` and any example values provided in this template are given purely for illustration purposes. Predicted values and their uncertainties (both in micromolar) must be provided for all Stage 2 compounds.
 
 
 
@@ -65,6 +65,8 @@ For the IC50 case, several other complexities are worth noting. Your predictions
 - All compounds must have a nonzero IC50 and uncertainty
 - should contain a placeholder value for any compounds for which you have no predictions (the average of your predictions? the max or min? Something else?) and note this in your methods; the server will not accept predictions unless the correct number of compounds are present
 - must have correct compound names (but the server isn't checking this)
+
+The list of compounds for Stage 2 is available in `NCATS_experimental_data/nanoluc_binders_tranche1.csv`
 
 ## Containerized challenges
 
