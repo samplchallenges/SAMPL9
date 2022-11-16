@@ -42,7 +42,7 @@ Stage 1 challenge inputs are now available as SMILES, as of 2022-05-10. Conforme
 
 - Stage 1 predictions are due Friday, September 23, 2022, at midnight UTC. (Update: Delayed to Oct. 7, 2022, midnight UTC.)
 - Stage 2 inputs were released October 10, 2022.
-- Stage 2 predictions are due Friday, Dec. 9, 2022, at midnight UTC.
+- Stage 2 predictions are due Friday, Dec. 9, 2022, at midnight UTC, for both the ranking and IC50 prediction portions (you can submit to one or both)
 
 ### Prediction formats
 
@@ -60,6 +60,7 @@ The submission formats are available as `NANOLUC_stage2a_submission_template.txt
 
 To submit, upload your completed submission file to the appropriate SAMPL9 submission server (below) by the requisite deadline. You MUST follow the required submission format for your challenge stage, and your file name must begin with "NANOLUC". Additional details are available as comments within the template file itself.
 - Submit [SAMPL9 virtual screening submissions here](https://submit.samplchallenges.org/submit/SAMPL9-VS)
+- Submit Stage 2a [SAMPL9 ranking predictions here](https://submit.samplchallenges.org/submit/SAMPL9-ranking)
 - Submit Stage 2b [SAMPL9 IC50 predictions here](https://submit.samplchallenges.org/submit/SAMPL9-affinity)
 
 Please note that the server will do some basic error checking, such as checking that it can read at least SOME data from your predictions section, checking that the requisite fields are completed, etc. However, it will NOT check whether you have submitted predictions for all of the compounds by name. The virtual screening server will simply check that it can process predictions for at least some compounds. The IC50 server will check whether you have submitted predictions for the correct number of compounds, but you need to ensure they have the correct names.
@@ -69,6 +70,8 @@ For the IC50 case, several other complexities are worth noting. Your predictions
 - All compounds must have a nonzero IC50 and uncertainty
 - should contain a placeholder value for any compounds for which you have no predictions (the average of your predictions? the max or min? Something else?) and note this in your methods; the server will not accept predictions unless the correct number of compounds are present
 - must have correct compound names (but the server isn't checking this)
+
+For ranking submissions, your predictions must be similar, except in place of an IC50, your submission must list the compound rank (1 being best), and no uncertainty is required. Placeholder ranks are required for compounds with no predictions, e.g. place these at the end.
 
 The list of compounds for Stage 2 is available in `NCATS_experimental_data/nanoluc_binders_tranche1.csv`
 
