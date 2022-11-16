@@ -62,6 +62,7 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 - 2022-09-22: Extend NanoLuc Stage 1 deadline to Oct. 7
 - 2022-10-10: Add tranche1 NanoLuc binders (answers to Stage 1/inputs for Stage 2)
 - 2022-10-10: Add NanoLuc Stage 1 submissions
+- 2022-11-16: Extend NanoLuc Stage 2 to allow for ranking rather than just IC50 prediction
 
 ## Challenge construction
 
