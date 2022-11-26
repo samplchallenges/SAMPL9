@@ -9,7 +9,7 @@ For experimental measurements, we are indebted to Dr. Clara Ràfols (University 
 Experimental measurements were done for sixteen compounds with acid-base properties (see Table 1), most of them drugs showing a variety of therapeutical capabilities. These were commonly selected from Sigma-Aldrich ≥ 98% (www.sigmaaldrich.com), with some selected because of potential internal hydrogen bonding. The partition solvent was from Sigma-Aldrich: toluene (ACS reagent, ≥ 99.5%, 179418).
 
 **Table 1. Experimental equipment used in the determination of logPtol/w**
-|**name	| Exp. equipment|
+|**name**	| **Exp. equipment** |
 |-----------|--------------|
 | Albendazole	| Pion SiriusT3 |
 | Alprenolol	| Pion SiriusT3 |
@@ -27,7 +27,6 @@ Experimental measurements were done for sixteen compounds with acid-base propert
 | Quinine	Sirius | D-PAS & GLpKa |
 | Sulfamethazine	| Sirius D-PAS & GLpKa |
 | Trazodone hydrochloride	| Pion SiriusT3 |
-|-----------|--------------|
 
 Partition values, log Ptol/w, were obtained by sample titrations as typically described for aqueous pKa determination but in presence of various amounts of the partitioning solvent. The log Psolv/w was calculated by the difference between the aqueous pKa and the apparent poKa (pKa measured in presence of a partition solvent) at several phase ratios depending on the expected partition value. All measurements were taken at 25 °C, under an inert gas atmosphere, and at least three titrations were made for each compound (Avdeef, 1993; Avdeef, Comer et al. 1993). Several titrations were carried out at the measurement limit conditions of the potentiometric technique. In these instances, the cautions for log Poct/w determination previously described were considered (Ràfols et al., 2012).
 
