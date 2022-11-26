@@ -63,16 +63,21 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 - 2022-10-10: Add tranche1 NanoLuc binders (answers to Stage 1/inputs for Stage 2)
 - 2022-10-10: Add NanoLuc Stage 1 submissions
 - 2022-11-16: Extend NanoLuc Stage 2 to allow for ranking rather than just IC50 prediction
+- 2022-11-25: Add logP challenge initial information
 
 ## Challenge construction
 
 ### Overview
 
-The SAMPL9 phase of challenges includes two host-guest challenges (already closed) and a protein-ligand challenge on nanoluciferase.
+The SAMPL9 phase of challenges includes two host-guest challenges (already closed), a protein-ligand challenge on nanoluciferase, and a toluene-water logP challenge.
 
 ### The NanoLuc challenge
 
-The SAMPL9 (and SAMPL10) protein-ligand challenges focus on binding to nanoluciferase (nanoluc) and include both a virtual screening and potency prediction component, as [further detailed here](protein_ligand/README.md). Compound identities and submission deadlines [are available](protein_ligand/README.md)], and submission links are forthcoming before the challenge deadline.
+The SAMPL9 (and SAMPL10) protein-ligand challenges focus on binding to nanoluciferase (nanoluc) and include both a virtual screening and potency prediction component, as [further detailed here](protein_ligand/README.md). Compound identities and submission deadlines [are available](protein_ligand/README.md)], along with submission links.
+
+## The logP challenge
+
+A generous contribution of new experimental data makes it possible for us to run a toluene-water logP challenge, with new measurements for 16 compounds spanning a few log units in dynamic range for logP. Additional details [available under the logP directory](logP/README.md).
 
 ### The WP6 challenge
 

@@ -1,0 +1,17 @@
+ID,name,SMILES
+1,Albendazole,CCCSc1ccc2c(c1)[nH]c(n2)NC(=O)OC
+2,Alprenolol,CC(C)NCC(O)COc1ccccc1CC=C
+3,Amitriptyline,CN(C)CCC=C2c1ccccc1CCc3ccccc23
+4,Bifonazole,c1ccc(cc1)C(c2ccc(cc2)c3ccccc3)n4ccnc4
+5,Chlorpheniramine maleate salt,CN(C)CCC(c1ccc(Cl)cc1)c2ccccn2
+6,Epinephrine,CNC[C@H](O)c1ccc(O)c(O)c1
+7,Fluphenazine dihydrochloride,OCCN4CCN(CCCN2c1ccccc1Sc3ccc(cc23)C(F)(F)F)CC4
+8,Glyburide,COc1ccc(Cl)cc1C(=O)NCCc2ccc(cc2)S(=O)(=O)NC(=O)NC3CCCCC3
+9,Imipramine hydrochloride,CN(C)CCCN2c1ccccc1CCc3ccccc23
+10,Ketoprofen,CC(C(O)=O)c1cccc(c1)C(=O)c2ccccc2
+11,Nalidixic acid,CCn1cc(C(O)=O)c(=O)c2ccc(C)nc12
+12,Paracetamol,CC(=O)Nc1ccc(O)cc1
+13,Pindolol,CC(C)NCC(O)COc1cccc2[nH]ccc12
+14,Quinine,COc4ccc3nccc(C(O)C1CC2CCN1CC2C=C)c3c4
+15,Sulfamethazine,Cc2cc(C)nc(NS(=O)(=O)c1ccc(N)cc1)n2
+16,Trazodone hydrochloride,Clc1cccc(c1)N4CCN(CCCn3nc2ccccn2c3=O)CC4
