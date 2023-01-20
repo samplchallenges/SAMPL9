@@ -41,3 +41,5 @@ Partition values, log Ptol/w, were obtained by sample titrations as typically de
 
 - `compounds.csv`: A list of the compounds to be considered in the challenge
 - `compounds_image.png`: An image of the compounds
+- `logP_prediction_template.csv`: Template file for predictions
+- `logP_template_example.csv`: Example completed template for submission

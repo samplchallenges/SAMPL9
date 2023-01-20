@@ -64,6 +64,8 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 - 2022-10-10: Add NanoLuc Stage 1 submissions
 - 2022-11-16: Extend NanoLuc Stage 2 to allow for ranking rather than just IC50 prediction
 - 2022-11-25: Add logP challenge initial information
+- 2023-01-13: Switch logP compound numbering to have "SAMPL9-" prefix
+- 2023-01-20: Provide logP submission template and example
 
 ## Challenge construction
 
