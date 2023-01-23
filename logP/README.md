@@ -1,6 +1,6 @@
 # The SAMPL9 LogP Challenge
 
-The SAMPL9 logP challenge begins immediately and runs through Friday, Jan. 27 at 13:00 UTC. The compound list is provided here, and submission details and instructions (including data format) will be posted soon.
+The SAMPL9 logP challenge begins immediately and runs through Friday, Jan. 31 at 13:00 UTC. The compound list is provided here. Submissions must be uploaded via the [submission server](https://submit.samplchallenges.org/submit/sampl9-logp). A template file and an example file are provided in this directory, with additional instructions below.
 
 ## Experimental details
 
@@ -36,6 +36,12 @@ Partition values, log Ptol/w, were obtained by sample titrations as typically de
 - Avdeef, A., Comer J., 1993. pH-Metric log P.II. Refinement of partition coeficients and ionization constants of multiprotic substances, J. Pharm. Sci. 82, 183-190
 - Avdeef, Alex; Comer, John E. A.; Thomson, Simon J., 1993. pH-Metric log P. 3. Glass electrode calibration in methanol-water, applied to pKa determination of water-insoluble substances, Anal. Chem., 65, 42-49
 - Ràfols, C., Bosch, E., Ruiz, R., Box, K. J., Reis, M., Ventura, C., Santos, S., Araújo, M. E., Martins F., 2012. Acidity and Hydrophobicity of Several New Potential Antitubercular Drugs: Isoniazid and Benzimidazole Derivatives, J. Chem. Eng. Data, 57, 330-338
+
+## Instructions
+
+The SAMPL9 log P Challenge consists of predicting the water-toluene partition coefficients of 16 molecules. Our aim is to evaluate how well current models can capture the transfer free energy of small molecules between different solvent environments through blind predictions. Challenge participants are asked to predict the difference in free energy for the neutral form between water and toluene.
+
+Submissions must be in the required format, linked below. The submission file must begin with the characters "logP_" and end with ".csv" and must contain a **transfer free energy** (in kcal/mol) for all compounds, as well as a predicted statistical uncertainty (same units) and a predicted model uncertainty (same units). Note that the statistical uncertainty may be small, e.g. if your model has very low statistical error, and should estimate how much your prediction would differ if you ran again, or used different initial coordinates, or changed other minor factors. Your predicted "model uncertainty" should be an estimate of the overall accuracy you would estimate your model has (regardless of statistical error), e.g. if you expect your prediction will be within 2 kcal/mol, use that value. 
 
 ## Manifest
 

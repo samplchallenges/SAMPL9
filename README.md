@@ -27,7 +27,6 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 
 - Analysis of the WP6/bCD challenge
 - Additional inputs for NanoLuc challenge
-- Submission details and formats for NanoLuc challenge
 - Info on submission of containerized methods for NanoLuc challenge
 
 ## Changes and Data Set Versions/Changelog
@@ -66,6 +65,7 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 - 2022-11-25: Add logP challenge initial information
 - 2023-01-13: Switch logP compound numbering to have "SAMPL9-" prefix
 - 2023-01-20: Provide logP submission template and example
+- 2023-01-23: Add [submission server](https://submit.samplchallenges.org/submit/sampl9-logp) link for logP, update deadline to Jan. 31.
 
 ## Challenge construction
 
@@ -79,7 +79,7 @@ The SAMPL9 (and SAMPL10) protein-ligand challenges focus on binding to nanolucif
 
 ## The logP challenge
 
-A generous contribution of new experimental data makes it possible for us to run a toluene-water logP challenge, with new measurements for 16 compounds spanning a few log units in dynamic range for logP. Additional details [available under the logP directory](logP/README.md).
+A generous contribution of new experimental data makes it possible for us to run a toluene-water logP challenge, with new measurements for 16 compounds spanning a few log units in dynamic range for logP. Additional details [available under the logP directory](logP/README.md). The [submission server is live](https://submit.samplchallenges.org/submit/sampl9-logp).
 
 ### The WP6 challenge
 
