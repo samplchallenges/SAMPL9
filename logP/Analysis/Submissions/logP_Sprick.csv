@@ -1,0 +1,84 @@
+# WATER-TOLUENE (ΔG_toluene - ΔG_water) TRANSFER FREE ENERGY PREDICTIONS
+#
+# 
+# PREDICTION SECTION
+#
+Predictions:
+SAMPL9-1,7.785,0.07,0.934
+SAMPL9-2,-6.412,0.042,0.58
+SAMPL9-3,-13.754,0.035,0.58
+SAMPL9-4,-8.258,0.094,0.58
+SAMPL9-5,-8.382,0.068,0.58
+SAMPL9-6,0.024,0.081,0.58
+SAMPL9-7,-13.918,0.121,0.934
+SAMPL9-8,-4.964,0.231,0.934
+SAMPL9-9,-9.336,0.057,0.58
+SAMPL9-10,-6.621,0.041,0.58
+SAMPL9-11,-3.083,0.138,0.58
+SAMPL9-12,15.312,0.044,0.58
+SAMPL9-13,-3.355,0.072,0.58
+SAMPL9-14,-5.013,0.048,0.58
+SAMPL9-15,-2.188,0.094,0.934 
+SAMPL9-16,-5.426,0.09,0.58
+
+#
+Participant name:
+MSc. Miriam Sprick
+PD Dr.-Ing. Gabriele Raabe
+
+#
+Participant organization:
+Institute of Thermodynamics, Technische Universität (TU) Braunschweig
+
+#
+# NAME SECTION
+#
+Name:
+MD_GAFF_IPolQ_LJFit_pathfinder
+
+#
+# COMPUTE TIME SECTION
+#
+Compute time:
+CPU time for quantum mechanics simulations: 550 on 1 node á 20 cores
+CPU time for molecular dynamics simulations: 1500 hours on 1 node á 96 cores
+
+#
+# COMPUTING AND HARDWARE SECTION
+#
+Computing and hardware:
+CPU INTEL Xeon E5-2640v4 (local cluster of TU Braunschweig) for quantum mechanics simulation
+Intel Cascade Lake Platinum 9242 (CLX-AP) (supercomputer HLRN-IV system) for molecular dynamics simulation
+
+#
+# SOFTWARE SECTION
+#
+# 
+Software:
+GAUSSIAN16 for quantum mechanics simulation
+GROMACS version 2019.6 for molecular dynamics simulation
+
+#
+# METHOD CATEGORY SECTION
+#
+Category:
+physical (MM)
+
+#
+# METHOD DESCRIPTION SECTION
+#
+Method:
+The molecule-solvent systems were simulated using the force field GAFF/IPolQ-Mod+LJ-Fit. Therefore, IPolQ-Mod partial charges were determined using the functional and basis set MP2/aug-cc-pvdz. The quantum mechanics simulations were performed with GAUSSIAN16. First, the geometry of the molecule was optimized in vacuum, and then, the partial charges were derived in both, vacuum and in the explicit solvent toluene and water. The partial charges of the molecules were then averaged to imitate the change in the charge distribution within the molecule during its transfer from vacuum to the fully dissolved state. The Lennard-Jones parameter were taken from the GAFF/IPolQ-Mod+LJ-Fit force field by Mecklenfeld & Raabe [DOI: 10.5599/admet.837], that provides refitted Lennard-Jones parameters for the IPolQ-Mod partial charges.
+For the solvent water, the TIP3P model was used without any modification. 
+The partial charges for the solvent toluene were derived from quantum mechanics simulations using MP2/aug-cc-pvdz in the explicit solvent toluene, and Lennard-Jones parameter were modelled according to Mecklenfeld and Raabe. 
+The initial configuration of the molecules was generated using PACKMOL. The required amount of solvent molecules was calculated according to the method from Parameswaran and Mobley [DOI: 10.1007/s10822-014-9766-7], which yielded 2000 TIP3P molecules for the solvation free energy simulations in the solvent water and 400 toluene molecules for the solvation free energy simulations in the solvent toluene, except for SAMPL9-7 (2200 TIP3P molecules), SAMPL9-8 (3000 TIP3P, 550 toluene molecules), SAMPL9-9 (3000 TIP3P, 550 toluene molecules) and SAMPL9-16 (2100 TIP3P molecules).
+The molecular dynamics simulations were performed with GROMACS 2019.6, and organized using the in-house pathfinder tool developed by  Mecklenfeld & Raabe [DOI: 10.1080/00268976.2017.1292008]. The softcore potential 1-1-6 with an \alpha-parameter of 0.5 was used. 
+There are four stages for each simulation system to perform:  Energy minimization, equilibration, optimization and production. An initial \lambda-distribution of 12 equidistantly distributed \lambda-states were chosen since there is a lack of information of the percentage distribution between van-der-Waals and Coulomb interactions. Furthermore, 12 simulations run efficiently on the supercomputer. 
+Firstly, the energy minimization of each \lambda-state of the initial \lambda-distribution uses the steep integrator for maximal 100.000 steps. It stops earlier if the maximal force is smaller than 10 kJ/(mol nm). Secondly, the equilibration simulation of each \lambda-state uses the sd integrator in NpT-ensemble and runs for 10^6 steps. The Berendsen barostat is applied for pressure coupling. 
+The optimization simulations use the sd integrator in NpT-ensemble and run for 10^6 steps. The Parrinello-Rahman barostat is applied for pressure coupling. Replica-exchange molecular dynamics was applied to improve the sampling, with the exchange rate set to 200. In the optimization simulation, the pathfinder method for an adaptive \lambda-spacing was applied to determine the optimal number and distribution of \lambda-state. Therefore, the python based package "alchemical_analysis.py" [DOI: 10.1007/s10822-015-9840-9] was used to evaluate the solvation free energy after each optimization block. The evaluation of the alchemical pathway is performed using the statistically optimized Multistate Bennet Acceptance Ratio (MBAR) [DOI: 10.1063/1.2978177] method. Important criteria for the optimized \lambda-distribution are the sufficient overlap shown in the MBAR matrix and an evenly distributed statistical uncertainties of the partial solvation energies along the alchemical path. 5 optimization blocks are needed to find a suitable distribution. For smaller molecules, 12-15 \lambda-states gain sufficient overlap. For the larger molecules containing sulfur, the optimization iterated between 17-20 \lambda-states. The optimized \lambda-distribution is the starting configuration for five production simulations using the sd integrator in NpT-Ensemble and Parrinello-Rahman pressure coupling for 4 * 10^6 steps. Replica-exchange molecular dynamics was applied with an exchange rate of 200. 
+For postprocessing, the python based package "alchemical_analysis.py" was used as well. 
+The solvation free energy of a molecule-solvent system is the block average of 5 production blocks with the standard deviation of these 5 blocks. The difference of solvation free energy in toluene and solvation free energy in water is the transfer free energy. The statistical uncertainty of the transfer free energy is calculated with the Gaussians’ error propagation from the standard deviations of the solvation free energy in toluene and water. The model uncertainty of the force field GAFF/IPolQ-Mod+LJ-Fit is given by the RMSD of 0.58 kcal/mol according to Mecklenfeld and Raabe, who compared 357 solute-solvent systems to experimental data. Though, it should be mentioned that the softcore potential 1-1-48 was used by Mecklenfeld and Raabe, whereas the 1-1-6 softcore potential was used here. The solvation free energy results might slightly vary with the applied softcore potential, and with this also the deviation from experimental data.  So far, there are no optimized LJ-parameter for sulfate atomtypes available in the GAFF/IPolQ-Mod+LJ-Fit force field. Therefore, the LJ-parameter for the sulfur atoms in the molecules SAMPL9-1, SAMPL9-7, SAMPL9-8 and SAMPL9-15 were taken from GAFF. Thus, the model uncertainty for these molecules is estimated to be 0.934 kcal/mol which is the average between the RMSD of GAFF/IPolQ-Mod (with no adjusted LJ-parameters) and GAFF/IPolQ-Mod+LJ-Fit according to Mecklenfeld and Raabe.
+
+#
+Ranked:
+True

@@ -1,0 +1,141 @@
+# WATER-TOLUENE (ΔG_toluene - ΔG_water) TRANSFER FREE ENERGY PREDICTIONS
+#
+# This file will be automatically parsed. It must contain the following four elements:
+# predictions, name of method, software listing, and method description.
+# These elements must be provided in the order shown with their respective headers.
+#
+# Any line that begins with a # is considered a comment and will be ignored when parsing.
+#
+# 
+# PREDICTION SECTION
+#
+# It is mandatory to submit water to toluene (ΔG_toluene - ΔG_water) transfer free energy (TFE) predictions for all 16 molecules.
+# Incomplete submissions will not be accepted.
+# The energy units must be in kcal/mol.
+
+# Please report the general molecule `ID tag` in the form of `SAMPL9-XX` (e.g. SAMPL9-1, SAMPL9-2, etc).
+# Please report TFE standard error of the mean (SEM) and TFE model uncertainty.
+#
+# The data in each prediction line should be structured as follows:
+# ID tag, TFE, TFE SEM, TFE model uncertainty
+#
+# If you use a microstate other than the challenge provided microstate, please note SMILES strings of microstates you used in your submission, such as in the methods section.
+#
+# The list of predictions must begin with the 'Predictions:' keyword as illustrated here.
+Predictions:
+SAMPL9-1,-2.22,0.1,0.8
+SAMPL9-2,-4.05,0.1,0.8
+SAMPL9-3,-7.84,0.1,0.8
+SAMPL9-4,-7.19,0.1,0.8
+SAMPL9-5,-5.29,0.1,0.8
+SAMPL9-6,6.17,0.1,0.8
+SAMPL9-7,-5.68,0.1,0.8
+SAMPL9-8,-4.75,0.1,0.8
+SAMPL9-9,-7.94,0.1,0.8
+SAMPL9-10,-3.62,0.1,0.8
+SAMPL9-11,0.35,0.1,0.8
+SAMPL9-12,2.14,0.1,0.8
+SAMPL9-13,-1.43,0.1,0.8
+SAMPL9-14,-1.91,0.1,0.8
+SAMPL9-15,1.04,0.1,0.8
+SAMPL9-16,-3.98,0.1,0.8
+#
+#
+#
+# Please list your name, using only UTF-8 characters as described above. The "Participant name:" entry is required.
+Participant name:
+Jasmine (Vy) Tran
+Andrew Paluch
+
+#
+#
+# Please list your organization/affiliation, using only UTF-8 characters as described above.
+Participant organization:
+Miami University
+
+#
+#
+# NAME SECTION
+#
+# Please provide an informal but informative name of the method used.
+# The name must not exceed 40 characters.
+# The 'Name:' keyword is required as shown here.
+Name:
+gc-lser-ufz
+
+#
+#
+# COMPUTE TIME SECTION
+#
+# Please provide the average compute time across all of the molecules.
+# For physical methods, report the GPU and/or CPU compute time in hours.
+# For empirical methods, report the query time in hours.
+# Create a new line for each processor type.
+# The 'Compute time:' keyword is required as shown here.
+Compute time:
+0 hours, CPU
+
+#
+# COMPUTING AND HARDWARE SECTION
+#
+# Please provide details of the computing resources that were used to train models and make predictions.
+# Please specify compute time for training models and querying separately for empirical prediction methods.
+# Provide a detailed description of the hardware used to run the simulations.
+# The 'Computing and hardware:' keyword is required as shown here.
+Computing and hardware:
+All calculations were performed on my laptop running an Intel Core i5 processor.
+LSER parameters were predicted on the UFZ-LSER website.
+
+# SOFTWARE SECTION
+#
+# List all major software packages used and their versions.
+# Create a new line for each software.
+# The 'Software:' keyword is required.
+Software:
+LSER parameters were predicted on the UFZ-LSER website. The logP predictions
+were then readily made using LibreOffice Calc.
+
+# METHOD CATEGORY SECTION
+#
+# State which method category your prediction method is better described as:
+# `Physical (MM)`, `Physical (QM)`, `Empirical`, or `Mixed`.
+# Pick only one category label.
+# The `Category:` keyword is required.
+Category:
+Empirical
+
+# METHOD DESCRIPTION SECTION
+#
+# Methodology and computational details.
+# Level of details should be roughly equivalent to that used in a publication.
+# Please include the values of key parameters with units.
+# Please explain how statistical uncertainties were estimated.
+#
+# If you have evaluated additional microstates, please report their SMILES strings and populations of all the microstates in this section.
+# If you used a microstate other than the challenge provided microstate (`SMXX_micro000`), please list your chosen `Molecule ID` (in the form of `SMXX_extra001`) along with the SMILES string in your methods description.
+#
+# Use as many lines of text as you need.
+# All text following the 'Method:' keyword will be regarded as part of your free text methods description.
+Method:
+This work follows our SAMPL6 entry, UFZ-LSER. Namely, Abraham solute descriptors 
+were predicted from the provided smiles on the UFZ-LSER website (https://www.ufz.de/index.php?en=31698&contentonly=1&m=0&lserd_data[mvc]=Public/start).
+Once Abraham solute descriptors were predicted for the SAMPL9 molecules,
+existing LSER correlations were used to predict logP, which we converted
+to the transfer free energy in kcal/mol.
+
+The uncertainty in the solvation free energy calculations was taken to be 0.1 kcal/mol. Given the
+same SMILES, we would obtain the same Abraham solute descriptors, which would lead to 
+an uncertainty of 0. We use 0.1 as the server requires a non-zero value. To obtain the model uncertainty,
+we additionally performed calculation using an existing correlation for water/1-octanol 
+which were used to generate an estimate of logP octanol/water and the transfer free energy. 
+This was then compared to reference logP values obtained from DrugBank.ca, which were converted to transfer free energies. 
+
+#
+#
+# All submissions must either be ranked or non-ranked.
+# Only one ranked submission per participant is allowed.
+# Multiple ranked submissions from the same participant will not be judged.
+# Non-ranked submissions are accepted so we can verify that they were made before the deadline.
+# The "Ranked:" keyword is required, and expects a Boolean value (True/False)
+Ranked:
+False

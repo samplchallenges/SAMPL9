@@ -1,0 +1,127 @@
+# WATER-TOLUENE (ΔG_toluene - ΔG_water) TRANSFER FREE ENERGY PREDICTIONS
+#
+# This file will be automatically parsed. It must contain the following four elements:
+# predictions, name of method, software listing, and method description.
+# These elements must be provided in the order shown with their respective headers.
+#
+# Any line that begins with a # is considered a comment and will be ignored when parsing.
+#
+# 
+# PREDICTION SECTION
+#
+# It is mandatory to submit water to octanol (ΔG_octanol - ΔG_water) transfer free energy (TFE) predictions for all 22 molecules.
+# Incomplete submissions will not be accepted.
+# The energy units must be in kcal/mol.
+
+# Please report the general molecule `ID tag` in the form of `SAMPL9-XX` (e.g. SAMPL9-1, SAMPL9-2, etc).
+# Please report TFE standard error of the mean (SEM) and TFE model uncertainty.
+#
+# The data in each prediction line should be structured as follows:
+# ID tag, TFE, TFE SEM, TFE model uncertainty
+#
+# If you use a microstate other than the challenge provided microstate, please note SMILES strings of microstates you used in your submission, such as in the methods section.
+#
+# The list of predictions must begin with the 'Predictions:' keyword as illustrated here.
+Predictions:
+SAMPL9-1,4.28,1.0,2
+SAMPL9-2,1.28,1.34,2
+SAMPL9-3,6.4,0.75,2
+SAMPL9-4,2.07,1.04,2
+SAMPL9-5,-0.75,2.43,1.5
+SAMPL9-6,2.19,1.09,1.5
+SAMPL9-7,4.05,0.82,1.5
+SAMPL9-8,1.51,1.88,1.5
+SAMPL9-9,3.31,2.22,1.5
+SAMPL9-10,2.07,1.04,2
+SAMPL9-11,4.05,0.82,1.5
+SAMPL9-12,0.41,0.88,2 
+SAMPL9-13,1.28,1.34,2
+SAMPL9-14,6.4,0.75,2
+SAMPL9-15,2.07,1.04,2
+SAMPL9-16,-0.75,2.43,1.5
+#
+#
+#
+# Please list your name, using only UTF-8 characters as described above. The "Participant name:" entry is required.
+Participant name:
+Template
+
+#
+#
+# Please list your organization/affiliation, using only UTF-8 characters as described above.
+Participant organization:
+none
+
+#
+#
+# NAME SECTION
+#
+# Please provide an informal but informative name of the method used.
+# The name must not exceed 40 characters.
+# The 'Name:' keyword is required as shown here.
+Name:
+nullmethod
+
+#
+#
+# COMPUTE TIME SECTION
+#
+# Please provide the average compute time across all of the molecules.
+# For physical methods, report the GPU and/or CPU compute time in hours.
+# For empirical methods, report the query time in hours.
+# Create a new line for each processor type.
+# The 'Compute time:' keyword is required as shown here.
+Compute time:
+0000
+
+#
+# COMPUTING AND HARDWARE SECTION
+#
+# Please provide details of the computing resources that were used to train models and make predictions.
+# Please specify compute time for training models and querying separately for empirical prediction methods.
+# Provide a detailed description of the hardware used to run the simulations.
+# The 'Computing and hardware:' keyword is required as shown here.
+Computing and hardware:
+Macbook Pro M2, no compute time was used or harmed in the making of this file.
+
+# SOFTWARE SECTION
+#
+# List all major software packages used and their versions.
+# Create a new line for each software.
+# The 'Software:' keyword is required.
+Software:
+no software used, I just made it up
+
+# METHOD CATEGORY SECTION
+#
+# State which method category your prediction method is better described as:
+# `Physical (MM)`, `Physical (QM)`, `Empirical`, or `Mixed`.
+# Pick only one category label.
+# The `Category:` keyword is required.
+Category:
+physical (MM)
+
+# METHOD DESCRIPTION SECTION
+#
+# Methodology and computational details.
+# Level of details should be roughly equivalent to that used in a publication.
+# Please include the values of key parameters with units.
+# Please explain how statistical uncertainties were estimated.
+#
+# If you have evaluated additional microstates, please report their SMILES strings and populations of all the microstates in this section.
+# If you used a microstate other than the challenge provided microstate (`SMXX_micro000`), please list your chosen `Molecule ID` (in the form of `SMXX_extra001`) along with the SMILES string in your methods description.
+#
+# Use as many lines of text as you need.
+# All text following the 'Method:' keyword will be regarded as part of your free text methods description.
+Method:
+mymethod
+
+#
+#
+# All submissions must either be ranked or non-ranked.
+# Only one ranked submission per participant is allowed.
+# Multiple ranked submissions from the same participant will not be judged.
+# Non-ranked submissions are accepted so we can verify that they were made before the deadline.
+# The "Ranked:" keyword is required, and expects a Boolean value (True/False)
+Ranked:
+True

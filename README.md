@@ -66,6 +66,7 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 - 2023-01-13: Switch logP compound numbering to have "SAMPL9-" prefix
 - 2023-01-20: Provide logP submission template and example
 - 2023-01-23: Add [submission server](https://submit.samplchallenges.org/submit/sampl9-logp) link for logP, update deadline to Jan. 31.
+- 2023-01-31: Add SAMPL submissions
 
 ## Challenge construction
 

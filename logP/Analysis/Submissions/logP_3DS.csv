@@ -1,0 +1,141 @@
+# WATER-TOLUENE (ΔG_toluene - ΔG_water) TRANSFER FREE ENERGY PREDICTIONS
+#
+# This file will be automatically parsed. It must contain the following four elements:
+# predictions, name of method, software listing, and method description.
+# These elements must be provided in the order shown with their respective headers.
+#
+# Any line that begins with a # is considered a comment and will be ignored when parsing.
+#
+# 
+# PREDICTION SECTION
+#
+# It is mandatory to submit water to octanol (ΔG_octanol - ΔG_water) transfer free energy (TFE) predictions for all 22 molecules.
+# Incomplete submissions will not be accepted.
+# The energy units must be in kcal/mol.
+
+# Please report the general molecule `ID tag` in the form of `SAMPL9-XX` (e.g. SAMPL9-1, SAMPL9-2, etc).
+# Please report TFE standard error of the mean (SEM) and TFE model uncertainty.
+#
+# The data in each prediction line should be structured as follows:
+# ID tag, TFE, TFE SEM, TFE model uncertainty
+#
+# If you use a microstate other than the challenge provided microstate, please note SMILES strings of microstates you used in your submission, such as in the methods section.
+#
+# The list of predictions must begin with the 'Predictions:' keyword as illustrated here.
+Predictions:
+SAMPL9-1,-2.52,0.4,0.1
+SAMPL9-2,-5.89,0.4,0.1
+SAMPL9-3,-9.81,0.4,0.1
+SAMPL9-4,-8.91,0.4,0.1
+SAMPL9-5,-7.24,0.4,0.1
+SAMPL9-6,4.66,0.4,0.1
+SAMPL9-7,-6.48,0.4,0.1
+SAMPL9-8,-2.26,0.4,0.1
+SAMPL9-9,-9.76,0.4,0.1
+SAMPL9-10,-3.08,0.4,0.1
+SAMPL9-11,-2.54,0.4,0.1
+SAMPL9-12,1.66,0.4,0.1
+SAMPL9-13,-2.67,0.4,0.1
+SAMPL9-14,-4.12,0.4,0.1
+SAMPL9-15,3.71,0.4,0.1
+SAMPL9-16,-5.75,0.4,0.1
+#
+#
+# Please list your name, using only UTF-8 characters as described above. The "Participant name:" entry is required.
+Participant name:
+Michael Diedenhofen, Arnim Hellweg
+
+#
+#
+# Please list your organization/affiliation, using only UTF-8 characters as described above.
+Participant organization:
+Dassault Systemes Deutschland GmbH BIOVIA
+
+#
+#
+# NAME SECTION
+#
+# Please provide an informal but informative name of the method used.
+# The name must not exceed 40 characters.
+# The 'Name:' keyword is required as shown here.
+Name:
+COSMO-RS
+
+#
+#
+# COMPUTE TIME SECTION
+#
+# Please provide the average compute time across all of the molecules.
+# For physical methods, report the GPU and/or CPU compute time in hours.
+# For empirical methods, report the query time in hours.
+# Create a new line for each processor type.
+# The 'Compute time:' keyword is required as shown here.
+Compute time:
+The conformer COSMO file creation took ~40 hours (wall time) using 1 to 48 processors. 
+The number of processors used changes in the course of the calculations.
+
+#
+# COMPUTING AND HARDWARE SECTION
+#
+# Please provide details of the computing resources that were used to train models and make predictions.
+# Please specify compute time for training models and querying separately for empirical prediction methods.
+# Provide a detailed description of the hardware used to run the simulations.
+# The 'Computing and hardware:' keyword is required as shown here.
+Computing and hardware:
+For the conformer generation we have used a linux machine (AMD EPYC 7413 24-Core Processor). The calculations could use up to 48 cores. The number of actually used CPU differ during the steps of the conformer search procedure.
+Compared to the creation of the conformer sets the time for the COSMO-RS logD calculations is neglectable (one minute on a windows notebook, one CPU). 
+
+# SOFTWARE SECTION
+#
+# List all major software packages used and their versions.
+# Create a new line for each software.
+# The 'Software:' keyword is required.
+Software:
+BIOVIA COSMOquick 2023: A proprietary tool of Dassault Systemes to generate tautomeric states.
+BIOVIA COSMOconf 2023: A proprietary tool of Dassault Systemes for conformer generation (uses TURBOMOLE and COSMOtherm)
+BIOVIA COSMObase 2023: A proprietary tool of Dassault Systemes (COSMO file Database)
+BIOVIA COSMOtherm 2023: The proprietary software developed and distributed by Dassault Systemes, which uses COSMO-RS. COSMO-RS is a published theory: Klamt A (1995) Conductor-like screening model for real solvents: a new approach to the quantitative calculation of solvation phenomena. J Phys Chem 99:2224-2235. https://doi.org/10.1021/j100007a062
+TURBOMOLE 7.7: The quantum chemistry suite. University of Karlsruhe and Forschungszentrum Karlsruhe GmbH, 1989-2007, TURBOMOLE GmbH, since 2007; available from http://www.turbomole.com: Karlsruhe, Germany,2020"
+xTB: C. Bannwarth, E. Caldeweyher, S. Ehlert, A. Hansen, P. Pracht, J. Seibert, S. Spicher, S. Grimme, WIREs Comput. Mol. Sci., 2020, e01493. DOI: 10.1002/wcms.1493
+
+# METHOD CATEGORY SECTION
+#
+# State which method category your prediction method is better described as:
+# `Physical (MM)`, `Physical (QM)`, `Empirical`, or `Mixed`.
+# Pick only one category label.
+# The `Category:` keyword is required.
+Category:
+Physical (QM)
+
+# METHOD DESCRIPTION SECTION
+#
+# Methodology and computational details.
+# Level of details should be roughly equivalent to that used in a publication.
+# Please include the values of key parameters with units.
+# Please explain how statistical uncertainties were estimated.
+#
+# If you have evaluated additional microstates, please report their SMILES strings and populations of all the microstates in this section.
+# If you used a microstate other than the challenge provided microstate (`SMXX_micro000`), please list your chosen `Molecule ID` (in the form of `SMXX_extra001`) along with the SMILES string in your methods description.
+#
+# Use as many lines of text as you need.
+# All text following the 'Method:' keyword will be regarded as part of your free text methods description.
+Method:
+Conformer/tautomer workflow:
+1) We used COSMOquick + xTB approach to generate possible tautomers. After a first DFT optimization we discarded all structures with relative energies >15 kcal/mol. The tautomer sets were then checked manually and missing tautomers were added.
+2) COSMOconf was used to create the COSMO files for the conformer set of the microstates.
+COSMO-RS calculations:
+All COSMO-RS calculation have been performed with the COSMOtherm software (parametrization: BP_TZVPD_FINE_23.ctd). 
+The COSMO files for Water, Toluene, SAMPL9-10, SAMPL9-11, SAMPL9-15, SAMPL9-9, SAMPL9_12 and SAMPL9_4 have been taken from the COSMObase2023, all other files were calculated according to the procedure described above (step 1+2) 
+The conformer sets of the microstates (tautomers) of the compounds have been merged to form the conformer set of the compound. These sets have been used for the prediction of the partition coefficients between pure water and a toluene phase with 0.23 mol % water (N. Peschke, S. I. Sandler,  J. Chem. Eng. Data 1995, 40, 315-320).
+The COSMO-RS algorithm by itself has no statistical error. The overall workflow including the conformational search (or molecule or state) has a statistical noise smaller than 0.1 kcal/mol.
+As an error estimation for the underlying partition coefficients we use the root mean square deviation (RMSD) of 0.4 kcal/mol (taken from COSMO-RS parametrization).
+
+#
+#
+# All submissions must either be ranked or non-ranked.
+# Only one ranked submission per participant is allowed.
+# Multiple ranked submissions from the same participant will not be judged.
+# Non-ranked submissions are accepted so we can verify that they were made before the deadline.
+# The "Ranked:" keyword is required, and expects a Boolean value (True/False)
+Ranked:
+True

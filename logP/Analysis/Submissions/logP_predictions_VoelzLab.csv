@@ -1,0 +1,155 @@
+# WATER-TOLUENE (ΔG_toluene - ΔG_water) TRANSFER FREE ENERGY PREDICTIONS
+#
+# This file will be automatically parsed. It must contain the following four elements:
+# predictions, name of method, software listing, and method description.
+# These elements must be provided in the order shown with their respective headers.
+#
+# Any line that begins with a # is considered a comment and will be ignored when parsing.
+#
+#
+# PREDICTION SECTION
+#
+# It is mandatory to submit water to octanol (ΔG_octanol - ΔG_water) transfer free energy (TFE) predictions for all 22 molecules.
+# Incomplete submissions will not be accepted.
+# The energy units must be in kcal/mol.
+
+# Please report the general molecule `ID tag` in the form of `SAMPL9-XX` (e.g. SAMPL9-1, SAMPL9-2, etc).
+# Please report TFE standard error of the mean (SEM) and TFE model uncertainty.
+#
+# The data in each prediction line should be structured as follows:
+# ID tag, TFE, TFE SEM, TFE model uncertainty
+#
+# If you use a microstate other than the challenge provided microstate, please note SMILES strings of microstates you used in your submission, such as in the methods section.
+#
+# The list of predictions must begin with the 'Predictions:' keyword as illustrated here.
+Predictions:
+SAMPL9-1,-4.542,0.186,0.447
+SAMPL9-2,-5.813,0.208,0.457
+SAMPL9-3,-8.44,0.309,0.51
+SAMPL9-4,-7.916,0.134,0.428
+SAMPL9-5,-7.455,0.147,0.432
+SAMPL9-6,1.954,0.241,0.472
+SAMPL9-7,-9.73,0.279,0.493
+SAMPL9-8,-4.467,0.401,0.571
+SAMPL9-9,-8.404,0.17,0.44
+SAMPL9-10,-3.786,0.199,0.452
+SAMPL9-11,-0.06,0.261,0.483
+SAMPL9-12,2.498,0.222,0.463
+SAMPL9-13,-1.765,0.357,0.541
+SAMPL9-14,-7.449,2.4,2.434
+SAMPL9-15,3.152,0.443,0.601
+SAMPL9-16,-8.128,0.415,0.581
+#
+#
+# Please list your name, using only UTF-8 characters as described above. The "Participant name:" entry is required.
+Participant name:
+Voelz lab
+#
+#
+# Please list your organization/affiliation, using only UTF-8 characters as described above.
+Participant organization:
+Temple University
+#
+#
+# NAME SECTION
+#
+# Please provide an informal but informative name of the method used.
+# The name must not exceed 40 characters.
+# The 'Name:' keyword is required as shown here.
+Name:
+EE/Openff-2.0/TIP3P/MD-EE/WL
+#
+#
+# COMPUTE TIME SECTION
+#
+# Please provide the average compute time across all of the molecules.
+# For physical methods, report the GPU and/or CPU compute time in hours.
+# For empirical methods, report the query time in hours.
+# Create a new line for each processor type.
+# The 'Compute time:' keyword is required as shown here.
+Compute time:
+Difficult to say. We put them up on Folding@Home (FAH) around Jan 22nd. 2023.
+#
+# COMPUTING AND HARDWARE SECTION
+#
+# Please provide details of the computing resources that were used to train models and make predictions.
+# Please specify compute time for training models and querying separately for empirical prediction methods.
+# Provide a detailed description of the hardware used to run the simulations.
+# The 'Computing and hardware:' keyword is required as shown here.
+Computing and hardware:
+A8-core/FAH Donors CPUs
+#
+# SOFTWARE SECTION
+#
+# List all major software packages used and their versions.
+# Create a new line for each software.
+# The 'Software:' keyword is required.
+Software:
+Gromacs 2020
+openff-toolkit
+#
+# METHOD CATEGORY SECTION
+#
+# State which method category your prediction method is better described as:
+# `Physical (MM)`, `Physical (QM)`, `Empirical`, or `Mixed`.
+# Pick only one category label.
+# The `Category:` keyword is required.
+Category:
+Physical (MM)
+#
+# METHOD DESCRIPTION SECTION
+#
+# Methodology and computational details.
+# Level of details should be roughly equivalent to that used in a publication.
+# Please include the values of key parameters with units.
+# Please explain how statistical uncertainties were estimated.
+#
+# If you have evaluated additional microstates, please report their SMILES strings and populations of all the microstates in this section.
+# If you used a microstate other than the challenge provided microstate (`SMXX_micro000`), please list your chosen `Molecule ID` (in the form of `SMXX_extra001`) along with the SMILES string in your methods description.
+#
+# Use as many lines of text as you need.
+# All text following the 'Method:' keyword will be regarded as part of your free text methods description.
+Method:
+Free energies of transfer from water to toluene were calculated using ``double-decoupling'': alchemical free energies of decoupling a solute's nonbonded interactions were calculated for aqueous solvent and in toluene, with the transfer free energy calculated as the difference between the two values.  The free energies were computed using expanded-ensemble molecular simulations performed in GROMACS \cite{abraham2015gromacs} on the Folding@home distributed computing platform \cite{zimmerman2021sars}.  A three-part workflow was implemented to (1) prepare simulation topologies, (2) equilibrate, optimize and perform expanded ensemble simulations, and (3) analyze the results.
+\subsection{System preparation}
+\paragraph{Preparation of system topologies}
+The OpenEye OEChem, Omega and Quacpac \cite{QUACPAC} modules were used to generate low-energy conformers of solutes and assign partial charges using the AM1-BCC method \cite{jakalian2000fast}.  Separate topologies were constructed for all likely tautomers and relevant ionization states (those with significant population at pH 7.0 in the aqueous phase), allowing for estimation of distribution coefficients ($\log D$) as well as partition coefficients ($\log P$).
+Force field parameters for all solutes and toluene solvent were provided by OpenFF-2.0.0. \cite{boothroyd2022development} The Open Force Field Toolkit \cite{jeff_wagner_2023_7506404} and the \textit{parmed} library \cite{shirts2017lessons} were used to parameterize each molecule and create structure and topology files for use with the GROMACS \cite{abraham2015gromacs} molecular dynamics package.
+\paragraph{Molecular simulation}
+All simulations were performed using GROMACS 2020.3. Solutes were solvated in an initial cubic box of length 6.0 nm, by insertion into pre-constructed periodic solvent systems and removal overlapping solvent molecules, through the GROMACS \texttt{gmx solvate} command.  Aqueous systems used a periodic box containing 216 TIP3P \cite{jorgensen1983comparison} water molecules provided by GROMACS for this purpose, while toluene-solvated systems required custom preparation of a periodic box containing 216 toluene molecules.  This system was steepest-descent minimized and pressure-equilibrated for 200 ps using a Berendsen barostat at 298.15 K, converging to a final cubic box length of 3.3806 nm.
+Solvated solute systems with an initial volume of (6.0 nm)$^3$ of were prepared for production using the following procedure: (1) steepest-descent minimization, (2) constant-volume equilibration at 298.15 K using a velocity-rescaling thermostat for 100 ps, and (3) constant-pressure equilibration at 1 bar using a Berendsen barostat for 200 ps.  For charged solutes, counterions (either Na+ or Cl- with parameters from the AMBER force field) were added at a distance of 4.6 nm from the center of mass of the solute.  The distance was enforced using harmonic position restraints of force constant 1000 kJ mol$^{-1}$ on the ion and a single non-hydrogen atom of the solute.  Ions were added to the solute molecule topology, such that non-bonded scaling of the solute and its counterion(s) would occur commensurately. All molecular dynamics used a velocity-Verlet integrator with a 2-fs time step, with hydrogen bond lengths constrained using LINCS \cite{hess1997lincs}. Particle-Mesh Ewald electrostatics were used with a PME order of 4 and Fourier spacing of 0.16.
+All input files and preparation scripts are available at \url{https://github.com/vvoelz/sampl9-voelzlab}.
+\subsection{Expanded Ensemble simulations}
+Free energies of solute decoupling were obtained using expanded-ensemble (EE) simulations performed using the free energy methods available in GROMACS 2020.3.  In an EE simulation, $N$ thermodynamic ensembles corresponding to alchemical intermediates are adaptively sampled through proposed Markov Chain Monte Carlo (MCMC) moves.  A bias potential $\tilde{f}_i$ for each intermediate $i$ is maintained and adaptively adjusted to produce equal sampling of all intermediates. By detailed balance, the converged values of $\tilde{f}_i$ that achieve this goal are equal to the free energies $f_i$ of each thermodynamic ensemble, and the total free energy of the alchemical transformation from $i=1$ to $i=N$ can be computed as $\Delta G = \tilde{f}_N -\tilde{f}_1$.
+Expanded ensemble methods have been used to predict absolute binding free energies in host-guest systems \cite{monroe2014converging,rizzi2020sampl6}, and relative binding free energies for receptor ligand systems \cite{zhang2021expanded}.  An advantage of EE is the abilility to sample all alchemical intermediates in a single simulation, enabling asynchronous deployment of large numbers of calculations.  A key shortcoming, however, is the difficulty in determining a schedule of alchemical intermediates that will have sufficiently large MCMC acceptance probabilities to enable efficient sampling.
+To address this problem, we have developed a new method to optimize the schedule of decoupling parameters $\lambda_i^{\text{(coul)}}$ and $\lambda_i^{\text{(vdw)}}$ for the Couloub and van der Waals interactions, respectively, by assuming a simple model of how the variance of $\big( \frac{dU}{d\lambda} \big)$ increases with $\lambda$ (Zhang et al., in preparation).   This method takes as input energies sampled in a short EE simulation with an initial $\lambda$-schedule, and outputs a new set of near-optimal $\lambda_i$ values that maximize the MCMC acceptance probabilities, for use in production simulations.
+We chose 99 alchemical intermediates for solute decoupling, where first the electrostatic interactions are scaled to zero, then the van der Waals interactions are scaled to zero.  For optimization of the $\lambda$-values, 1000 ps of EE simulation was performed (in some cases more; enough to sample all intermediates), restricting proposed MCMC moves to nearest-neighbor thermodynamic ensembles, to ensure sampling of each ensemble.
+Production runs with optimized $\lambda$-values were performed on the Folding@home distributed computing. For each system, 100 EE simulation replicas were performed used a timestep of 2 fs, 0.9 nm cutoffs for long-range electrostatics, LINCS constraints on H-bonds, with frames were saved every 50 ps.  A Metropolized-Gibbs move set was used for proposed MCMC moves. The EE biases were adjusted using the Wang-Landau flat-histogram method \cite{wang2001efficient}. The initial Wang-Landau (WL) bias increment was set to 10 $k_BT$, and was scaled by a factor of 0.8 every time the histogram of sampled intermediates was sufficiently flat.
+\subsection{Analysis of free energies and uncertainties}
+The convergence of the EE simulations was monitored by the progressive decrease of the Wang-Landau (WL) increment.  In practice, EE simulations are sufficiently converged when the WL increment decreases below 0.01.  Typical trajectory lengths to achieve this convergence range from 500--1000 ns.  Only some of the submitted trajectories were able to reach these lengths, due to the asynchronous client-server architecture of distributed computing.
+For each system, estimates of the free energy of decoupling were made by averaging across the available replicas.  For each replica $j$, the last half of the trajectory of $\Delta G$ estimates was used to compute a sample mean $\bar{\Delta G_j}$ and variance $\sigma^2_{\Delta G_j}$.  The aggregate estimate for a system's $\Delta G$ was computed as the $1/\sigma^2_{\Delta G_j}$-weighted average of  $\bar{\Delta G_j}$ values.  This estimator gives the largest influence to the most converged EE simulations.
+\subsection{Predictions of $\log P_{\text{tol/w}}$}
+Our final submission of predictions are computed as $\log P_{\text{tol/w}} = \log_{10} (e^{-\Delta G})$, for
+\begin{equation}
+    \Delta G = \Delta G_{\text{w}} - \Delta G_{\text{tol}}
+\end{equation}
+where $\Delta G_{\text{w}}$ is the free energy of decoupling the solute from water, and $\Delta G_{\text{tol}}$ is the free energy of decoupling the solute from toluene (both in units $RT$).  Analytic propagation of error is used to estimate uncertainties for these values.
+For all solutes except albendazole, we compute transfer free energies that only consider the neutral (and non-zwitterionic) species.  For albendazole, there are two tautomers predicted to have significant population in both aqueous and toluene phases.  A recent DFT study by Claramunt et al. \cite{claramunt2022determination} estimates  tautomer (``2'') to be preferred in aqueous solution over tautomer ``1'' by $\Delta G^* = -0.7$ kJ mol$^{-1}$.  In this case, we estimate the free energy of transfer as
+\begin{equation}
+    \Delta G =  -\ln \frac{ 1 + e^{-\Delta G_i} }{\sum_{i \in \text{unbound}} e^{-\Delta G_i} },
+\end{equation}
+where each $\Delta G_i$ are bound- and unbound-microstate
+Model uncertainties $\sigma_{\text{model}}$ were calculated as
+\begin{equation}
+    \sigma_{\text{model}} = \left( \sigma_{\Delta G}^2 +  \sigma_{\text{sys}}^2  \right)^{1/2}
+\end{equation}
+where $\sigma_{\text{sys}} = 0.6857 RT$ is assumed to be independent systematic error arising from the reported 1.7 kJ mol$^{-1}$ accuracy of OpenFF 2.0.0 \cite{boothroyd2022development}.
+#
+#
+# All submissions must either be ranked or non-ranked.
+# Only one ranked submission per participant is allowed.
+# Multiple ranked submissions from the same participant will not be judged.
+# Non-ranked submissions are accepted so we can verify that they were made before the deadline.
+# The "Ranked:" keyword is required, and expects a Boolean value (True/False)
+Ranked:
+True
