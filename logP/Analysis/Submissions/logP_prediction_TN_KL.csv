@@ -1,0 +1,126 @@
+# WATER-TOLUENE (ΔG_toluene - ΔG_water) TRANSFER FREE ENERGY PREDICTIONS
+#
+# This file will be automatically parsed. It must contain the following four elements:
+# predictions, name of method, software listing, and method description.
+# These elements must be provided in the order shown with their respective headers.
+#
+# Any line that begins with a # is considered a comment and will be ignored when parsing.
+#
+# 
+# PREDICTION SECTION
+#
+# It is mandatory to submit water to toluene (ΔG_toluene - ΔG_water) transfer free energy (TFE) predictions for all 16 molecules.
+# Incomplete submissions will not be accepted.
+# The energy units must be in kcal/mol.
+
+# Please report the general molecule `ID tag` in the form of `SAMPL9-XX` (e.g. SAMPL9-1, SAMPL9-2, etc).
+# Please report TFE standard error of the mean (SEM) and TFE model uncertainty.
+#
+# The data in each prediction line should be structured as follows:
+# ID tag, TFE, TFE SEM, TFE model uncertainty
+#
+# If you use a microstate other than the challenge provided microstate, please note SMILES strings of microstates you used in your submission, such as in the methods section.
+#
+# The list of predictions must begin with the 'Predictions:' keyword as illustrated here.
+Predictions:
+SAMPL9-1, -2.38, 0.4, 0.1
+SAMPL9-2, -3.92, 0.4, 0.1
+SAMPL9-3, -8.17, 0.4, 0.1
+SAMPL9-4, -7.09, 0.4, 0.1
+SAMPL9-5, -5.74, 0.4, 0.1
+SAMPL9-6, 5.67, 0.4, 0.1
+SAMPL9-7, -4.41, 0.4, 0.1
+SAMPL9-8, -0.70, 0.4, 0.1
+SAMPL9-9, -7.96, 0.4, 0.1
+SAMPL9-10, -1.46, 0.4, 0.1
+SAMPL9-11, -1.84, 0.4, 0.1
+SAMPL9-12, 3.52, 0.4, 0.1
+SAMPL9-13, -0.57, 0.4, 0.1
+SAMPL9-14, -1.15, 0.4, 0.1
+SAMPL9-15, 0.77, 0.4, 0.1
+SAMPL9-16, -4.39, 0.4, 0.1
+#
+#
+# Please list your name, using only UTF-8 characters as described above. The "Participant name:" entry is required.
+Participant name:
+Thomas Nevolianis
+Kai Leonhard
+#
+#
+# Please list your organization/affiliation, using only UTF-8 characters as described above.
+Participant organization:
+RWTH Aachen University
+#
+#
+# NAME SECTION
+#
+# Please provide an informal but informative name of the method used.
+# The name must not exceed 40 characters.
+# The 'Name:' keyword is required as shown here.
+Name:
+COSMO-RS
+#
+#
+# COMPUTE TIME SECTION
+#
+# Please provide the average compute time across all of the molecules.
+# For physical methods, report the GPU and/or CPU compute time in hours.
+# For empirical methods, report the query time in hours.
+# Create a new line for each processor type.
+# The 'Compute time:' keyword is required as shown here.
+Compute time:
+3.7 hours (29.2 core-hours)
+#
+# COMPUTING AND HARDWARE SECTION
+#
+# Please provide details of the computing resources that were used to train models and make predictions.
+# Please specify compute time for training models and querying separately for empirical prediction methods.
+# Provide a detailed description of the hardware used to run the simulations.
+# The 'Computing and hardware:' keyword is required as shown here.
+Computing and hardware:
+8-cores 2.2GHz Intel Xeon Silver 4114
+# SOFTWARE SECTION
+#
+# List all major software packages used and their versions.
+# Create a new line for each software.
+# The 'Software:' keyword is required.
+Software:
+COSMOconf2022, COSMOtherm2022
+#
+# METHOD CATEGORY SECTION
+#
+# State which method category your prediction method is better described as:
+# `Physical (MM)`, `Physical (QM)`, `Empirical`, or `Mixed`.
+# Pick only one category label.
+# The `Category:` keyword is required.
+Category:
+Physical (QM)
+#
+# METHOD DESCRIPTION SECTION
+#
+# Methodology and computational details.
+# Level of details should be roughly equivalent to that used in a publication.
+# Please include the values of key parameters with units.
+# Please explain how statistical uncertainties were estimated.
+#
+# If you have evaluated additional microstates, please report their SMILES strings and populations of all the microstates in this section.
+# If you used a microstate other than the challenge provided microstate (`SMXX_micro000`), please list your chosen `Molecule ID` (in the form of `SMXX_extra001`) along with the SMILES string in your methods description.
+#
+# Use as many lines of text as you need.
+# All text following the 'Method:' keyword will be regarded as part of your free text methods description.
+Method:
+The Conductor like Screening Model for Realistic Solvation (COSMO-RS) approached was used.
+Initially, we used RDkit to obtain the xyz structures of SAMPL9 molecules based on the SMILES strings.
+Next, we performed conformational search using the COSMOconf procedure at BP86/def2-TZVPD level of theory with the FINE COSMO cavity.
+Finally, we predicted the transfer free energies using COSMOtherm based on the difference of the chemical potential at infinite dilution in phases toluene and water.
+COSMO-RS has a statistical noise smaller than 0.1 kcal/mol on average (J. Warnau et al., J. Comput. Aided Mol. Des., vol. 35, no. 7, pp. 813–818, Jul. 2021).
+COSMO-RS predicts the transfer free energy with an uncertainty of 0.4 kcal/mol (T. M. Letcher, ‘Development and Applications in Solubility’. The Royal Society of Chemistry, 02 2007).
+#
+#
+# All submissions must either be ranked or non-ranked.
+# Only one ranked submission per participant is allowed.
+# Multiple ranked submissions from the same participant will not be judged.
+# Non-ranked submissions are accepted so we can verify that they were made before the deadline.
+# The "Ranked:" keyword is required, and expects a Boolean value (True/False)
+Ranked:
+True

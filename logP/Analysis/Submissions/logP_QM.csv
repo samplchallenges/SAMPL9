@@ -1,0 +1,134 @@
+# WATER-TOLUENE (ΔG_toluene - ΔG_water) TRANSFER FREE ENERGY PREDICTIONS
+#
+# This file will be automatically parsed. It must contain the following four elements:
+# predictions, name of method, software listing, and method description.
+# These elements must be provided in the order shown with their respective headers.
+#
+# Any line that begins with a # is considered a comment and will be ignored when parsing.
+#
+# 
+# PREDICTION SECTION
+#
+# It is mandatory to submit water to octanol (ΔG_octanol - ΔG_water) transfer free energy (TFE) predictions for all 22 molecules.
+# Incomplete submissions will not be accepted.
+# The energy units must be in kcal/mol.
+
+# Please report the general molecule `ID tag` in the form of `SAMPL9-XX` (e.g. SAMPL9-1, SAMPL9-2, etc).
+# Please report TFE standard error of the mean (SEM) and TFE model uncertainty.
+#
+# The data in each prediction line should be structured as follows:
+# ID tag, TFE, TFE SEM, TFE model uncertainty
+#
+# If you use a microstate other than the challenge provided microstate, please note SMILES strings of microstates you used in your submission, such as in the methods section.
+#
+# The list of predictions must begin with the 'Predictions:' keyword as illustrated here.
+Predictions:
+SAMPL9-1,4.23,0.01,0.01
+SAMPL9-2,4.20,0.01,0.01
+SAMPL9-3,6.64,0.01,0.01
+SAMPL9-4,8.36,0.01,0.01
+SAMPL9-5,6.52,0.01,0.01
+SAMPL9-6,-3.86,0.01,0.01
+SAMPL9-7,4.23,0.01,0.01
+SAMPL9-8,1.06,0.01,0.01
+SAMPL9-9,6.84,0.01,0.01
+SAMPL9-10,2.20,0.01,0.01
+SAMPL9-11,1.21,0.01,0.01
+SAMPL9-12,-1.27,0.01,0.01
+SAMPL9-13,1.40,0.01,0.01
+SAMPL9-14,1.88,0.01,0.01
+SAMPL9-15,2.51,0.01,0.01
+SAMPL9-16,7.58,0.01,0.01
+#
+#
+#
+# Please list your name, using only UTF-8 characters as described above. The "Participant name:" entry is required.
+Participant name:
+Prajay Patel
+
+#
+#
+# Please list your organization/affiliation, using only UTF-8 characters as described above.
+Participant organization:
+University of Dallas
+
+#
+#
+# NAME SECTION
+#
+# Please provide an informal but informative name of the method used.
+# The name must not exceed 40 characters.
+# The 'Name:' keyword is required as shown here.
+Name:
+DLPNO-CCSD(T)/def2-SVP
+
+#
+#
+# COMPUTE TIME SECTION
+#
+# Please provide the average compute time across all of the molecules.
+# For physical methods, report the GPU and/or CPU compute time in hours.
+# For empirical methods, report the query time in hours.
+# Create a new line for each processor type.
+# The 'Compute time:' keyword is required as shown here.
+Compute time:
+CPU compute time - 182
+
+#
+# COMPUTING AND HARDWARE SECTION
+#
+# Please provide details of the computing resources that were used to train models and make predictions.
+# Please specify compute time for training models and querying separately for empirical prediction methods.
+# Provide a detailed description of the hardware used to run the simulations.
+# The 'Computing and hardware:' keyword is required as shown here.
+Computing and hardware:
+Dell Precision 5820 Tower Workstation, OS: Windows 11 Pro, RAM: 64.0 GB, CPU: Intel(R) Xeon(R) W-2275 CPU @ 3.30GHz 3.31 GHz, 14 cores
+
+# SOFTWARE SECTION
+#
+# List all major software packages used and their versions.
+# Create a new line for each software.
+# The 'Software:' keyword is required.
+Software:
+ORCA 5.0.1
+
+# METHOD CATEGORY SECTION
+#
+# State which method category your prediction method is better described as:
+# `Physical (MM)`, `Physical (QM)`, `Empirical`, or `Mixed`.
+# Pick only one category label.
+# The `Category:` keyword is required.
+Category:
+Physical (QM)
+
+# METHOD DESCRIPTION SECTION
+#
+# Methodology and computational details.
+# Level of details should be roughly equivalent to that used in a publication.
+# Please include the values of key parameters with units.
+# Please explain how statistical uncertainties were estimated.
+#
+# If you have evaluated additional microstates, please report their SMILES strings and populations of all the microstates in this section.
+# If you used a microstate other than the challenge provided microstate (`SMXX_micro000`), please list your chosen `Molecule ID` (in the form of `SMXX_extra001`) along with the SMILES string in your methods description.
+#
+# Use as many lines of text as you need.
+# All text following the 'Method:' keyword will be regarded as part of your free text methods description.
+Method:
+Structures were optimized at B3LYP/def2-SVP level of theory using 3D structure generated from provided SMILES strings. 
+The structures were optimized in both solvents with the SMD implicit solvation model. The structures were verified to be local minina with no imaginary frequencies.
+Thermal free energy corrections at 298.15 K were obtained with harmonic frequencies scaled by 1.0044 to account for anharmonicity.
+DLPNO-CCSD(T)/def2-SVP calculations were performed on the optimized structures.
+The RIJCOSX approximation and the corresponding auxiliary basis sets (def2/J, def2-SVP/C) were used under TightPNO convergence thresholds.
+A vertical solvation model was used to compute the logP based on the difference in the solvation free energies of the molecules in toluene and water.
+Both the standard error of the mean and the model were reported to 0.01 based on submission criteria.
+In the method for the submission, true error would be 0 since only one QM calculation was completed per challenge molecule.
+
+#
+#
+# All submissions must either be ranked or non-ranked.
+# Only one ranked submission per participant is allowed.
+# Multiple ranked submissions from the same participant will not be judged.
+# Non-ranked submissions are accepted so we can verify that they were made before the deadline.
+# The "Ranked:" keyword is required, and expects a Boolean value (True/False)
+Ranked:
+False

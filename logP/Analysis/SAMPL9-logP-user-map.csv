@@ -1,0 +1,20 @@
+sid, e-mail, file name
+2, LogP_NE-FG.csv
+3, logP_prediction_TN_KL.csv
+4, logP_Sprick.csv
+5, logP_QM.csv
+6, logP_MD.csv
+7, logP_Mixed.csv
+8, logP_predictions_VoelzLab.csv
+9, logP_paluch_sm8.csv
+10, logP_tran_lser.csv
+11, logP_3DS.csv
+12, logP_SAMPL9_Beckstein_Iorga_OPLS-AA_M24.csv
+13, logP_SAMPL9_Beckstein_Iorga_OPLS-AA_TIP4P.csv
+14, logP_SAMPL9_Beckstein_Iorga_GAFF_TIP3P.csv
+15, logP_ECRISM-1.csv
+16, logP_ECRISM-2.csv
+17, logP_tran_lser_ufz.csv
+18, logP_Pitt_JWang.csv
+19, logP_paluch_sm8_basis.csv
+20, logP_oxford.csv
