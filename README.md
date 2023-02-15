@@ -33,42 +33,42 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 
 ### Releases
 - **Release 0.1** (Sept. 7, 2021, DOI [10.5281/zenodo.5485849](https://dx.doi.org/10.5281/zenodo.5485849)): WP6 challenge details, deadline, host/guest files, submission template, and submission instructions, initially added Aug. 20
-
+- **Release 0.2** (Feb. 15, 2022, DOI [10.5281/zenodo.7644720](https://dx.doi.org/10.5281/zenodo.7644720))): Incorporates all of the following changes:
+    - 2021-09-29: Add link to [WP6 submission server](http://sampl-submit.us-west-1.elasticbeanstalk.com/submit/SAMPL9-HG)  
+    - 2021-10-30: Push deadline back to Nov. 15
+    - 2021-11-08: Make WP6 G4 guest optional as it contains silicon
+    - 2021-11-20: Add bCD challenge information, host and guest files, and submission template. Deadline Feb. 23
+    - 2021-11-30: Add experimental data for WP6
+    - 2021-12-07: Add pKa values for WP6 host in `experimental_data/WP6`
+    - 2021-12-08: Correct TFP `.mol2` , `.sdf`, and `.pdb` structure files in `host_guest/bCD/guest_files` directory
+    - 2021-12-21: Add SAMPL WP6 experimental reference at https://doi.org/10.1039/D1NJ05209H
+    - 2022-01-27: Add submission instructions for CD challenge
+    - 2022-04-06: Add CD submissions, updated usermap, and reference calculations
+    - 2022-04-06: Add CD raw experimental measurements provided by Gilson group
+    - 2022-04-06: Add generated machine readable experimental measurements for WP6 and CD
+    - 2022-04-25: Update analyze_hostguest.py to include CD dataset submissions.
+    - 2022-04-25: Edit analyze_hostguest.py updating deprecated .as_matrix() function to .to_numpy().
+    - 2022-04-25: Edit and update submissions.py removing stats_funcs=None parameter from plotting functions
+    - 2022-04-25: Add preliminary analysis of ranked methods and all methods separately for SAMPL9 WP6 and CD datasets.
+    - 2022-05-10: Add additional info on nanoluciferase (NanoLuc) binding prediction challenge
+    - 2022-06-29: Add (optional) conformers for NanoLuc challenge, as well as info on which compounds were tested as a racemic mix
+    - 2022-07-01: Add submission templates for NanoLuc challenge, challenge deadlines.
+    - 2022-07-21: Add submission link for NanoLuc Stage 1
+    - 2022-08-01: Correct list of compounds for which conformer generation failed, for NanoLuc Stage 1 (`tranche1_failures.txt1`)
+    - 2022-08-01: Add (optional) correct SMILES strings for molecules for which conformer generation had failed from both tranches. Participants may either skip these molecules or provide predictions for them.
+    - 2022-09-22: Extend NanoLuc Stage 1 deadline to Oct. 7
+    - 2022-10-10: Add tranche1 NanoLuc binders (answers to Stage 1/inputs for Stage 2)
+    - 2022-10-10: Add NanoLuc Stage 1 submissions
+    - 2022-11-16: Extend NanoLuc Stage 2 to allow for ranking rather than just IC50 prediction
+    - 2022-11-25: Add logP challenge initial information
+    - 2023-01-13: Switch logP compound numbering to have "SAMPL9-" prefix
+    - 2023-01-20: Provide logP submission template and example
+    - 2023-01-23: Add [submission server](https://submit.samplchallenges.org/submit/sampl9-logp) link for logP, update deadline to Jan. 31.
+    - 2023-01-31: Add SAMPL submissions for logP challenge
+    - 2023-02-15: Add logP challenge experimental data
+    - 2023-02-15: Add logP challenge super preliminary analysis
 
 ### Changes not in a release
-- 2021-09-29: Add link to [WP6 submission server](http://sampl-submit.us-west-1.elasticbeanstalk.com/submit/SAMPL9-HG)  
-- 2021-10-30: Push deadline back to Nov. 15
-- 2021-11-08: Make WP6 G4 guest optional as it contains silicon
-- 2021-11-20: Add bCD challenge information, host and guest files, and submission template. Deadline Feb. 23
-- 2021-11-30: Add experimental data for WP6
-- 2021-12-07: Add pKa values for WP6 host in `experimental_data/WP6`
-- 2021-12-08: Correct TFP `.mol2` , `.sdf`, and `.pdb` structure files in `host_guest/bCD/guest_files` directory
-- 2021-12-21: Add SAMPL WP6 experimental reference at https://doi.org/10.1039/D1NJ05209H
-- 2022-01-27: Add submission instructions for CD challenge
-- 2022-04-06: Add CD submissions, updated usermap, and reference calculations
-- 2022-04-06: Add CD raw experimental measurements provided by Gilson group
-- 2022-04-06: Add generated machine readable experimental measurements for WP6 and CD
-- 2022-04-25: Update analyze_hostguest.py to include CD dataset submissions.
-- 2022-04-25: Edit analyze_hostguest.py updating deprecated .as_matrix() function to .to_numpy().
-- 2022-04-25: Edit and update submissions.py removing stats_funcs=None parameter from plotting functions
-- 2022-04-25: Add preliminary analysis of ranked methods and all methods separately for SAMPL9 WP6 and CD datasets.
-- 2022-05-10: Add additional info on nanoluciferase (NanoLuc) binding prediction challenge
-- 2022-06-29: Add (optional) conformers for NanoLuc challenge, as well as info on which compounds were tested as a racemic mix
-- 2022-07-01: Add submission templates for NanoLuc challenge, challenge deadlines.
-- 2022-07-21: Add submission link for NanoLuc Stage 1
-- 2022-08-01: Correct list of compounds for which conformer generation failed, for NanoLuc Stage 1 (`tranche1_failures.txt1`)
-- 2022-08-01: Add (optional) correct SMILES strings for molecules for which conformer generation had failed from both tranches. Participants may either skip these molecules or provide predictions for them.
-- 2022-09-22: Extend NanoLuc Stage 1 deadline to Oct. 7
-- 2022-10-10: Add tranche1 NanoLuc binders (answers to Stage 1/inputs for Stage 2)
-- 2022-10-10: Add NanoLuc Stage 1 submissions
-- 2022-11-16: Extend NanoLuc Stage 2 to allow for ranking rather than just IC50 prediction
-- 2022-11-25: Add logP challenge initial information
-- 2023-01-13: Switch logP compound numbering to have "SAMPL9-" prefix
-- 2023-01-20: Provide logP submission template and example
-- 2023-01-23: Add [submission server](https://submit.samplchallenges.org/submit/sampl9-logp) link for logP, update deadline to Jan. 31.
-- 2023-01-31: Add SAMPL submissions for logP challenge
-- 2023-02-15: Add logP challenge experimental data
-- 2023-02-15: Add logP challenge super preliminary analysis
 
 ## Challenge construction
 
