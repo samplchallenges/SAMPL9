@@ -49,3 +49,5 @@ Submissions must be in the required format, linked below. The submission file mu
 - `compounds_image.png`: An image of the compounds
 - `logP_prediction_template.csv`: Template file for predictions
 - `logP_template_example.csv`: Example completed template for submission
+- `experimental_data`: Experimental data for logP challenge
+- `Analysis`: Includes submissions and eventually analysis; for now includes a very preliminary first pass at statistics.
