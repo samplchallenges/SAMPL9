@@ -66,7 +66,8 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 - 2023-01-13: Switch logP compound numbering to have "SAMPL9-" prefix
 - 2023-01-20: Provide logP submission template and example
 - 2023-01-23: Add [submission server](https://submit.samplchallenges.org/submit/sampl9-logp) link for logP, update deadline to Jan. 31.
-- 2023-01-31: Add SAMPL submissions
+- 2023-01-31: Add SAMPL submissions for logP challenge
+- 2023-02-15: Add logP challenge experimental data
 
 ## Challenge construction
 
@@ -102,6 +103,7 @@ The bCD challenge focuses on binding of five phenothiazine antipsychotic drugs t
 - [`experimental_measurements.X`]: Summary table of experimental data in `.csv` and `.json` formats. Includes WP6 and bCD.
 - [`experimental_data/CD/`](experimental_data/CD/PhenothiazineCD-Binding-Summary-3-31-2022_BAedit.docx): Data provided by the Gilson group in `.docx` format. This document was updated/corrected on 3/31/2022 from earlier values.
 - ['protein_ligand`](protein_ligand): Information on the protein-ligand challenge on nanoluciferase (nanoluc) binding, which includes library screening and prediction of potency (IC50).
+- [`logP`](logP): Files pertaining to the logP challenge, including challenge inputs, submissions, and experimental data.
 
 ## SAMPL-related
 If you give a SAMPL-related talk or presentation or an analysis of its data, and are willing to share publicly, please consider posting on Zenodo and linking it to the [SAMPL Zenodo community](https://zenodo.org/communities/sampl?page=1&size=20).
