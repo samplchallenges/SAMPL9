@@ -68,6 +68,7 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 - 2023-01-23: Add [submission server](https://submit.samplchallenges.org/submit/sampl9-logp) link for logP, update deadline to Jan. 31.
 - 2023-01-31: Add SAMPL submissions for logP challenge
 - 2023-02-15: Add logP challenge experimental data
+- 2023-02-15: Add logP challenge super preliminary analysis
 
 ## Challenge construction
 
