@@ -1,0 +1,35 @@
+\documentclass[8pt]{article}
+\usepackage[a4paper,margin=0.2in,tmargin=0.5in,bmargin=0.5in,landscape]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\pagenumbering{gobble}
+\begin{document}
+\begin{center}
+\begin{footnotesize}
+\begin{longtable}{|cccccccccccccc|}
+\toprule
+ID & Sensitivity (TPR) & Specificity (TNR) &   Precision (PPV) & Balanced Accuracy &          Accuracy &                 MCC &         Cohen Kappa &           Youdens J &           True Positive &             False Negative &                 True Negative &             False Positive \\
+\midrule
+\endfirsthead
+
+\toprule
+ID & Sensitivity (TPR) & Specificity (TNR) &   Precision (PPV) & Balanced Accuracy &          Accuracy &                 MCC &         Cohen Kappa &           Youdens J &           True Positive &             False Negative &                 True Negative &             False Positive \\
+\midrule
+\endhead
+\midrule
+\multicolumn{13}{r}{{Continued on next page}} \\
+\midrule
+\endfoot
+
+\bottomrule
+\endlastfoot
+ 5 & 0.14 [0.12, 0.15] & 0.94 [0.94, 0.94] & 0.10 [0.09, 0.11] & 0.54 [0.53, 0.55] & 0.90 [0.90, 0.90] &   0.06 [0.05, 0.08] &   0.06 [0.05, 0.08] &   0.08 [0.06, 0.09] & 287.00 [255.00, 321.00] & 1796.00 [1713.00, 1879.00] & 40778.00 [40649.00, 40904.00] & 2682.00 [2583.00, 2781.00] \\
+ 8 & 0.04 [0.03, 0.05] & 0.96 [0.96, 0.96] & 0.04 [0.03, 0.05] & 0.50 [0.50, 0.50] & 0.92 [0.92, 0.92] & -0.00 [-0.01, 0.01] & -0.00 [-0.01, 0.01] & -0.00 [-0.01, 0.01] &    77.00 [61.00, 94.00] & 2006.00 [1922.00, 2090.00] & 41780.00 [41665.00, 41894.00] & 1680.00 [1601.00, 1760.00] \\
+ 2 & 0.02 [0.01, 0.02] & 0.98 [0.98, 0.98] & 0.04 [0.03, 0.05] & 0.50 [0.49, 0.50] & 0.93 [0.93, 0.94] & -0.01 [-0.01, 0.00] & -0.01 [-0.01, 0.00] & -0.00 [-0.01, 0.00] &    38.00 [27.00, 51.00] & 2045.00 [1961.00, 2134.00] & 42461.00 [42356.00, 42563.00] &   999.00 [938.00, 1061.00] \\
+10 & 0.01 [0.01, 0.02] & 0.99 [0.99, 0.99] & 0.08 [0.05, 0.11] & 0.50 [0.50, 0.50] & 0.95 [0.95, 0.95] &   0.01 [0.00, 0.03] &   0.01 [0.00, 0.02] &   0.00 [0.00, 0.01] &    22.00 [13.00, 32.00] & 2061.00 [1975.00, 2150.00] & 43206.00 [43112.00, 43297.00] &    254.00 [224.00, 286.00] \\
+ 7 & 0.00 [0.00, 0.01] & 1.00 [1.00, 1.00] & 0.05 [0.02, 0.09] & 0.50 [0.50, 0.50] & 0.95 [0.95, 0.95] &  0.00 [-0.01, 0.01] &  0.00 [-0.00, 0.00] &  0.00 [-0.00, 0.00] &      6.00 [2.00, 11.00] & 2077.00 [1989.00, 2165.00] & 43344.00 [43254.00, 43435.00] &     116.00 [96.00, 137.00] \\
+\end{longtable}
+\end{footnotesize}
+\end{center}
+
+\end{document}
