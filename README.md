@@ -69,6 +69,7 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
     - 2023-02-15: Add logP challenge super preliminary analysis
 
 ### Changes not in a release
+ - 2023-02-23: Add preliminary NanoLuc stage 1 analysis outputs
 
 ## Challenge construction
 
