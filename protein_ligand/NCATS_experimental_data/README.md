@@ -19,6 +19,8 @@ For Stage 2, the `nanoluc_binders_tranche1.csv` file contains compound IDs for b
 - `tranche2_failures.txt`: Molecules in tranche2 for which we failed to generate conformers; this likely means the SMILES strings are invalid or cannot be correctly parsed. Alternate input for these failures provided in a separate file.
 - `nanoluc_compounds_tranche1_failure_updates.csv` and `nanoluc_compounds_tranche2_failure_updates.csv`: Updated (corrected) SMILES strings for molecules for which conformer generation failed
 - `nanoluc_binders_tranche1.csv`: NanoLuc binders from tranche1 (compound ID and SMILES); provides answers for Stage 1, and inputs for Stage 2. SMILES strings are original NCATS SMILES strings, and corrected SMILES from the above files can be used if failures are encountered. 
+- `nanoluc_binders_tranche1_with_IC50.csv`: NanoLuc binders IC50 measurements from tranche1 (compound ID, IC50, and SMILES). SMILES strings are original NCATS SMILES strings, and corrected SMILES from the above files can be used if failures are encountered.
+- `Scripts`: Contains scripts used to process and/or split NanoLuc experimental data. 
 
 ## Additional information forthcoming
 - Experimental results will be released after phases close
