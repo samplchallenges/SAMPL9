@@ -71,6 +71,7 @@ Of course, we also appreciate it if you cite any overview/experimental papers re
 ### Changes not in a release
  - 2023-02-23: Add preliminary NanoLuc stage 1 analysis outputs
  - 2023-02-24: Add NanoLuc stage2 experimental IC50 values (answers for Stage 2), found in `nanoluc_binders_tranche1_with_IC50.csv`
+ - 2023-03-01: Adds NCATS experimental slide `qHTS-curve-classification.png` and additional information in `qHTS-curve-classification.md` 
 
 ## Challenge construction
 
