@@ -21,6 +21,15 @@ For Stage 2, the `nanoluc_binders_tranche1.csv` file contains compound IDs for b
 - `nanoluc_binders_tranche1.csv`: NanoLuc binders from tranche1 (compound ID and SMILES); provides answers for Stage 1, and inputs for Stage 2. SMILES strings are original NCATS SMILES strings, and corrected SMILES from the above files can be used if failures are encountered. 
 - `nanoluc_binders_tranche1_with_IC50.csv`: NanoLuc binders IC50 measurements from tranche1 (compound ID, IC50, and SMILES). SMILES strings are original NCATS SMILES strings, and corrected SMILES from the above files can be used if failures are encountered.
 - `Scripts`: Contains scripts used to process and/or split NanoLuc experimental data. 
+- `qHTS-curve-classification.png`: Slide from NCATS explaining curve classification used in qHTS data files.
+- `qHTS-curve-classification.png`: Additional information explaining curve classification used in qHTS data files.
+
+Note:
+In the qHTS data, there were occasionally duplicate compounds as an internal reference; in the latest version NCATS has presumably removed these. There are also trailing compound IDs such as `-01`, `-02`, `-15`, etc.; these are batch numbers and refer to the same compound.
+
+Many provided SMILES strings are isomeric; however, occasional stereocenters are left unspecified. When unspecified, compounds were tested as a racemic mixutre.
+
+The `nanoluc_binders_tranche1.csv` and `nanoluc_binders_tranche1_with_IC50.csv` answer files were generated from NCATS spreadsheet `secNanoLuc-Genesis-qHTS-data.xls` (currently not in repository as it contains data that can't be released; this file will be made available after tranche2 challenge is run).
 
 ## Additional information forthcoming
 - Experimental results will be released after phases close
