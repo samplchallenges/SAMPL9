@@ -8,6 +8,8 @@ For experimental measurements, we are indebted to Dr. Clara Ràfols (University 
 
 Experimental measurements were done for sixteen compounds with acid-base properties (see Table 1), most of them drugs showing a variety of therapeutical capabilities. These were commonly selected from Sigma-Aldrich ≥ 98% (www.sigmaaldrich.com), with some selected because of potential internal hydrogen bonding. The partition solvent was from Sigma-Aldrich: toluene (ACS reagent, ≥ 99.5%, 179418).
 
+Experimental work is described in a manuscript [published in PCCP](https://dx.doi.org/10.1039/D3CP01428B).
+
 **Table 1. Experimental equipment used in the determination of logPtol/w**
 |**name**	| **Exp. equipment** |
 |-----------|--------------|
@@ -36,6 +38,7 @@ Partition values, log Ptol/w, were obtained by sample titrations as typically de
 - Avdeef, A., Comer J., 1993. pH-Metric log P.II. Refinement of partition coeficients and ionization constants of multiprotic substances, J. Pharm. Sci. 82, 183-190
 - Avdeef, Alex; Comer, John E. A.; Thomson, Simon J., 1993. pH-Metric log P. 3. Glass electrode calibration in methanol-water, applied to pKa determination of water-insoluble substances, Anal. Chem., 65, 42-49
 - Ràfols, C., Bosch, E., Ruiz, R., Box, K. J., Reis, M., Ventura, C., Santos, S., Araújo, M. E., Martins F., 2012. Acidity and Hydrophobicity of Several New Potential Antitubercular Drugs: Isoniazid and Benzimidazole Derivatives, J. Chem. Eng. Data, 57, 330-338
+- Zamora, W. J.; Viayna, A.; Pinheiro, S.; Curutchet, C.; Bisbal, L.; Ruiz, R.; Ràfols, C.; Luwue, F. J. Prediction of toluene/water partition coefficients in the SAMPL9 blind challenge: Assessment of machine learning and IEF-PCM/MST continuum solvation models.
 
 ## Instructions
 
