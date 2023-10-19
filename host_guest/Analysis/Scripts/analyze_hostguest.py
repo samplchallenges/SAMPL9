@@ -1396,7 +1396,7 @@ if __name__ == '__main__':
     statistics = pd.read_json('../Ranked_Accuracy/MoleculesStatistics/StatisticsTables/statistics.json', orient='index')
 
     # Remove OPTIONALS (). Plots error by molecule only for ranked
-    #statistics = statistics[~statistics.index.isin({'WP6-G4'})]
+    statistics = statistics[~statistics.index.isin({'WP6-G4'})]
     statistics.sort_values(by='RMSE', inplace=True)
     for ax, stats_name in zip(axes, stats_names):
         # Build palette.
@@ -1417,7 +1417,7 @@ if __name__ == '__main__':
     statistics_nr = pd.read_json('../All_Accuracy/MoleculesStatistics/StatisticsTables/statistics.json', orient='index')
 
     # Remove OPTIONALS (). Plots error by molecule for all submissions (includes non ranked)
-    #statistics_nr = statistics_nr[~statistics_nr.index.isin({'WP6-G4'})]
+    statistics_nr = statistics_nr[~statistics_nr.index.isin({'WP6-G4'})]
     statistics_nr.sort_values(by='RMSE', inplace=True)
     for ax, stats_name in zip(axes, stats_names):
         # Build palette.
